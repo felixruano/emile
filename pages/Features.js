@@ -17,7 +17,7 @@ function Features() {
                         A better way to send money
         </h3>
                     <p className="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
-                        The Emile School is a 1:1, full-time, blended alternative to traditional middle and high school.By reimagining and rethinking education using today’s resources, including technology, advancements in learning and cognitive science, we developed a “full-stack” education offering that combines proprietary technology, teacher training and curriculum.
+                        By reimagining and rethinking education using today’s resources, including technology, advancements in learning and cognitive science, we developed a “full-stack” education offering that combines proprietary technology, teacher training and curriculum.
         </p>
                 </div>
 

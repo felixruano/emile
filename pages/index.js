@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
 import Mobile from './Mobile'
 import Footer from './Footer'
