@@ -21,7 +21,7 @@ function Mobile({ }) {
                                     <div className="-mr-2 flex items-center md:hidden">
                                         <button type="button" onClick={() => setOpen(!open)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
                                             <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                                <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                                             </svg>
                                         </button>
                                     </div>
@@ -109,8 +109,9 @@ function Mobile({ }) {
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
                 <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" />
             </div>
-        </div >
-    );
+        </div>
+    )
 }
 
-export default Mobile;
+
+export default Mobile
