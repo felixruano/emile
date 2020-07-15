@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Mobile from './Mobile'
 
 const Home = () => (
   <div className="antialiased">
@@ -8,6 +9,8 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
+
+    <Mobile onClick={() => setIsOpen(!isOpen)} />
 
     <div className="py-12 bg-white">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,7 +108,7 @@ const Home = () => (
         </h2>
         <div className="mt-8 flex lg:flex-shrink-0 lg:mt-0">
           <div className="inline-flex rounded-md shadow">
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+            <a href="https://www.google.com" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
               Get started
           </a>
           </div>
