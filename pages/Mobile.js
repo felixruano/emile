@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Transition from './Transition.js'
 
 function Mobile({ }) {
-    const [isOpen, setIsOpen] = useState(false)
+    const [open, setOpen] = useState(false);
     return (
         <div className="relative bg-white overflow-hidden">
             <div className="max-w-screen-xl mx-auto">
@@ -19,7 +19,7 @@ function Mobile({ }) {
                                         <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Logo" />
                                     </a>
                                     <div className="-mr-2 flex items-center md:hidden">
-                                        <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
+                                        <button type="button" onClick={() => setOpen(!open)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
                                             <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                                             </svg>
@@ -39,7 +39,7 @@ function Mobile({ }) {
 
 
                     <Transition
-                        show={isOpen}
+                        show={open}
                         enter="duration-150 ease-out"
                         enterFrom="opacity-0 scale-95"
                         enterTo="opacity-100 scale-100"
@@ -55,7 +55,7 @@ function Mobile({ }) {
                                             <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="" />
                                         </div>
                                         <div className="-mr-2">
-                                            <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
+                                            <button type="button" onClick={() => setOpen(!open)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
                                                 <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
@@ -81,24 +81,26 @@ function Mobile({ }) {
                     <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
                             <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                                Data to enrich your
+                                Welcome to your
                   <br className="xl:hidden" />
-                                <span className="text-indigo-600">online business</span>
+                                <span className="text-indigo-600"> new school</span>
                             </h2>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                                We are a 1:1, full-time, blended alternative to traditional middle and high school.
                 </p>
-                            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                                <div className="rounded-md shadow">
-                                    <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                                        Get started
-                    </a>
-                                </div>
-                                <div className="mt-3 sm:mt-0 sm:ml-3">
-                                    <a href="#" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
-                                        Live demo
-                    </a>
-                                </div>
+                            <div className="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                                <p className="text-base font-medium text-gray-900">
+                                    Sign up to get notified when it’s ready.
+                </p>
+                                <form action="#" method="POST" className="mt-3 sm:flex" >
+                                    <input aria-label="Email" className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" placeholder="Enter your email" />
+                                    <button type="submit" className="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
+                                        Notify me
+                  </button>
+                                </form>
+                                <p className="mt-3 text-sm leading-5 text-gray-500">
+                                    Placeholder
+                </p>
                             </div>
                         </div>
                     </main>
