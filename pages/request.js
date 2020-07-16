@@ -54,7 +54,7 @@ function Request() {
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <inpu name="email" id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="email" id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
