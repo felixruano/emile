@@ -36,25 +36,25 @@ function Request() {
                             <div>
                                 <label htmlFor="first_name" className="block text-sm font-medium leading-5 text-gray-700">First name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input id="first_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="first_name" id="first_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="last_name" className="block text-sm font-medium leading-5 text-gray-700">Last name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input id="last_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="last_name" id="last_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="company" className="block text-sm font-medium leading-5 text-gray-700">Company</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input id="company" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="company" id="company" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <inpu name="email" id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
@@ -67,13 +67,13 @@ function Request() {
                                             <option>EU</option>
                                         </select>
                                     </div>
-                                    <input id="phone_number" className="form-input py-3 px-4 block w-full pl-20 transition ease-in-out duration-150" placeholder="+1 (555) 987-6543"></input>
+                                    <input name="phone_number" id="phone_number" className="form-input py-3 px-4 block w-full pl-20 transition ease-in-out duration-150" placeholder="+1 (555) 987-6543"></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="message" className="block text-sm font-medium leading-5 text-gray-700">Message</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <textarea id="message" rows="4" className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"></textarea>
+                                    <textarea name="message" id="message" rows="4" className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"></textarea>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
