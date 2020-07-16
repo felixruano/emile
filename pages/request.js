@@ -32,7 +32,7 @@ function Request() {
             </p>
                     </div>
                     <div className="mt-12">
-                        <form action="#" method="POST" className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8" data-netlify="true">
+                        <form action="/" method="POST" className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8" data-netlify="true">
                             <div>
                                 <label htmlFor="first_name" className="block text-sm font-medium leading-5 text-gray-700">First name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
@@ -40,25 +40,25 @@ function Request() {
                                 </div>
                             </div>
                             <div>
-                                <label for="last_name" className="block text-sm font-medium leading-5 text-gray-700">Last name</label>
+                                <label htmlFor="last_name" className="block text-sm font-medium leading-5 text-gray-700">Last name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
                                     <input id="last_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label for="company" className="block text-sm font-medium leading-5 text-gray-700">Company</label>
+                                <label htmlFor="company" className="block text-sm font-medium leading-5 text-gray-700">Company</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
                                     <input id="company" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label for="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
+                                <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
                                     <input id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label for="phone_number" className="block text-sm font-medium leading-5 text-gray-700">Phone Number</label>
+                                <label htmlFor="phone_number" className="block text-sm font-medium leading-5 text-gray-700">Phone Number</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
                                     <div className="absolute inset-y-0 left-0 flex items-center">
                                         <select aria-label="Country" className="form-select h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-gray-500 transition ease-in-out duration-150">
@@ -71,7 +71,7 @@ function Request() {
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label for="message" className="block text-sm font-medium leading-5 text-gray-700">Message</label>
+                                <label htmlFor="message" className="block text-sm font-medium leading-5 text-gray-700">Message</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
                                     <textarea id="message" rows="4" className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"></textarea>
                                 </div>
