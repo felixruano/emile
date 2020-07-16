@@ -73,7 +73,7 @@ function Team() {
                                         Johnny Duda
               </h3>
                                     <h3 className="mt-2 text-xl leading-7 text-gray-500 text-center">
-                                        COO
+                                        Chief Academic Officer
               </h3>
                                     <p className="mt-3 text-base leading-6 text-gray-500">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
