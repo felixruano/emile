@@ -21,7 +21,7 @@ function Team() {
                     <div className="mt-12 grid gap-10 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
                         <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
                             <div className="flex-shrink-0">
-                                <img className="h-64 w-64 rounded-full object-cover" src="/felix.jpg" alt="" />
+                                <img className="h-64 w-64 rounded-full object-cover" src="/felix.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
 
                             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -42,7 +42,7 @@ function Team() {
                         </div>
                         <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
                             <div className="flex-shrink-0">
-                                <img className="h-64 w-64 rounded-full object-cover" src="/felix.jpg" alt="" />
+                                <img className="h-64 w-64 rounded-full object-cover" src="/felix.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
 
                             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
