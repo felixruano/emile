@@ -14,7 +14,7 @@ function Features() {
 
                 <div className="relative">
                     <h3 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                        A better way to send money
+                        A better way to do school
         </h3>
                     <p className="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
                         By reimagining and rethinking education using today’s resources, including technology, advancements in learning and cognitive science, we developed a “full-stack” education offering that combines proprietary technology, teacher training and curriculum.
@@ -24,7 +24,7 @@ function Features() {
                 <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
                     <div className="relative">
                         <h4 className="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
-                            Transfer funds world-wide
+                            Our learning model
           </h4>
                         <p className="mt-3 text-lg leading-7 text-gray-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores officia assumenda aliquam laborum ab aliquid veritatis impedit odit adipisci optio iste blanditiis facere. Totam, velit.
@@ -41,7 +41,7 @@ function Features() {
                                         </div>
                                     </div>
                                     <div className="ml-4">
-                                        <h5 className="text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</h5>
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">1:1 Instruction</h5>
                                         <p className="mt-2 text-base leading-6 text-gray-500">
                                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
                   </p>
