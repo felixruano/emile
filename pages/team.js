@@ -70,7 +70,7 @@ function Team() {
                                 <div className="flex-1">
 
                                     <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900 text-center">
-                                        Lidia Medina
+                                        Johnny Duda
               </h3>
                                     <h3 className="mt-2 text-xl leading-7 text-gray-500 text-center">
                                         COO
