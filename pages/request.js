@@ -32,7 +32,7 @@ function Request() {
             </p>
                     </div>
                     <div className="mt-12">
-                        <form action="/mission" method="POST" className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8" data-netlify="true">
+                        <form name="contact" action="/mission" method="POST" className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8" data-netlify="true">
                             <div>
                                 <label htmlFor="first_name" className="block text-sm font-medium leading-5 text-gray-700">First name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
