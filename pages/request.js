@@ -84,7 +84,7 @@ function Request() {
                             <div className="sm:col-span-2">
                                 <label htmlFor="student_school" className="block text-sm font-medium leading-5 text-gray-700">Student school (attended Spring 2020)</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="student_school" id="student_school" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="student_school" id="student_school" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
 
