@@ -38,7 +38,7 @@ function Request() {
                     </div>
                     <div className="mt-12">
                         <form name="contact" action="/thankyou" method="POST" className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8" data-netlify="true">
-                            <input type="hidden" name="contact" value="contact" />
+                            <input type="hidden" name="form-name" value="contact" />
                             <div>
                                 <label htmlFor="first_name" className="block text-sm font-medium leading-5 text-gray-700">First name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
