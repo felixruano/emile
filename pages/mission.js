@@ -11,45 +11,175 @@ function Mission() {
         <Header />
 
         <section className="py-12 bg-white overflow-hidden md:py-20 lg:py-24">
-            <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <svg className="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
-                    <title id="svg-workcation">Workcation</title>
-                    <defs>
-                        <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                            <rect x="0" y="0" width="4" height="4" className="text-gray-200" fill="currentColor" />
-                        </pattern>
-                    </defs>
-                    <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
-                </svg>
-
-                <div className="relative">
-                    <blockquote className="mt-8">
-                        <h3 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-indigo-600 sm:text-4xl sm:leading-10">
-                            Traditional models of education are not working
-    </h3>
-                        <p className="mt-4 max-w-3xl mx-auto text-left text-xl leading-7 text-gray-500">
-                            Traditional education is not working. Legacy “factory model” classrooms treat students as passive receptacles of information. Instruction continues to emphasize core content remediation, while a rapidly changing labor market demands mastery of a foundational set of critical skills. Online efforts to individualize instruction fail because they continue to be content-focused and teacher-centric.
-    </p>
-                        <footer className="mt-8">
-                            <div className="md:flex md:items-center md:justify-center">
-
-                            </div>
-                        </footer>
-                    </blockquote>
-                    <blockquote className="mt-8">
-                        <h3 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-indigo-600 sm:text-4xl sm:leading-10">
-                            Traditional models of education are not working
-</h3>
-                        <p className="mt-4 max-w-3xl mx-auto text-left text-xl leading-7 text-gray-500">
-                            Traditional education is not working. Legacy “factory model” classrooms treat students as passive receptacles of information. Instruction continues to emphasize core content remediation, while a rapidly changing labor market demands mastery of a foundational set of critical skills. Online efforts to individualize instruction fail because they continue to be content-focused and teacher-centric.
-</p>
-                        <footer className="mt-8">
-                            <div className="md:flex md:items-center md:justify-center">
-
-                            </div>
-                        </footer>
-                    </blockquote>
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="lg:text-center mb-12">
+                    <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 text-left">
+                        The Problem
+                    </h2>
+                    <p className="mt-4 max-w-4xl text-l leading-7 text-gray-500 text-left">
+                        “Factory model” schools treat students as passive receptacles of information. This outdated methodology emphasizes a remedial curriculum and often ignores the interests and intricacies of individual students. Today's rapidly changing vocational market still demands mastery of foundational skills, but it also requires critical thinking to an unprecedented degree.
+                    </p>
+                    <p className="mt-4 max-w-4xl text-l leading-7 text-gray-500 text-left">
+                        As technological advances in automation consume what were once "safe" jobs at an exponential pace, critical thinking paired with applicable skills are now mandatory prerequisites for young people entering the economy. Many of the current online efforts to individualize instruction fail because they continue to be content-focused and teacher-centric. Rather than cultivating students' instinctual desire to learn, schools have become a rigid system hindered by political and profit driven motives without any signs of real innovation in over 50 years.
+                    </p>
                 </div>
+                <div className="lg:text-center">
+                    <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 text-left">
+                        The Solution
+                    </h2>
+                    <p className="mt-4 max-w-4xl text-l leading-7 text-gray-500 text-left">
+                        We believe that meaningful innovation in education can't be made on the margins. We can have all the free or low-cost supplemental tools available at our fingertips, but we won't move the needle if we don't challenge the underlying model. This is why we decided to build a better foundation from scratch - one that uses the latest in technology, cognitive science and curriculum development across the entire student experience. The end result is a student-centered education offering that cultivates learning where students are empowered to identify and develop their natural capacities while simultaneously learning how to think critically about the world around them so they can be part of it and contribute to it.
+                    </p>
+                </div>
+
+                <div className="py-12 bg-white">
+                    <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
+                        <div class="my-12 flex flex-col p-12 rounded-lg shadow-lg overflow-hidden bg-gray-100 bg-opacity-50">
+                            <h4 id="math" className="mt-2 pb-8 text-2xl leading-8 font-extrabold tracking-tight text-indigo-600 sm:text-2xl sm:leading-10">
+                                Math Journey
+                            </h4>
+                            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+
+                                <div>
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                                <div className="mt-10 lg:mt-0">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">No hidden fees</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                                <div className="mt-10 lg:mt-0">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">Transfers are instant</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-12 flex flex-col p-12 rounded-lg shadow-lg overflow-hidden bg-gray-100 bg-opacity-50">
+                            <h4 id="math" className="mt-2 pb-8 text-2xl leading-8 font-extrabold tracking-tight text-indigo-600 sm:text-2xl sm:leading-10">
+                                Math Journey
+                            </h4>
+                            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+
+                                <div>
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                                <div className="mt-10 lg:mt-0">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">No hidden fees</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                                <div className="mt-10 lg:mt-0">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">Transfers are instant</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-12 flex flex-col p-12 rounded-lg shadow-lg overflow-hidden bg-gray-100 bg-opacity-50">
+                            <h4 id="math" className="mt-2 pb-8 text-2xl leading-8 font-extrabold tracking-tight text-indigo-600 sm:text-2xl sm:leading-10">
+                                Math Journey
+                            </h4>
+                            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+
+                                <div>
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                                <div className="mt-10 lg:mt-0">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">No hidden fees</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                                <div className="mt-10 lg:mt-0">
+                                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <div className="mt-5">
+                                        <h5 className="text-lg leading-6 font-medium text-gray-900">Transfers are instant</h5>
+                                        <p className="mt-2 text-base leading-6 text-gray-500">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+          </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </section>
 

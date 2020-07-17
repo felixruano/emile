@@ -9,7 +9,7 @@ function Request() {
         </Head>
         <Header />
 
-        <section className="py-12 bg-white overflow-hidden md:pb-20 lg:pb-12">
+        <section className="pb-12 bg-white overflow-hidden md:pb-20 lg:pb-12">
             <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
                 <div className="relative max-w-xl mx-auto">
                     <svg className="absolute left-full transform translate-x-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404">
@@ -42,23 +42,23 @@ function Request() {
                             <div>
                                 <label htmlFor="first_name" className="block text-sm font-medium leading-5 text-gray-700">First name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="first_name" id="first_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="first_name" id="first_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="last_name" className="block text-sm font-medium leading-5 text-gray-700">Last name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="last_name" id="last_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="last_name" id="last_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
                                 <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="email" id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="email" id="email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label htmlFor="phone_number" className="block text-sm font-medium leading-5 text-gray-700">Phone number</label>
+                                <label htmlFor="phone_number" className="block text-sm font-medium leading-5 text-gray-700" required>Phone number</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
                                     <input name="phone_number" id="phone_number" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" placeholder="+1 (555) 987-6543"></input>
                                 </div>
@@ -66,13 +66,13 @@ function Request() {
                             <div>
                                 <label htmlFor="student_first_name" className="block text-sm font-medium leading-5 text-gray-700">Student first name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="student_first_name" id="student_first_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="student_first_name" id="student_first_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="student_last_name" className="block text-sm font-medium leading-5 text-gray-700">Student last name</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="student_last_name" id="student_last_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="student_last_name" id="student_last_name" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
@@ -84,19 +84,20 @@ function Request() {
                             <div className="sm:col-span-2">
                                 <label htmlFor="student_school" className="block text-sm font-medium leading-5 text-gray-700">Student school (attended Spring 2020)</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="student_school" id="student_school" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="student_school" id="student_school" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="city" className="block text-sm font-medium leading-5 text-gray-700">City</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="city" id="city" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="city" id="city" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
                             </div>
                             <div>
                                 <label htmlFor="state" className="block text-sm font-medium leading-5 text-gray-700">State</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <select name="state" aria-label="Country" class="form-select py-3 px-4 block w-full border-transparent bg-transparent text-gray-500 transition ease-in-out duration-150">
+                                    <select name="state" class="form-select py-3 px-4 block w-full bg-transparent text-gray-500 transition ease-in-out duration-150">
+                                        <option hidden disabled selected value> -- select an option -- </option>
                                         <option>AL</option>
                                         <option>AK</option>
                                         <option>AZ</option>
@@ -261,7 +262,7 @@ function Request() {
                             <div className="sm:col-span-2">
                                 <span className="w-full inline-flex rounded-md shadow-sm">
                                     <button type="submit" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
-                                        Let's talk
+                                        Submit
                                     </button>
                                 </span>
                             </div>
