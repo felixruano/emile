@@ -39,7 +39,7 @@ function Team() {
                                         CEO
               </h3>
                                     <p className="mt-3 text-base leading-6 text-gray-500">
-                                        Orem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
+                                        Felix is Emile's Chief Executive Officer, leading the team as it builds the K-12 platform for the 21st-century. He previously worked as a management consultant with McKinsey & Company, where he advised retail and industrial clients across strategy and operations projects. He is a board member of Asia Society’s Center for Global Education, comprised of education leaders from around the world. He earned a degree in Economics from Harvard University.
               </p>
 
                                 </div>
@@ -47,7 +47,7 @@ function Team() {
                         </div>
                         <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
                             <div className="flex-shrink-0">
-                                <img className="h-64 w-64 rounded-full object-cover" src="/felix.jpg?nf_resize=fit&h=500" alt="" />
+                                <img className="h-64 w-64 rounded-full object-cover" src="/lidia.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
 
                             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -68,7 +68,7 @@ function Team() {
                         </div>
                         <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
                             <div className="flex-shrink-0">
-                                <img className="h-64 w-64 rounded-full object-cover" src="/felix.jpg?nf_resize=fit&h=500" alt="" />
+                                <img className="h-64 w-64 rounded-full object-cover" src="/johnny.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
 
                             <div className="flex-1 bg-white p-6 flex flex-col justify-between">

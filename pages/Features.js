@@ -9,7 +9,7 @@ function Features() {
                         A better way to do online school
       </h3>
                     <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
-                        Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
+                        We combine technology with 21st-century instruction techniques to deliver a modern, personalized, effective learning experience.
       </p>
                 </div>
 
@@ -30,7 +30,7 @@ function Features() {
                                 <div className="ml-4">
                                     <h4 className="text-lg leading-6 font-medium text-gray-900">1:1 Instruction</h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
-                                        The only way to deliver truly personalized learning is through 1:1 instruction, not 'sage on the stage' lectures to a passive audience.
+                                        We "flip" the classroom to engage students in self-directed study, supported by 100+ hours a year of 1:1 teacher interaction to keep students engaged every day, all year long.
               </p>
                                 </div>
                             </div>
@@ -65,13 +65,13 @@ function Features() {
                             <div className="flex">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                                        <img className="p-2" src={require('../public/hands_white.svg')} />
+                                        <img className="p-2" src={require('../public/pencil-3_white.svg')} />
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Skills-based</h4>
+                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Skills-based curriculum</h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
-                                        We teach every subject with a skills-based approach, challenging students to answer fundamental questions based on critical thinking, comprehension and communication.
+                                        We teach every subject through the lens of three foundational, 21st-century skills: Critical Thinking, Comprehension and Communication.
               </p>
                                 </div>
                             </div>
@@ -85,11 +85,11 @@ function Features() {
                             <div className="flex">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-gray-600 text-white">
-                                        <img className="p-2" src={require('../public/hands_white.svg')} />
+                                        <img className="p-2" src={require('../public/pencil-3_white.svg')} />
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Content-based</h4>
+                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Content-based curriculum</h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
                                         Many schools teach the same core content that was taught in the 50s, while colleges and the professional world demand proficiency in a suite of critical skills.
               </p>
@@ -110,9 +110,9 @@ function Features() {
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Mastery Learning</h4>
+                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Mastery learning</h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
-                                        Our curriculum is designed to ensure every student achieves mastery, while becoming more confident, independent and self-directed in the process.
+                                        Our curriculum is designed to ensure every student achieves mastery based on their ability to articulate the concept, not just a quiz score.
               </p>
                                 </div>
                             </div>
@@ -130,7 +130,7 @@ function Features() {
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Rote Memorization</h4>
+                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Rote memorization</h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
                                         90% of U.S. parents believe their kids are proficient in school, but data shows only a fraction of high school seniors achieve the mastery needed for college.
               </p>
@@ -150,9 +150,9 @@ function Features() {
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Tech Enabled Executive Functioning</h4>
+                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Tech-enabled executive functioning</h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
-                                        Thousands of learning hours a year go untapped in schools because students are neither engaged nor equipped with the tools to learn on their own.
+                                        We've built a proprietary tech platform that empowers students to teach themselves, and that tracks their progress with complete transparency.
               </p>
                                 </div>
                             </div>
@@ -170,9 +170,9 @@ function Features() {
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Mobile notifications</h4>
+                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Teacher-led Communication</h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
-                                        We've built a proprietary tech platform that empowers students to teach themselves and tracks their progress with complete transparency.
+                                        Thousands of learning hours a year go untapped in schools because students are neither engaged nor equipped with the tools to learn efficiently on their own.
               </p>
                                 </div>
                             </div>

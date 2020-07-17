@@ -86,7 +86,7 @@ function Mobile({ }) {
                                 <span className="text-indigo-600"> that actually works</span>
                             </h2>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                The Emile School is a 1:1, full-time, blended alternative to traditional middle and high school. We unlock and develop every one of our students’ full potential by teaching them how to learn.
+                                The Emile School is a 1:1, full-time, blended alternative to traditional middle and high school. We unlock and develop every student's full potential by teaching them how to learn.
                 </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div className="rounded-md shadow">

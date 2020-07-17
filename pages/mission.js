@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Footer from './Footer'
 
 function Mission() {
     return <div className="antialiased" >
@@ -33,6 +34,9 @@ function Mission() {
                 </div>
             </div>
         </section>
+
+        <Footer />
+
 
     </div>
 }
