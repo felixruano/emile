@@ -87,6 +87,70 @@ function Request() {
                                     <input name="student_school" id="student_school" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
                                 </div>
                             </div>
+                            <div>
+                                <label htmlFor="city" className="block text-sm font-medium leading-5 text-gray-700">City</label>
+                                <div className="mt-1 relative rounded-md shadow-sm">
+                                    <input name="city" id="city" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                </div>
+                            </div>
+                            <div>
+                                <label htmlFor="state" className="block text-sm font-medium leading-5 text-gray-700">State</label>
+                                <div className="mt-1 relative rounded-md shadow-sm">
+                                    <select name="state" aria-label="Country" class="form-select py-3 px-4 block w-full border-transparent bg-transparent text-gray-500 transition ease-in-out duration-150">
+                                        <option>AL</option>
+                                        <option>AK</option>
+                                        <option>AZ</option>
+                                        <option>AR</option>
+                                        <option>CA</option>
+                                        <option>CO</option>
+                                        <option>CT</option>
+                                        <option>DC</option>
+                                        <option>DE</option>
+                                        <option>FL</option>
+                                        <option>GA</option>
+                                        <option>HI</option>
+                                        <option>ID</option>
+                                        <option>IL</option>
+                                        <option>IN</option>
+                                        <option>IA</option>
+                                        <option>KS</option>
+                                        <option>KY</option>
+                                        <option>LA</option>
+                                        <option>ME</option>
+                                        <option>MD</option>
+                                        <option>MA</option>
+                                        <option>MI</option>
+                                        <option>MN</option>
+                                        <option>MS</option>
+                                        <option>MO</option>
+                                        <option>MT</option>
+                                        <option>NE</option>
+                                        <option>NV</option>
+                                        <option>NH</option>
+                                        <option>NJ</option>
+                                        <option>NM</option>
+                                        <option>NY</option>
+                                        <option>NC</option>
+                                        <option>ND</option>
+                                        <option>OH</option>
+                                        <option>OK</option>
+                                        <option>OR</option>
+                                        <option>PA</option>
+                                        <option>RI</option>
+                                        <option>SC</option>
+                                        <option>SD</option>
+                                        <option>TN</option>
+                                        <option>TX</option>
+                                        <option>UT</option>
+                                        <option>VT</option>
+                                        <option>VA</option>
+                                        <option>WA</option>
+                                        <option>WV</option>
+                                        <option>WI</option>
+                                        <option>WY</option>
+                                    </select>
+                                </div>
+                            </div>
 
                             <div className="sm:col-span-2">
                                 <fieldset>
