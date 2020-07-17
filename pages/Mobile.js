@@ -30,9 +30,10 @@ function Mobile({ }) {
                             </div>
                             <div className="hidden md:block md:ml-10 md:pr-4">
                                 <Link href="/mission"><a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Mission</a></Link>
-                                <Link href="/model"><a className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Model</a></Link>
-                                <Link href="/team"><a className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Who We Are</a></Link>
-                                <Link href="/request"><a className="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Request Info</a></Link>
+                                <Link href="/model"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Model</a></Link>
+                                <Link href="/tuition"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Tuition</a></Link>
+                                <Link href="/team"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Who We Are</a></Link>
+                                <Link href="/request"><a className="ml-6 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Request Info</a></Link>
                             </div>
                         </nav>
                     </div>
@@ -65,6 +66,7 @@ function Mobile({ }) {
                                     <div className="px-2 pt-2 pb-3">
                                         <Link href="/mission"><a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Our Mission</a></Link>
                                         <Link href="/model"><a className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Our Model</a></Link>
+                                        <Link href="/tuition"><a className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Tuition</a></Link>
                                         <Link href="/team"><a className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Who We Are</a></Link>
 
                                     </div>
