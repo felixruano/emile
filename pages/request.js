@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Footer from './Footer'
 
 function Request() {
     return <div className="antialiased" >
@@ -271,6 +272,8 @@ function Request() {
                 </div>
             </div>
         </section>
+
+        <Footer />
 
     </div>
 }
