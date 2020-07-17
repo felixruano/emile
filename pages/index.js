@@ -8,7 +8,7 @@ import Features from './Features'
 const Home = () => (
   <div className="antialiased">
     <Head>
-      <title>Emile</title>
+      <title>The Emile School</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 

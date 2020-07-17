@@ -34,7 +34,7 @@ function Team() {
                                         CEO
               </h3>
                                     <p className="mt-3 text-base leading-6 text-gray-500">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
+                                        Orem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.
               </p>
 
                                 </div>

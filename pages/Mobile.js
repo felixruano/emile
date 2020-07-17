@@ -22,7 +22,7 @@ function Mobile({ }) {
                                     <div className="-mr-2 flex items-center md:hidden">
                                         <button type="button" onClick={() => setOpen(!open)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
                                             <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                                             </svg>
                                         </button>
                                     </div>
@@ -30,7 +30,7 @@ function Mobile({ }) {
                             </div>
                             <div className="hidden md:block md:ml-10 md:pr-4">
                                 <Link href="/mission"><a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Mission</a></Link>
-                                <Link href="/team"><a className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Model</a></Link>
+                                <Link href="/model"><a className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Model</a></Link>
                                 <Link href="/team"><a className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Who We Are</a></Link>
                                 <Link href="/request"><a className="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Request Info</a></Link>
                             </div>
@@ -57,7 +57,7 @@ function Mobile({ }) {
                                         <div className="-mr-2">
                                             <button type="button" onClick={() => setOpen(!open)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
                                                 <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
                                             </button>
                                         </div>
@@ -80,26 +80,24 @@ function Mobile({ }) {
                     <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
                             <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                                Welcome to your
+                                Welcome to online school
                   <br className="xl:hidden" />
-                                <span className="text-indigo-600"> new school</span>
+                                <span className="text-indigo-600"> that actually works</span>
                             </h2>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                                 The Emile School is a 1:1, full-time, blended alternative to traditional middle and high school. We unlock and develop every one of our students’ full potential by teaching them how to learn.
                 </p>
-                            <div className="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                                <p className="text-base font-medium text-gray-900">
-                                    Sign up to get notified when it’s ready.
-                </p>
-                                <form action="#" method="POST" className="mt-3 sm:flex" >
-                                    <input aria-label="Email" className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" placeholder="Enter your email" />
-                                    <button type="submit" className="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
-                                        Notify me
-                  </button>
-                                </form>
-                                <p className="mt-3 text-sm leading-5 text-gray-500">
-                                    Placeholder
-                </p>
+                            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                <div className="rounded-md shadow">
+                                    <a href="/request" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                                        Request Info
+                  </a>
+                                </div>
+                                <div class="mt-3 sm:mt-0 sm:ml-3">
+                                    <a href="#features" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                                        Features
+                  </a>
+                                </div>
                             </div>
                         </div>
                     </main>
