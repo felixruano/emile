@@ -1,7 +1,13 @@
+import Head from 'next/head'
 import Header from '../components/Header'
 
 function Mission() {
     return <div className="antialiased" >
+        <Head>
+            <title>Our Mission</title>
+            <meta property="og:title" content="My page title" key="title" />
+        </Head>
+
         <Header />
 
         <section className="py-12 bg-white overflow-hidden md:py-20 lg:py-24">
