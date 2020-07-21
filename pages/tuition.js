@@ -18,7 +18,7 @@ function Tuition() {
                     <p className="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Tuition</p>
                 </div>
 
-                <div className="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
+                <div className="mt-8 max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex border border-gray-200">
                     <div className="bg-white px-6 py-8 lg:flex-shrink-1 lg:p-12">
                         <h3 className="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9">
                             Fall 2020

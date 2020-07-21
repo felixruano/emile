@@ -22,7 +22,7 @@ function Team() {
       </h2>
                     </div>
                     <div className="mt-12 grid gap-10 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-                        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
+                        <div className="flex flex-col pt-8 rounded-lg shadow-lg overflow-hidden items-center border border-gray-200">
                             <div className="flex-shrink-0">
                                 <img className="h-64 w-64 rounded-full object-cover" src="/felix.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
@@ -43,7 +43,7 @@ function Team() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
+                        <div className="flex flex-col pt-8 rounded-lg shadow-lg overflow-hidden items-center border border-gray-200">
                             <div className="flex-shrink-0">
                                 <img className="h-64 w-64 rounded-full object-cover" src="/lidia.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
@@ -64,7 +64,7 @@ function Team() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
+                        <div className="flex flex-col pt-8 rounded-lg shadow-lg overflow-hidden items-center border border-gray-200">
                             <div className="flex-shrink-0">
                                 <img className="h-64 w-64 rounded-full object-cover" src="/johnny.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
@@ -89,7 +89,7 @@ function Team() {
 
                     </div>
                     <div className="mt-12 grid gap-10 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-                        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
+                        <div className="flex flex-col pt-8 rounded-lg shadow-lg overflow-hidden items-center border border-gray-200">
                             <div className="flex-shrink-0">
                                 <img className="h-64 w-64 rounded-full object-cover" src="/sarah.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
@@ -110,7 +110,7 @@ function Team() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
+                        <div className="flex flex-col pt-8 rounded-lg shadow-lg overflow-hidden items-center border border-gray-200">
                             <div className="flex-shrink-0">
                                 <img className="h-64 w-64 rounded-full object-cover" src="/abdiel.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
@@ -131,7 +131,7 @@ function Team() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col rounded-lg shadow-lg overflow-hidden items-center">
+                        <div className="flex flex-col pt-8 rounded-lg shadow-lg overflow-hidden items-center border border-gray-200">
                             <div className="flex-shrink-0">
                                 <img className="h-64 w-64 rounded-full object-cover" src="/nate.jpg?nf_resize=fit&h=500" alt="" />
                             </div>
