@@ -122,10 +122,10 @@ function Team() {
                                         Abdiel Garcia
               </h3>
                                     <h3 className="mt-2 text-xl leading-7 text-gray-500 text-center">
-                                        Director of Admissions
+                                        Admissions
               </h3>
                                     <p className="mt-3 text-base leading-6 text-gray-500">
-                                        Abdiel is Emile's Director of Admissions. Prior to joining us, he spent 5 years as a Harvard Undergraduate Admissions Officer. He has also worked and taught in K-8 classrooms in Los Angeles, Boston, New York, and Latin America.  Abdiel earned a B.A. in Child Development from Tufts University in 2014 and earned a Masters in Education from Harvard in 2019.
+                                        Abdiel coordinates Admissions for Emile. Prior to joining us, he spent 5 years as a Harvard Undergraduate Admissions Officer. He has also worked and taught in K-8 classrooms in Los Angeles, Boston, New York, and Latin America.  Abdiel earned a B.A. in Child Development from Tufts University in 2014 and earned a Masters in Education from Harvard in 2019.
               </p>
 
                                 </div>
