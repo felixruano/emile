@@ -83,12 +83,12 @@ function Mobile({ }) {
                     <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
                             <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                                Welcome to online school
+                                Welcome to online learning
                   <br className="xl:hidden" />
                                 <span className="text-indigo-600"> that actually works</span>
                             </h2>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                The Emile School is a 1:1, full-time, blended alternative to traditional middle and high school. We unlock and develop every student's full potential by teaching them how to learn.
+                                Emile is a 1:1, blended learning platform that offers individual classes and a full-time middle and high school. Whether you're looking for a full-time alternative to your child's current school or 1-2 classes that can count for credit, our model will unlock and develop your child's full potential.
                 </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div className="rounded-md shadow">

@@ -6,7 +6,7 @@ function Features() {
                 <div className="lg:text-center">
                     <p className="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">How we're different</p>
                     <h3 id="features" className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                        A better way to do online school
+                        A better way to deliver instruction
       </h3>
                     <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
                         We combine technology with 21st-century instruction techniques to deliver a modern, personalized, effective learning experience.
@@ -18,7 +18,7 @@ function Features() {
                         <li>
                             <div className="flex items-center justify-center pb-4">
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
-                                    The Emile School
+                                    Emile Instruction
                 </span>
                             </div>
                             <div className="flex">
@@ -38,7 +38,7 @@ function Features() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex items-center justify-center pb-4">
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-gray-100 text-gray-800">
-                                    Traditional School
+                                    Traditional Instruction
                 </span>
                             </div>
                             <div className="flex">
@@ -59,7 +59,7 @@ function Features() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex items-center justify-center pb-4">
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
-                                    The Emile School
+                                    Emile Instruction
                 </span>
                             </div>
                             <div className="flex">
@@ -79,7 +79,7 @@ function Features() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex items-center justify-center pb-4">
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-gray-100 text-gray-800">
-                                    Traditional School
+                                    Traditional Instruction
                 </span>
                             </div>
                             <div className="flex">
@@ -100,7 +100,7 @@ function Features() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex items-center justify-center pb-4">
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
-                                    The Emile School
+                                    Emile Instruction
                 </span>
                             </div>
                             <div className="flex">
@@ -120,7 +120,7 @@ function Features() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex items-center justify-center pb-4">
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-gray-100 text-gray-800">
-                                    Traditional School
+                                    Traditional Instruction
                 </span>
                             </div>
                             <div className="flex">
@@ -140,7 +140,7 @@ function Features() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex items-center justify-center pb-4">
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
-                                    The Emile School
+                                    Emile Instruction
                 </span>
                             </div>
                             <div className="flex">
@@ -160,7 +160,7 @@ function Features() {
                         <li className="mt-10 md:mt-0">
                             <div className="flex items-center justify-center pb-4">
                                 <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-gray-100 text-gray-800">
-                                    Traditional School
+                                    Traditional Instruction
                 </span>
                             </div>
                             <div className="flex">
