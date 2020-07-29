@@ -136,7 +136,7 @@ function Courses() {
                                         Statistics
                                 </h3>
                                     <p className="mt-3 text-base leading-6 text-gray-500">
-                                        Grades: 8, 9
+                                        Grades: 11, 12
                                 </p>
                                 </a>
                             </div>
