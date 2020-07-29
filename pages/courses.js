@@ -22,7 +22,7 @@ function Courses() {
 
                 {/*first row*/}
 
-                <div className="mt-12 grid gap-5 max-w-lg mx-auto md:grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
                     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div className="flex-1 p-6 flex flex-col justify-between bg-gray-100 bg-opacity-50">
                             <div className="flex-1">
@@ -103,7 +103,7 @@ function Courses() {
 
                 </div>
 
-                <div className="mt-12 grid gap-5 max-w-lg mx-auto md:grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
                     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div className="flex-1 p-6 flex flex-col justify-between bg-gray-100 bg-opacity-50">
                             <div className="flex-1">
@@ -186,7 +186,7 @@ function Courses() {
 
                 {/*third row*/}
 
-                <div className="mt-12 grid gap-5 max-w-lg mx-auto md:grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
                     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div className="flex-1 p-6 flex flex-col justify-between bg-gray-100 bg-opacity-50">
                             <div className="flex-1">
@@ -269,7 +269,7 @@ function Courses() {
 
                 {/*fourth row start*/}
 
-                <div className="mt-12 grid gap-5 max-w-lg mx-auto md:grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
                     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div className="flex-1 p-6 flex flex-col justify-between bg-gray-100 bg-opacity-50">
                             <div className="flex-1">
@@ -353,7 +353,7 @@ function Courses() {
                 {/*fifth row start*/}
 
 
-                <div className="mt-12 grid gap-5 max-w-lg mx-auto md:grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
                     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div className="flex-1 p-6 flex flex-col justify-between bg-gray-100 bg-opacity-50">
                             <div className="flex-1">
