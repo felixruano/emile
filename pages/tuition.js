@@ -83,7 +83,7 @@ function Tuition() {
             </p>
                         <div className="mt-4 flex items-center justify-center text-5xl leading-none font-extrabold text-gray-900">
                             <span>
-                                $5,000
+                                $7,500
               </span>
                             <span className="ml-3 text-xl leading-7 font-medium text-gray-500">
                                 USD
