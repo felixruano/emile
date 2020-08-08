@@ -83,7 +83,7 @@ function Header({ }) {
                 </div>
             </div>
 
-        </div >
+        </div>
     )
 }
 

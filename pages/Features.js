@@ -17,7 +17,7 @@ function Features() {
                     <ul className="md:grid md:grid-cols-2 md:col-gap-8 md:row-gap-10">
                         <li>
                             <div className="flex items-center justify-center pb-4">
-                                <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
+                                <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
                                     Emile Instruction
                 </span>
                             </div>

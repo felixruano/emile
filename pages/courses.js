@@ -209,7 +209,7 @@ function Courses() {
                     <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div className="flex-1 p-6 flex flex-col justify-between bg-gray-100 bg-opacity-50">
                             <div className="flex-1">
-                                <p className="text-sm leading-5 font-medium text-indigo-600">
+                                <p className="text-sm leading-5 font-medium text-blue-600">
                                     <a href="#" className="hover:underline">
                                         Science
                                 </a>

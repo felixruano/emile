@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Mobile from './Mobile'
 import Footer from './Footer'
+import Carousel from '../components/Carousel'
 import Features from './Features'
 
 const Home = () => (
@@ -15,6 +16,8 @@ const Home = () => (
     </Head>
 
     <Mobile />
+
+    <Carousel />
 
     <Features />
 
