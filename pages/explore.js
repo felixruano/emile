@@ -7,7 +7,7 @@ function Explore() {
     var bg = require('../public/ed-vector-1.svg')
     return <div className="antialiased" >
         <Head>
-            <title>Our programs</title>
+            <title>Explore our programs</title>
             <meta property="og:title" content="My page title" key="title" />
         </Head>
 
@@ -34,7 +34,7 @@ function Explore() {
                                         </h3>
                                         <div className="mt-3 text-base leading-6 text-gray-600">
                                             <ul>
-                                                <li>- For sudents looking to take classes for credit at any time</li>
+                                                <li>- For students looking to take classes for credit at any time</li>
                                                 <li>- Option to choose from 20+ currently available classes</li>
                                                 <li>- New classes getting added weekly</li>
                                             </ul>

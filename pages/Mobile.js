@@ -29,10 +29,10 @@ function Mobile({ }) {
                                 </div>
                             </div>
                             <div className="hidden md:block md:ml-10 md:pr-4">
-                                <Link href="/mission"><a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Mission</a></Link>
+                                <Link href="/explore"><a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Programs</a></Link>
                                 <Link href="/model"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Model</a></Link>
-                                <Link href="/tuition"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Tuition</a></Link>
-                                <Link href="/courses"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Courses</a></Link>
+                                <Link href="/mission"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Mission</a></Link>
+                                <Link href="/team"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Team</a></Link>
                                 <Link href="/request"><a className="ml-6 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Request Info</a></Link>
                             </div>
                         </nav>
