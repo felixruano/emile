@@ -24,7 +24,7 @@ function Explore() {
 
                 <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-2 lg:max-w-none">
+                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-1 lg:grid-cols-2 lg:max-w-none">
                         <div className="card flex flex-col rounded-lg shadow-lg overflow-hidden border border-indigo-600" style={{ backgroundImage: "url(" + bg + ")" }}>
                             <div className="flex-1 p-6 flex flex-col justify-between">
                                 <div className="flex-1">
@@ -72,9 +72,8 @@ function Explore() {
                     </div>
                     <style jsx>{`
                     .card {
-                    min-width: 200px;
+                    min-width: 100px;
                     min-height: 250px;
-                    margin: 5px;
                     scroll-snap-align: center;
                     }
     

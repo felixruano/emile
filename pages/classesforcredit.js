@@ -26,7 +26,7 @@ function Individual() {
 
                     {/*first row*/}
 
-                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-1 lg:grid-cols-4 lg:max-w-none">
                         <div className="card flex flex-col rounded-lg shadow-lg overflow-hidden border border-indigo-600" style={{ backgroundImage: "url(" + bg + ")" }}>
                             <div className="flex-1 p-6 flex flex-col justify-between">
                                 <div className="flex-1">
@@ -107,7 +107,7 @@ function Individual() {
 
                     </div>
 
-                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-1 lg:grid-cols-4 lg:max-w-none">
                         <div className="card flex flex-col rounded-lg shadow-lg overflow-hidden border border-indigo-600" style={{ backgroundImage: "url(" + bg + ")" }}>
                             <div className="flex-1 p-6 flex flex-col justify-between">
                                 <div className="flex-1">
@@ -190,7 +190,7 @@ function Individual() {
 
                     {/*third row*/}
 
-                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-1 lg:grid-cols-4 lg:max-w-none">
                         <div className="card flex flex-col rounded-lg shadow-lg overflow-hidden border border-blue-600" style={{ backgroundImage: "url(" + bg + ")" }}>
                             <div className="flex-1 p-6 flex flex-col justify-between">
                                 <div className="flex-1">
@@ -273,7 +273,7 @@ function Individual() {
 
                     {/*fourth row start*/}
 
-                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-1 lg:grid-cols-4 lg:max-w-none">
                         <div className="card flex flex-col rounded-lg shadow-lg overflow-hidden border border-orange-600" style={{ backgroundImage: "url(" + bg + ")" }}>
                             <div className="flex-1 p-6 flex flex-col justify-between">
                                 <div className="flex-1">
@@ -357,7 +357,7 @@ function Individual() {
                     {/*fifth row start*/}
 
 
-                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-2 lg:grid-cols-4 lg:max-w-none">
+                    <div className="mt-12 grid gap-5 max-w-lg mx-auto grid-cols-1 lg:grid-cols-4 lg:max-w-none">
                         <div className="card flex flex-col rounded-lg shadow-lg overflow-hidden border border-green-600" style={{ backgroundImage: "url(" + bg + ")" }}>
                             <div className="flex-1 p-6 flex flex-col justify-between">
                                 <div className="flex-1">
@@ -437,16 +437,6 @@ function Individual() {
 
 
                     </div>
-                    <style jsx>{`
-                    .card {
-                    min-width: 200px;
-                    min-height: 250px;
-                    margin: 5px;
-                    scroll-snap-align: center;
-                    }
-    
-                `}</style>
-
                 </div>
 
             </div>
