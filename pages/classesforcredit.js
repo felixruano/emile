@@ -8,7 +8,7 @@ function Individual() {
     return <div className="antialiased" >
         <Head>
             <title>Classes for credit</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <meta property="og:title" content="Classes for credit" key="title" />
         </Head>
 
         <Header />
