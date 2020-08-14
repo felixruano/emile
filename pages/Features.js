@@ -37,7 +37,7 @@ function Features() {
                         </li>
                         <li className="mt-10 md:mt-0">
                             <div className="flex items-center justify-center pb-4">
-                                <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-gray-100 text-gray-800">
+                                <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-gray-100 text-gray-800">
                                     Traditional Instruction
                 </span>
                             </div>

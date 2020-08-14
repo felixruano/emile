@@ -6,7 +6,7 @@ function Mission() {
     return <div className="antialiased" >
         <Head>
             <title>Our Mission</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <meta property="og:title" content="Our mission" key="title" />
         </Head>
 
         <Header />

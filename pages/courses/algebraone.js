@@ -6,8 +6,8 @@ import Footer from '../Footer'
 function Algebraone() {
     return <div className="antialiased" >
         <Head>
-            <title>Our Mission</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <title>Class - Algegra One</title>
+            <meta property="og:title" content="Algebra One" key="title" />
         </Head>
 
         <Header />

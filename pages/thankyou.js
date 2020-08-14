@@ -5,7 +5,7 @@ function Thankyou() {
     return <div className="antialiased" >
         <Head>
             <title>Thank You!</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <meta property="og:title" content="Thank you" key="title" />
         </Head>
         <Header />
 

@@ -8,7 +8,7 @@ function Explore() {
     return <div className="antialiased" >
         <Head>
             <title>Explore our programs</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <meta property="og:title" content="Our programs" key="title" />
         </Head>
 
         <Header />

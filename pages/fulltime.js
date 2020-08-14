@@ -8,7 +8,7 @@ function Fulltime() {
     return <div className="antialiased" >
         <Head>
             <title>Classes for credit</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <meta property="og:title" content="Full-time program" key="title" />
         </Head>
 
         <Header />

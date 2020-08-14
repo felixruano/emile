@@ -6,7 +6,7 @@ function Request() {
     return <div className="antialiased" >
         <Head>
             <title>Request Info</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <meta property="og:title" content="Submit request for info" key="title" />
         </Head>
         <Header />
 
