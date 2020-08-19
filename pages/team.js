@@ -7,6 +7,7 @@ function Team() {
     return <div className="antialiased" >
         <Head>
             <title>Who We Are</title>
+            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="My page title" key="title" />
         </Head>
 

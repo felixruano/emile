@@ -7,6 +7,7 @@ function Request() {
     return <div className="antialiased" >
         <Head>
             <title>Request Info</title>
+            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Submit request for info" key="title" />
         </Head>
 
