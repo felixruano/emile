@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Banner from '../components/Banner'
 import Footer from './Footer'
 
 function Mission() {
@@ -8,6 +9,8 @@ function Mission() {
             <title>Our Mission</title>
             <meta property="og:title" content="Our mission" key="title" />
         </Head>
+
+        <Banner />
 
         <Header />
 

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Banner from '../components/Banner'
 import Footer from './Footer'
 
 function Team() {
@@ -8,6 +9,9 @@ function Team() {
             <title>Who We Are</title>
             <meta property="og:title" content="My page title" key="title" />
         </Head>
+
+        <Banner />
+
         <Header />
 
         <section className="pb-12 bg-white overflow-hidden md:pb-20 lg:pb-24">

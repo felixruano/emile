@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Banner from '../components/Banner'
 import Footer from './Footer'
 import Features from './Features'
 
@@ -10,6 +11,8 @@ function Explore() {
             <title>Explore our programs</title>
             <meta property="og:title" content="Our programs" key="title" />
         </Head>
+
+        <Banner />
 
         <Header />
 

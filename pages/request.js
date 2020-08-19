@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Banner from '../components/Banner'
 import Footer from './Footer'
 
 function Request() {
@@ -8,6 +9,9 @@ function Request() {
             <title>Request Info</title>
             <meta property="og:title" content="Submit request for info" key="title" />
         </Head>
+
+        <Banner />
+
         <Header />
 
         <section className="pb-12 bg-white overflow-hidden md:pb-20 lg:pb-12">

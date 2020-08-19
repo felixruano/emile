@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Mobile from './Mobile'
 import Footer from './Footer'
 import Carousel from '../components/Carousel'
+import Banner from '../components/Banner'
 import Features from './Features'
 
 const Home = () => (
@@ -15,6 +16,8 @@ const Home = () => (
       <meta name="description" content="The Emile School is a 1:1, blended learning platform that offers individual classes and a full-time middle and high school. Whether you're looking for a full-time alternative to your child's current school or 1-2 classes that can count for credit, our model will unlock and develop your child's full potential." />
 
     </Head>
+
+    <Banner />
 
     <Mobile />
 

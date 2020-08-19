@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Banner from '../components/Banner'
 import Footer from './Footer'
 import Features from './Features'
 
@@ -9,6 +10,8 @@ function Model() {
             <title>Our Model</title>
             <meta property="og:title" content="My page title" key="title" />
         </Head>
+
+        <Banner />
 
         <Header />
 
