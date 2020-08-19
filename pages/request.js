@@ -39,8 +39,11 @@ function Request() {
                             Please send me more info
             </h2>
                         <p className="mt-4 text-lg leading-6 text-gray-500">
-                            Information below should be completed by parent/guardian. If you have any questions, you can reach us at team@hiemile.com.
-            </p>
+                            Information below should be completed by parent/guardian. If you have any questions, you can reach us at team@hiemile.com or {" "}
+                            <a href="tel:+1-424-228-8696" className="text-indigo-600 hover:text-indigo-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+                                (424) 228-8696
+                        </a>
+                        </p>
                     </div>
                     <div className="mt-12">
                         <form name="contact" action="/thankyou" method="POST" className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8" data-netlify="true">
