@@ -22,7 +22,7 @@ function Banner({ }) {
                                 Speak with a team member today!
           </span>
                             <span className="hidden md:inline">
-                                We're still enrolling! Speak with one of our team member today.
+                                We're still enrolling! Speak with one of our team members today.
           </span>
                         </p>
                     </div>
