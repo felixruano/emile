@@ -5,7 +5,7 @@ import Link from 'next/link'
 function Header({ }) {
     const [open, setOpen] = useState(false);
     return (
-        <div className="z-40 relative bg-white overflow-hidden">
+        <div className="z-40 relative bg-white">
             <div className="max-w-screen-xl mx-auto">
                 <div className="relative z-10 pb-2 bg-white sm:pb-16 md:pb-2 lg:max-w-2xl lg:w-full lg:pb-2 xl:pb-2">
                     <svg className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
