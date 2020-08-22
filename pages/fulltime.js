@@ -1,22 +1,17 @@
 import Head from 'next/head'
 import Header from '../components/Header'
-import Banner from '../components/Banner'
 import Footer from './Footer'
 import Features from './Features'
 
-function Model() {
+function Fulltime() {
+    var bg = require('../public/ed-vector-1.svg')
     return <div className="antialiased" >
         <Head>
-            <title>Our Model</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-            <meta property="og:title" content="Our model" key="title" />
+            <title>Classes for credit</title>
+            <meta property="og:title" content="Full-time program" key="title" />
         </Head>
 
-        <Banner />
-
         <Header />
-
-        <Features />
 
         <section className="py-12 bg-white overflow-hidden md:py-20 lg:py-24">
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,9 +88,11 @@ function Model() {
             </div>
         </section>
 
+        <Features />
+
         <Footer />
 
     </div>
 }
 
-export default Model
+export default Fulltime

@@ -1,17 +1,14 @@
 import Head from 'next/head'
-import Header from '../components/Header'
-import Banner from '../components/Banner'
-import Footer from './Footer'
+import Link from 'next/link'
+import Header from '../../components/Header'
+import Footer from '../Footer'
 
-function Mission() {
+function Algebraone() {
     return <div className="antialiased" >
         <Head>
-            <title>Our Mission</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-            <meta property="og:title" content="Our mission" key="title" />
+            <title>Class - Algegra One</title>
+            <meta property="og:title" content="Algebra One" key="title" />
         </Head>
-
-        <Banner />
 
         <Header />
 
@@ -45,4 +42,4 @@ function Mission() {
     </div>
 }
 
-export default Mission
+export default Algebraone

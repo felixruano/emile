@@ -17,22 +17,23 @@ function Mobile({ }) {
                             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                                 <div className="flex items-center justify-between w-full md:w-auto">
                                     <a href="#" aria-label="Home">
-                                        <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="Logo" />
+                                        <img className="h-8 w-auto sm:h-8 pb-1" src={require('../public/emile_logo.svg')} alt="Logo" />
                                     </a>
                                     <div className="-mr-2 flex items-center md:hidden">
                                         <button type="button" onClick={() => setOpen(!open)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
                                             <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                                             </svg>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <div className="hidden md:block md:ml-10 md:pr-4">
-                                <Link href="/mission"><a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Mission</a></Link>
-                                <Link href="/team"><a className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Our Model</a></Link>
-                                <Link href="/team"><a className="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Who We Are</a></Link>
-                                <Link href="/request"><a className="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Request Info</a></Link>
+                                <Link href="/explore"><a className="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Programs</a></Link>
+                                <Link href="/model"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Model</a></Link>
+                                <Link href="/mission"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Mission</a></Link>
+                                <Link href="/team"><a className="ml-6 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Team</a></Link>
+                                <Link href="/request"><a className="ml-6 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Request Info</a></Link>
                             </div>
                         </nav>
                     </div>
@@ -52,23 +53,25 @@ function Mobile({ }) {
                                 <div className="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
                                     <div className="px-5 pt-4 flex items-center justify-between">
                                         <div>
-                                            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="" />
+                                            <img className="h-8 w-auto pb-1" src={require('../public/emile_logo.svg')} alt="" />
                                         </div>
                                         <div className="-mr-2">
                                             <button type="button" onClick={() => setOpen(!open)} className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
                                                 <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                                 </svg>
                                             </button>
                                         </div>
                                     </div>
                                     <div className="px-2 pt-2 pb-3">
-                                        <Link href="/mission"><a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Our Mission</a></Link>
-                                        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Our Model</a>
-                                        <a href="#" className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Who We Are</a>
+                                        <Link href="/explore"><a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Programs</a></Link>
+                                        <Link href="/model"><a className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Model</a></Link>
+                                        <Link href="/mission"><a className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Mission</a></Link>
+                                        <Link href="/team"><a className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Team</a></Link>
+
                                     </div>
                                     <div>
-                                        <a href="#" className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out" role="menuitem">
+                                        <a href="/request" className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out" role="menuitem">
                                             Request Info
                     </a>
                                     </div>
@@ -80,33 +83,31 @@ function Mobile({ }) {
                     <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                         <div className="sm:text-center lg:text-left">
                             <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-                                Welcome to your
+                                Welcome to online learning
                   <br className="xl:hidden" />
-                                <span className="text-indigo-600"> new school</span>
+                                <span className="text-indigo-600"> that actually works</span>
                             </h2>
                             <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                                The Emile School is a 1:1, full-time, blended alternative to traditional middle and high school. We unlock and develop every one of our students’ full potential by teaching them how to learn.
+                                Emile is a 1:1, blended learning platform that offers individual classes and a full-time middle and high school. Whether you're looking for a full-time alternative to your child's current school or 1-2 classes that can count for credit, our model will unlock and develop your child's full potential.
                 </p>
-                            <div className="mt-5 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-                                <p className="text-base font-medium text-gray-900">
-                                    Sign up to get notified when it’s ready.
-                </p>
-                                <form action="#" method="POST" className="mt-3 sm:flex" >
-                                    <input aria-label="Email" className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" placeholder="Enter your email" />
-                                    <button type="submit" className="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-700 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray active:bg-gray-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
-                                        Notify me
-                  </button>
-                                </form>
-                                <p className="mt-3 text-sm leading-5 text-gray-500">
-                                    Placeholder
-                </p>
+                            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                <div className="rounded-md shadow">
+                                    <a href="/explore" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                                        Our Programs
+                  </a>
+                                </div>
+                                <div className="mt-3 sm:mt-0 sm:ml-3">
+                                    <a href="/request" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                                        Request Info
+                  </a>
+                                </div>
                             </div>
                         </div>
                     </main>
                 </div>
             </div>
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="" />
+                <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/girl_computer.jpg" alt="" />
             </div>
         </div>
     )
