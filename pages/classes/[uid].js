@@ -101,7 +101,7 @@ export async function getStaticPaths() {
     const documents = await queryRepeatableDocuments((doc) => doc.type === 'course')
     return {
         paths: documents.map(doc => `/classes/${doc.uid}`),
-        fallback: true,
+        fallback: false,
     }
 }
 
