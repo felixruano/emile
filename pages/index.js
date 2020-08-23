@@ -10,7 +10,7 @@ import Features from './Features'
 const Home = () => (
   <div className="antialiased">
     <Head>
-      <title>The Emile School: Online classes for credit and full-time school</title>
+      <title>The Emile School | Online classes for credit and full-time school</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       <meta name="description" content="The Emile School is a 1:1, blended learning platform that offers individual classes and a full-time middle and high school. Whether you're looking for a full-time alternative to your child's current school or 1-2 classes that can count for credit, our model will unlock and develop your child's full potential." />
