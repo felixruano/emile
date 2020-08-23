@@ -32,7 +32,7 @@ function Explore() {
                         <div className="card flex flex-col rounded-lg shadow-lg overflow-hidden border border-indigo-600" style={{ backgroundImage: "url(" + bg + ")" }}>
                             <div className="flex-1 p-6 flex flex-col justify-between">
                                 <div className="flex-1">
-                                    <a href="/classesforcredit" className="block">
+                                    <a href="/classes" className="block">
                                         <h3 className="mt-2 text-2xl leading-7 font-semibold text-gray-900">
                                             Classes for credit
                                         </h3>
