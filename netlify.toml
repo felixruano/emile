@@ -6,7 +6,7 @@
 package = "@netlify/plugin-sitemap"
 
   [plugins.inputs]
-  buildDir = "out"
+  buildDir = "public"
   exclude = [
     '/Footer',
     '/Features.html'
