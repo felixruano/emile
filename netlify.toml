@@ -8,6 +8,6 @@ package = "@netlify/plugin-sitemap"
   [plugins.inputs]
   buildDir = "out"
   exclude = [
-    './public/Footer.html',
+    'Footer.html',
     './public/Features.html'
   ]
