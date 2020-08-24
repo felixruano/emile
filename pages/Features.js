@@ -170,7 +170,7 @@ function Features() {
                                     </div>
                                 </div>
                                 <div className="ml-4">
-                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Teacher-led Communication</h4>
+                                    <h4 className="text-lg leading-6 font-medium text-gray-900">Teacher-led communication</h4>
                                     <p className="mt-2 text-base leading-6 text-gray-500">
                                         Thousands of learning hours a year go untapped in schools because students are neither engaged nor equipped with the tools to learn efficiently on their own.
               </p>
