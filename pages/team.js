@@ -8,7 +8,7 @@ function Team() {
         <Head>
             <title>Who We Are</title>
             <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-            <meta property="og:title" content="who we are" key="title" />
+            <meta property="og:title" content="Who we are" key="title" />
         </Head>
 
         <Banner />
