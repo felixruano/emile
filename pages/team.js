@@ -136,29 +136,6 @@ function Team() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col pt-8 rounded-lg shadow-lg overflow-hidden items-center border border-gray-200">
-                            <div className="flex-shrink-0">
-                                <img className="h-64 w-64 rounded-full object-cover" src="/nate.jpg?nf_resize=fit&h=500" alt="" />
-                            </div>
-
-                            <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                                <div className="flex-1">
-
-                                    <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900 text-center">
-                                        Nate Stewart
-              </h3>
-                                    <h3 className="mt-2 text-xl leading-7 text-gray-500 text-center">
-                                        Chief Marketing Officer
-              </h3>
-                                    <p className="mt-3 text-base leading-6 text-gray-500">
-                                        Nate leads marketing and partnerships as Emile's Chief Marketing Officer. He previously spent 20 years in the advertising industry, most recently as Managing Director for The&Partnership New York where he built an embedded, international agency for The Wall Street Journal. He's developed training curricula for dozens of agency and client teams, leading executive workshops from Hong Kong to Barcelona to London and NYC. Nate holds a Marketing degree from Texas A&M University.
-              </p>
-
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
