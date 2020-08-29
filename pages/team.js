@@ -9,6 +9,12 @@ function Team() {
             <title>Who We Are</title>
             <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Who we are" key="title" />
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'UA-176731734-1');
+                </script>
         </Head>
 
         <Banner />

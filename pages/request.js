@@ -9,6 +9,12 @@ function Request() {
             <title>Request Info</title>
             <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Submit request for info" key="title" />
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'UA-176731734-1');
+                </script>
         </Head>
 
         <Banner />

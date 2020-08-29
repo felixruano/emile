@@ -7,7 +7,13 @@ function Tuition() {
     return <div className="antialiased" >
         <Head>
             <title>Tuition</title>
-            <meta property="og:title" content="My page title" key="title" />
+            <meta property="og:title" content="Tuition" key="title" />
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'UA-176731734-1');
+                </script>
         </Head>
 
         <Header />
