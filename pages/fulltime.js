@@ -9,12 +9,6 @@ function Fulltime() {
         <Head>
             <title>Classes for credit</title>
             <meta property="og:title" content="Full-time program" key="title" />
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'UA-176731734-1');
-                </script>
         </Head>
 
         <Header />

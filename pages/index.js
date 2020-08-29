@@ -19,15 +19,6 @@ const Home = ({ courses }) => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <meta name="description" content="The Emile School is a 1:1, blended learning platform that offers individual classes and a full-time middle and high school. Whether you're looking for a full-time alternative to your child's current school or 1-2 classes that can count for credit, our model will unlock and develop your child's full potential." />
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176731734-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-176731734-1');
-        </script>
-
       </Head>
 
       <Banner />

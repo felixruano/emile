@@ -9,13 +9,14 @@ function Mission() {
             <title>Our Mission</title>
             <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Our mission" key="title" />
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
+        </Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176731734-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments)};
                     gtag('js', new Date());
                     gtag('config', 'UA-176731734-1');
-                </script>
-        </Head>
+        </script>
 
         <Banner />
 
