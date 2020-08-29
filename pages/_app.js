@@ -1,9 +1,8 @@
 import React from 'react'
 import { useEffect } from 'react'
 import Router from 'next/router'
-import * as gtag from '../utils/gtag'
-
 import '../styles/index.css'
+import * as gtag from '../utils/gtag'
 
 const MyApp = ({ Component, pageProps }) => {
     useEffect(() => {
