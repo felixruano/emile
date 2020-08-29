@@ -10,7 +10,7 @@ const CourseItem = ({ course }) => {
             as={linkResolver(course)}
             href={hrefResolver(course)}
         >
-            <div className="card flex flex-col rounded-lg shadow-lg overflow-hidden border border-indigo-600" style={{ backgroundImage: "url(" + bg + ")" }}>
+            <div className="transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 flex flex-col rounded-lg shadow-lg overflow-hidden border border-indigo-600" style={{ backgroundImage: "url(" + bg + ")" }}>
 
                 <div className="flex-1 p-6 flex flex-col justify-between">
                     <div className="flex-1">
@@ -22,6 +22,9 @@ const CourseItem = ({ course }) => {
                         <a href="#" className="block">
                             <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
                                 {RichText.asText(course.data.course_title)}
+                            </h3>
+                            <h3 className="mt-2 text-l leading-7 font-regular text-gray-900">
+                                {(course.data.price)}
                             </h3>
                             <p className="mt-3 text-base leading-6 text-gray-500">
                                 Grades: {RichText.asText(course.data.grades)}
