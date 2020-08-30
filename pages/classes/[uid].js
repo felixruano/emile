@@ -50,7 +50,7 @@ const Course = ({ course }) => {
                                             <div className="rounded-t-lg px-6 py-4 sm:px-10 sm:pt-3 sm:pb-8">
                                                 <div className="relative text-lg text-gray-700 leading-7 font-medium mt-8">
                                                     <p className="mt-6 leading-6 text-sm text-gray-500 font-semibold tracking-wide uppercase">Price</p>
-                                                    <p className="relative font-bold">{(course.data.price)}</p>
+                                                    <p className="relative font-bold">$2,500 per semester</p>
                                                     <hr class="mt-3 border-0 bg-gray-300 text-gray-500 h-px"></hr>
                                                     <p className="mt-6 leading-6 text-sm text-gray-500 font-semibold tracking-wide uppercase">Course Format</p>
                                                     <p className="relative font-bold">1:1 live sessions</p>
