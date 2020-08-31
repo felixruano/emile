@@ -36,7 +36,7 @@ function Request() {
                     </svg>
                     <div className="text-center">
                         <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                            Please send me more info
+                            Let's get started
             </h2>
                         <p className="mt-4 text-lg leading-6 text-gray-500">
                             Information below should be completed by parent/guardian. If you have any questions, you can reach us at team@hiemile.com or {" "}
@@ -85,13 +85,7 @@ function Request() {
                                 </div>
                             </div>
                             <div className="sm:col-span-2">
-                                <label htmlFor="student_email" className="block text-sm font-medium leading-5 text-gray-700">Student email</label>
-                                <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="student_email" id="student_email" type="email" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
-                                </div>
-                            </div>
-                            <div className="sm:col-span-2">
-                                <label htmlFor="student_school" className="block text-sm font-medium leading-5 text-gray-700">Student school (attended Spring 2020)</label>
+                                <label htmlFor="student_school" className="block text-sm font-medium leading-5 text-gray-700">School</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
                                     <input name="student_school" id="student_school" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
@@ -165,68 +159,6 @@ function Request() {
                             <div className="sm:col-span-2">
                                 <fieldset>
                                     <legend className="block text-sm font-medium leading-5 text-gray-700">
-                                        Grade for Fall 2020
-                              </legend>
-                                    <div className="mt-4 grid grid-cols-5 row-gap-4">
-                                        <div className="flex items-center">
-                                            <input id="seventh_grade" name="grade" value="seventh_grade" type="radio" className="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"></input>
-                                            <label htmlFor="seventh_grade" className="ml-3">
-                                                <span className="block text-sm leading-5 text-gray-700">7th</span>
-                                            </label>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <input id="eighth_grade" name="grade" value="eighth_grade" type="radio" className="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"></input>
-                                            <label htmlFor="eighth_grade" className="ml-3">
-                                                <span className="block text-sm leading-5 text-gray-700">8th</span>
-                                            </label>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <input id="ninth_grade" name="grade" value="ninth_grade" type="radio" className="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"></input>
-                                            <label htmlFor="ninth_grade" className="ml-3">
-                                                <span className="block text-sm leading-5 text-gray-700">9th</span>
-                                            </label>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <input id="tenth_grade" name="grade" value="tenth_grade" type="radio" className="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"></input>
-                                            <label htmlFor="tenth_grade" className="ml-3">
-                                                <span className="block text-sm leading-5 text-gray-700">10th</span>
-                                            </label>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <input id="eleventh_grade" name="grade" value="eleventh_grade" type="radio" className="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"></input>
-                                            <label htmlFor="eleventh_grade" className="ml-3">
-                                                <span className="block text-sm leading-5 text-gray-700">11th</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                            <div className="sm:col-span-2">
-                                <fieldset>
-                                    <legend className="block text-sm font-medium leading-5 text-gray-700">
-                                        What brings you here today?
-                              </legend>
-                                    <div className="mt-4 grid grid-cols-1 row-gap-4">
-                                        <div className="flex items-center">
-                                            <input id="just_info" name="intention" value="just_info" type="radio" className="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"></input>
-                                            <label htmlFor="just_info" className="ml-3">
-                                                <span className="block text-sm leading-5 text-gray-700">I'm just collecting information</span>
-                                            </label>
-                                        </div>
-                                        <div className="flex items-center">
-                                            <input id="actively_looking" name="intention" value="actively_looking" type="radio" className="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"></input>
-                                            <label htmlFor="actively_looking" className="ml-3">
-                                                <span className="block text-sm leading-5 text-gray-700">I'm actively looking at school options for Fall 2020</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                            <div className="sm:col-span-2">
-                                <fieldset>
-                                    <legend className="block text-sm font-medium leading-5 text-gray-700">
                                         How would you like us to reach out?
                               </legend>
                                     <div className="mt-4 grid grid-cols-3 row-gap-4">
@@ -253,18 +185,12 @@ function Request() {
                             </div>
 
                             <div className="sm:col-span-2">
-                                <label htmlFor="options" className="block text-sm font-medium leading-5 text-gray-700">(Optional) What other school options are you exploring?</label>
+                                <label htmlFor="class_request" className="block text-sm font-medium leading-5 text-gray-700">What classes are you interested in?</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <input name="options" id="options" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150"></input>
+                                    <input name="class_request" id="class_request" className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" required></input>
                                 </div>
                             </div>
 
-                            <div className="sm:col-span-2">
-                                <label htmlFor="message" className="block text-sm font-medium leading-5 text-gray-700">Anything else you would like to share?</label>
-                                <div className="mt-1 relative rounded-md shadow-sm">
-                                    <textarea name="message" id="message" rows="4" className="form-textarea py-3 px-4 block w-full transition ease-in-out duration-150"></textarea>
-                                </div>
-                            </div>
                             <div className="sm:col-span-2">
 
                             </div>
