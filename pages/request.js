@@ -39,7 +39,7 @@ function Request() {
                             Let's get started
             </h2>
                         <p className="mt-4 text-lg leading-6 text-gray-500">
-                            Information below should be completed by parent/guardian. If you have any questions, you can reach us at team@hiemile.com or {" "}
+                            Information below should be completed by parent/guardian. If you have any questions, you can reach us at contact@hiemile.com or {" "}
                             <a href="tel:+1-424-228-8696" className="text-indigo-600 hover:text-indigo-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
                                 (424) 228-8696
                         </a>
