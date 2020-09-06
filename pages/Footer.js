@@ -27,7 +27,7 @@ function Footer() {
                 </nav>
                 <div className="mt-8">
                     <p className="text-center text-base leading-6 text-gray-400">
-                        &copy; The Emile School
+                        &copy; Emile
         </p>
                 </div>
             </div>

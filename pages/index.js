@@ -15,10 +15,10 @@ const Home = ({ courses }) => {
   return (
     <div className="antialiased">
       <Head>
-        <title>The Emile School | K-12 accredited learning platform delivering 1:1, mastery-based instruction</title>
+        <title>Emile | K-12 learning platform delivering 1:1, mastery-based instruction</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        <meta name="description" content="The Emile School is a 1:1, accredited learning platform that offering classes for credit, tutorials and test prep." />
+        <meta name="description" content="Emile is a 1:1, accredited learning platform that offering classes for credit, tutorials and test prep." />
       </Head>
 
       <Banner />
