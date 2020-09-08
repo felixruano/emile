@@ -2,7 +2,7 @@
   command = "npm run build"
   publish = "out"
 
-[redirects]
-  from = “https://school.hiemile.com/*”
-  to = “https://hiemile.com/fulltime/:splat”
+[[redirects]]
+  from = “https://school.hiemile.com”
+  to = “https://hiemile.com/fulltime”
   status = 200
