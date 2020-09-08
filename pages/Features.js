@@ -19,7 +19,7 @@ function Features() {
                             <div className="flex items-center justify-center pb-4">
                                 <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-indigo-100 text-indigo-800">
                                     Emile Instruction
-                </span>
+                                </span>
                             </div>
                             <div className="flex">
                                 <div className="flex-shrink-0">
@@ -39,7 +39,7 @@ function Features() {
                             <div className="flex items-center justify-center pb-4">
                                 <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium leading-5 bg-gray-100 text-gray-800">
                                     Traditional Instruction
-                </span>
+                                </span>
                             </div>
                             <div className="flex">
                                 <div className="flex-shrink-0">
