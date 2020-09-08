@@ -3,6 +3,7 @@
   publish = "out"
 
 [[redirects]]
-  from = “school.hiemile.com”
-  to = “/fulltime”
+  from = "https://school.hiemile.com"
+  to = "/fulltime"
   status = 200
+  force = true
