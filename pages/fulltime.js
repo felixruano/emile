@@ -111,7 +111,7 @@ function Fulltime() {
                     <figure className="">
                         <img class="w-full rounded-lg" src="/sampleschedule.png" alt="" width="1310" height="873" />
                         <figcaption>A flexible yet rigorous school schedule coupled with the constant support of our
-                        instructors to help you achieve your goals and unlock your true learning potential”</figcaption>
+                        instructors to help you achieve your goals and unlock your true learning potential</figcaption>
                     </figure>
 
 
@@ -127,7 +127,7 @@ function Fulltime() {
 
                     <h2>Get Started</h2>
                     <p>To get started, please submit your information and a team member will reach out to schedule a free consultation.</p>
-                    <p>To learn more about the team behind The Emile School, please visit our main site at <a href="hiemile.com">hiemile.com</a>. If you have any questions, you can reach out to the team at <a href="contact@hiemile.com">contact@hiemile.com</a>. </p>
+                    <p>To learn more about the team behind The Emile School, please visit our main site at <a href="https://www.hiemile.com/">hiemile.com</a>. If you have any questions, you can reach out to the team at <a href="mailto:contact@hiemile.com">contact@hiemile.com</a>. </p>
 
                 </div>
 
