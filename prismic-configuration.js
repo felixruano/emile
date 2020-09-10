@@ -23,6 +23,9 @@ export const linkResolver = (doc) => {
     if (doc.type === 'course') {
         return `/classes/${doc.uid}`
     }
+    if (doc.type === 'teacher') {
+        return `/team/${doc.uid}`
+    }
     return '/'
 }
 
@@ -30,6 +33,9 @@ export const linkResolver = (doc) => {
 export const hrefResolver = (doc) => {
     if (doc.type === 'course') {
         return '/classes/[uid]'
+    }
+    if (doc.type === 'teacher') {
+        return '/team/[uid]'
     }
     return '/'
 }
