@@ -35,7 +35,7 @@ function Thankyou() {
                             Thank you!
             </h2>
                         <p className="mt-4 text-lg leading-6 text-gray-500">
-                            One of our team members will be in touch with you within 1 business day. If you have any questions, you can reach us at team@hiemile.com.
+                            One of our team members will be in touch with you within 1 business day. If you have any questions, you can reach us at contact@hiemile.com.
             </p>
                     </div>
 
