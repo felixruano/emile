@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import { InlineWidget } from 'react-calendly'
 
 function Thankyou() {
     return <div className="antialiased" >
         <Head>
-            <title>Thank You!</title>
+            <title>Emile | Thank You!</title>
             <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Thank you" key="title" />
         </Head>
@@ -35,9 +36,28 @@ function Thankyou() {
                             Thank you!
             </h2>
                         <p className="mt-4 text-lg leading-6 text-gray-500">
-                            One of our team members will be in touch with you within 1 business day. If you have any questions, you can reach us at contact@hiemile.com.
-            </p>
+                            Please schedule a 30-min consultation with one a team advisor below. If you have any questions, you can reach us at contact@hiemile.com or {" "}
+                            <a href="tel:+1-424-228-8696" className="text-indigo-600 hover:text-indigo-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+                                (424) 228-8696
+                        </a>
+                        </p>
                     </div>
+
+                    <InlineWidget
+                        pageSettings={{
+                            backgroundColor: 'ffffff',
+                            hideEventTypeDetails: false,
+                            hideLandingPageDetails: false,
+                            primaryColor: '464BE3',
+                            textColor: '4d5055'
+                        }}
+                        prefill={{}}
+                        styles={{
+                            height: '1000px'
+                        }}
+                        url="https://calendly.com/contact-emile/30min"
+                        utm={{}}
+                    />
 
                 </div>
             </div>
