@@ -53,7 +53,7 @@ function Fulltime() {
                     <h1 className="mt-2 mb-4 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">Pilot Full-Time School</h1>
 
                     <p className="text-xl text-gray-500 leading-8">Emile Academy is a pilot school and program of Emile. Our full-time school (grades 7-12)
-                    combines <strong>1:1 instruction</strong> with small group interactions to teach every subject through the lens of
+                    combines <strong>1:1 instruction</strong> with <strong>small group interactions</strong> to teach every subject through the lens of
                     three foundational, <strong>21st-century skills</strong>: Critical Thinking, Comprehension and Communication. We value content mastery over rote memorization, and personalized instruction over
                     traditional style course lectures.</p>
 
