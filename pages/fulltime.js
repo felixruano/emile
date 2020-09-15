@@ -44,7 +44,7 @@ function Fulltime() {
 
             <div className="relative px-4 sm:px-6 lg:px-8">
                 <div className="pb-8 justify-left lg:justify-center">
-                    <img className="lg:h-32 h-20 w-auto mx-auto object-cover" src="/emileschool.png?nf_resize=fit&h=500" alt="" />
+                    <img className="lg:h-32 h-20 w-auto mx-auto object-cover" src="/emileacademy.png?nf_resize=fit&h=500" alt="" />
                 </div>
                 <div className="text-lg max-w-prose mx-auto mb-6">
 
