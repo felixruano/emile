@@ -6,7 +6,6 @@ function Thankyou() {
     return <div className="antialiased" >
         <Head>
             <title>Emile | Thank You!</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Thank you" key="title" />
         </Head>
 

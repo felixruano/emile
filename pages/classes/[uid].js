@@ -17,7 +17,6 @@ const Course = ({ course }) => {
             <div className="antialiased" >
                 <Head>
                     <title>{title}</title>
-                    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
                 </Head>
 
                 <Header />

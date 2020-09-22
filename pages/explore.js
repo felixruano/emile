@@ -9,7 +9,6 @@ function Explore() {
     return <div className="antialiased" >
         <Head>
             <title>Explore our programs</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Our programs" key="title" />
         </Head>
 

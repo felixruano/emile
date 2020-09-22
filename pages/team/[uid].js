@@ -17,7 +17,6 @@ const Teammember = ({ teacher }) => {
             <div className="antialiased" >
                 <Head>
                     <title>{name}</title>
-                    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
                 </Head>
 
                 <Header />

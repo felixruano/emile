@@ -8,7 +8,6 @@ function Model() {
     return <div className="antialiased" >
         <Head>
             <title>Our Model</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Our model" key="title" />
         </Head>
 

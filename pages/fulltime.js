@@ -8,7 +8,6 @@ function Fulltime() {
     return <div className="antialiased" >
         <Head>
             <title>Emile | Pilot Full-Time School</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Our pilot full-time program" key="title" />
         </Head>
 

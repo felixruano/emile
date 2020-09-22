@@ -7,7 +7,6 @@ function Mock() {
     return <div className="antialiased" >
         <Head>
             <title>Emile | At-Home ACT Mock</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Request materials for an at-home ACT mock" key="title" />
         </Head>
 

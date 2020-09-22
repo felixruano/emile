@@ -7,7 +7,6 @@ function Mission() {
     return <div className="antialiased" >
         <Head>
             <title>Our Mission</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Our mission" key="title" />
         </Head>
 

@@ -7,7 +7,6 @@ function Request() {
     return <div className="antialiased" >
         <Head>
             <title>Request Info</title>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
             <meta property="og:title" content="Submit request for info" key="title" />
         </Head>
 
@@ -99,7 +98,7 @@ function Request() {
                             <div>
                                 <label htmlFor="state" className="block text-sm font-medium leading-5 text-gray-700">State</label>
                                 <div className="mt-1 relative rounded-md shadow-sm">
-                                    <select name="state" class="form-select py-3 px-4 block w-full bg-transparent text-gray-500 transition ease-in-out duration-150">
+                                    <select name="state" className="form-select py-3 px-4 block w-full bg-transparent text-gray-500 transition ease-in-out duration-150">
                                         <option hidden disabled selected value> -- select an option -- </option>
                                         <option>AL</option>
                                         <option>AK</option>

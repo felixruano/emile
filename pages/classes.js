@@ -13,7 +13,6 @@ const Classes = ({ listing, courses }) => {
         <div className="antialiased" >
             <Head>
                 <title>Classes for credit</title>
-                <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
                 <meta property="og:title" content="Classes for credit" key="title" />
             </Head>
 

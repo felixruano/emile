@@ -12,7 +12,6 @@ const Team = ({ teammembers }) => {
         <div className="antialiased" >
             <Head>
                 <title>Emile | Our Team</title>
-                <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
                 <meta property="og:title" content="Meet our team" key="title" />
             </Head>
 
