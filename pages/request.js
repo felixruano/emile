@@ -143,8 +143,8 @@ function Request() {
                     <div className="mt-12">
                         <form name="contact" action="/thankyou" method="POST"
                               className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8"
-                              netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
-                            <input type="hidden" name="form-name" value="contact"/>
+                              netlify-honeypot="bot-field" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact" />
                             {form.map((formItem) => (
                                 <div key={formItem.key} className={formItem.spanCol ? 'sm:col-span-2' : undefined}>
                                     <label htmlFor={formItem.key}
@@ -189,7 +189,6 @@ function Request() {
                             <p className="hidden">
                                 <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
                             </p>
-                            <div data-netlify-recaptcha="true"></div>
                             <div className="sm:col-span-2">
                                 <PrimaryButton text="Submit" type="submit"/>
                             </div>
