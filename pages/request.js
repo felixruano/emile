@@ -4,7 +4,7 @@ import Banner from '../components/Banner'
 import Footer from './Footer'
 import PrimaryButton from "../components/PrimaryButton";
 
-import { PHONE_NUMBER, EMAIL } from "../constants";
+import {PHONE_NUMBER, EMAIL} from "../constants";
 
 function Request() {
     const form = [
@@ -142,7 +142,8 @@ function Request() {
                     </div>
                     <div className="mt-12">
                         <form name="contact" action="/thankyou" method="POST"
-                              className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
+                              className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8"
+                              netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
                             <input type="hidden" name="form-name" value="contact"/>
                             {form.map((formItem) => (
                                 <div key={formItem.key} className={formItem.spanCol ? 'sm:col-span-2' : undefined}>
@@ -171,12 +172,26 @@ function Request() {
                                     </select>
                                 </div>
                             </div>
+                            <div className="sm:col-span-2">
+                                <fieldset>
+                                    <div className="mt-4">
+                                        <div className="flex items-center">
+                                            <input id="consent" name="consent" value="consent" type="checkbox"
+                                                   className="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
+                                                   required />
+                                            <label htmlFor="consent" className="ml-3">
+                                                <span className="block text-sm leading-5 text-gray-700">By clicking submit I'm giving Emile Learning permission to contact me directly.</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
                             <p className="hidden">
                                 <label>Don’t fill this out if you're human: <input name="bot-field"/></label>
                             </p>
                             <div data-netlify-recaptcha="true"></div>
                             <div className="sm:col-span-2">
-                                <PrimaryButton text="Submit" type="submit" />
+                                <PrimaryButton text="Submit" type="submit"/>
                             </div>
                         </form>
                     </div>
