@@ -22,14 +22,14 @@ function Request() {
     const form = {
         formData: [
             {
-                name: 'first_name',
+                name: 'student_first_name',
                 text: 'Student First Name',
                 type: 'text',
                 spanCol: false,
                 required: true,
             },
             {
-                name: 'last_name',
+                name: 'student_last_name',
                 text: 'Student Last Name',
                 type: 'text',
                 spanCol: false,
@@ -49,14 +49,14 @@ function Request() {
                 required: true,
             },
             {
-                name: 'email',
+                name: 'parent_email',
                 text: 'Parent Email',
                 type: 'email',
                 spanCol: true,
                 required: true,
             },
             {
-                name: 'phone_number',
+                name: 'parent_phone_number',
                 text: 'Parent Phone Number',
                 type: 'tel',
                 spanCol: true,
@@ -66,7 +66,7 @@ function Request() {
         formConsent: {
             id: 'consent',
             name: 'consent',
-            value: 'consent',
+            value: 'yes',
             spanCol: true,
             text: "By clicking submit I'm giving Emile Learning permission to contact me directly.",
             required: true,
