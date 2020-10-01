@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import Select from './Select';
@@ -7,10 +9,7 @@ import PrimaryButton from './PrimaryButton';
 
 function encode(data) {
     return Object.keys(data)
-        .map(
-            (key) =>
-                encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-        )
+        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&');
 }
 
@@ -19,11 +18,14 @@ function encode(data) {
  * Takes in form object with formConsent child object.
  */
 const Form = ({ form }) => {
+    const router = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
     const { formData, formConsent } = form;
     const { handleSubmit, register, errors } = useForm();
 
     const onSubmit = (data, e) => {
         e.preventDefault();
+        setIsLoading(true);
         fetch('/thankyou', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -32,8 +34,11 @@ const Form = ({ form }) => {
                 ...data,
             }),
         })
-            .then((data) => console.log(data))
-            .catch((error) => alert(error));
+            .then(() => {
+                setIsLoading(false);
+                router.push('/thankyou');
+            })
+            .catch((error) => console.log(error));
     };
 
     return (
@@ -87,7 +92,11 @@ const Form = ({ form }) => {
                     </label>
                 </p>
                 <div className="sm:col-span-2">
-                    <PrimaryButton text="Submit" type="submit" />
+                    <PrimaryButton
+                        text="Submit"
+                        isLoading={isLoading}
+                        type="submit"
+                    />
                 </div>
             </form>
         </div>
