@@ -1,25 +1,49 @@
 import PropTypes from 'prop-types';
+import { useForm } from 'react-hook-form';
 import Select from './Select';
 import Input from './Input';
 import Checkbox from './Checkbox';
 import PrimaryButton from './PrimaryButton';
 
+function encode(data) {
+    return Object.keys(data)
+        .map(
+            (key) =>
+                encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+}
+
 /*
-* Form component for request pages.
-* Takes in form object with formConsent child object.
-*/
+ * Form component for request pages.
+ * Takes in form object with formConsent child object.
+ */
 const Form = ({ form }) => {
     const { formData, formConsent } = form;
+    const { handleSubmit, register, errors } = useForm();
+
+    const onSubmit = (data, e) => {
+        e.preventDefault();
+        fetch('/thankyou', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({
+                'form-name': 'contact',
+                ...data,
+            }),
+        })
+            .then((data) => console.log(data))
+            .catch((error) => alert(error));
+    };
 
     return (
         <div className="mt-12">
             <form
                 name="contact"
-                action="/thankyou"
-                method="POST"
                 className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
+                onSubmit={handleSubmit(onSubmit)}
             >
                 <input type="hidden" name="form-name" value="contact" />
                 {formData.map((formItem) =>
@@ -29,7 +53,9 @@ const Form = ({ form }) => {
                             name={formItem.name}
                             text={formItem.text}
                             options={formItem.options}
-                            required={formItem.required}
+                            register={register}
+                            errors={errors}
+                            required
                         />
                     ) : (
                         <Input
@@ -38,7 +64,9 @@ const Form = ({ form }) => {
                             name={formItem.name}
                             text={formItem.text}
                             type={formItem.type}
-                            required={formItem.required}
+                            register={register}
+                            errors={errors}
+                            required
                         />
                     )
                 )}
@@ -48,7 +76,9 @@ const Form = ({ form }) => {
                     text={formConsent.text}
                     spanCol={formConsent.spanCol}
                     value={formConsent.value}
-                    required={formConsent.required}
+                    register={register}
+                    errors={errors}
+                    required
                 />
                 <p className="hidden">
                     <label>

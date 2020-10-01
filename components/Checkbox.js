@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Checkbox = ({ spanCol, id, name, value, text, required }) => (
+const Checkbox = ({ spanCol, id, name, value, text, required, register, errors }) => (
     <div className={spanCol ? 'sm:col-span-2' : undefined}>
         <fieldset>
             <div className="mt-4">
@@ -11,7 +11,7 @@ const Checkbox = ({ spanCol, id, name, value, text, required }) => (
                         value={value}
                         type="checkbox"
                         className="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
-                        required={required}
+                        ref={register({ required })}
                     />
                     <label htmlFor="consent" className="ml-3">
                         <span className="block text-sm leading-5 text-gray-700">
@@ -20,6 +20,9 @@ const Checkbox = ({ spanCol, id, name, value, text, required }) => (
                     </label>
                 </div>
             </div>
+            <span className="text-red-500 text-xs italic">
+                {errors?.[name] && 'Checkbox must be checked to submit'}
+        </span>
         </fieldset>
     </div>
 );
@@ -31,6 +34,10 @@ Checkbox.propTypes = {
     text: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     required: PropTypes.bool.isRequired,
+};
+
+Checkbox.defaultProps = {
+    required: false,
 };
 
 export default Checkbox;

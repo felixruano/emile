@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from './Footer';
 import SquareDotsDesign from '../components/SquareDotsDesign';
-import Form from "../components/Form";
+import Form from '../components/Form';
 
 import { PHONE_NUMBER, EMAIL } from '../constants';
 
@@ -26,41 +26,35 @@ function Request() {
                 text: 'Student First Name',
                 type: 'text',
                 spanCol: false,
-                required: true,
             },
             {
                 name: 'student_last_name',
                 text: 'Student Last Name',
                 type: 'text',
                 spanCol: false,
-                required: true,
             },
             {
                 name: 'school',
                 text: 'School',
                 type: 'text',
                 spanCol: false,
-                required: true,
             },
             {
                 name: 'graduation_year',
                 text: 'Graduation Year',
                 options: getNextNYears(),
-                required: true,
             },
             {
                 name: 'parent_email',
                 text: 'Parent Email',
                 type: 'email',
                 spanCol: true,
-                required: true,
             },
             {
                 name: 'parent_phone_number',
                 text: 'Parent Phone Number',
                 type: 'tel',
                 spanCol: true,
-                required: true,
             },
         ],
         formConsent: {
@@ -68,9 +62,10 @@ function Request() {
             name: 'consent',
             value: 'yes',
             spanCol: true,
-            text: "By clicking submit I'm giving Emile Learning permission to contact me directly.",
+            text:
+                "By clicking submit I'm giving Emile Learning permission to contact me directly.",
             required: true,
-        }
+        },
     };
 
     return (
