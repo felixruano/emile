@@ -13,15 +13,16 @@ const Input = ({ spanCol, name, text, type, required, register, errors }) => {
         } else if (type === 'tel') {
             return register({
                 required,
-                validate: (value) =>
-                    value.length >= 10 ||
-                    'Please include area code. Ex: 4242288696',
+                pattern: {
+                    value: /^[0-9]*$/,
+                    message: 'Only numbers please!'
+                },
+                validate: (value) => value.length >= 10 || 'Please include area code. Ex: 4242288696',
             });
         } else {
             return register({
                 required,
-                validate: (value) =>
-                    value.length >= 2 || 'Must be more than 2 letters',
+                validate: (value) => value.length >= 2 || 'Must be more than 2 characters',
             });
         }
     };
