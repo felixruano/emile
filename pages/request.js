@@ -45,6 +45,18 @@ function Request() {
                 options: getNextNYears(),
             },
             {
+                name: 'parent_first_name',
+                text: 'Parent First Name',
+                type: 'text',
+                spanCol: false,
+            },
+            {
+                name: 'parent_last_name',
+                text: 'Parent Last Name',
+                type: 'text',
+                spanCol: false,
+            },
+            {
                 name: 'parent_email',
                 text: 'Parent Email',
                 type: 'email',
