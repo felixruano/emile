@@ -54,7 +54,7 @@ function Thankyou() {
                         styles={{
                             height: '1000px'
                         }}
-                        url="https://calendly.com/contact-emile/30min"
+                        url="https://calendly.com/c/BCGVIZFXOU4R5FKZ"
                         utm={{}}
                     />
 
