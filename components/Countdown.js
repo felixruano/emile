@@ -35,7 +35,7 @@ const Countdown = () => {
 
     return (
         <div className="flex items-center justify-center flex-row md:p-8">
-            <div className="mr-8">
+            <div className="hidden md:block mr-8">
                 <RocketIcon color="#4F46E8" size="36px" />
             </div>
                 <div className="flex text-gray-600 font-medium">
