@@ -172,8 +172,8 @@ const AnytimeAnywhereSection = () => (
 
 const NowEnrollingBanner = () => (
   <div className="flex items-center justify-center pt-12 pb-24 mx-6">
-    <div className="flex items-center w-5/6 border rounded p-10">
-      <h3 className="text-xl text-gray-700">Now enrolling for November 30</h3>
+    <div className="flex justify-center items-center w-5/6 border rounded p-10">
+      <h3 className="flex text-xl text-gray-700">Now enrolling for November 30</h3>
     </div>
   </div>
 );
