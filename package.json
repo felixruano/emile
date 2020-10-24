@@ -18,8 +18,9 @@
     "react-calendly": "^1.1.0",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.8.6",
+    "react-icons": "^3.11.0",
     "react-transition-group": "^4.4.1",
-    "tailwindcss": "^1.7.3"
+    "tailwindcss": "^1.9.5"
   },
   "devDependencies": {
     "prettier": "2.1.2"
