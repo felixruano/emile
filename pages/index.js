@@ -1,15 +1,15 @@
 import Head from 'next/head';
+// import { FaArrowRight } from 'react-icons/fa';
 
 import Header2 from '../components/Header2';
 import Hero from '../components/Hero';
-// import { FaArrowRight } from 'react-icons/fa';
 import UpcomingCourses from '../components/UpcomingCourses';
 import RisingIcon from '../components/icons/RisingIcon';
 import ClockStarsIcon from '../components/icons/ClockStarsIcon';
 import ThinkingIcon from '../components/icons/ThinkingIcon';
 import ReportIcon from '../components/icons/ReportIcon';
 import ConceptCard from '../components/ConceptCard';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 
 const ResultsSection = () => (
     <div

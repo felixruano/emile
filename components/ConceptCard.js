@@ -19,7 +19,7 @@ const Body = ({ listItems }) => (
             if (concept.type === 'definition') {
                 if (concept.isLocked) {
                     return (
-                        <div className="mb-4 text-gray-700">
+                        <div key={concept.type} className="mb-4 text-gray-700">
                             <div className="flex items-center space-x-2">
                                 <span>{index + 1}.</span>
                                 <span className="text-indigo-700 font-bold capitalize">
@@ -40,7 +40,7 @@ const Body = ({ listItems }) => (
                     );
                 }
                 return (
-                    <div className="mb-4 text-gray-700">
+                    <div key={concept.type} className="mb-4 text-gray-700">
                         {index + 1}.{' '}
                         <span className="text-indigo-700 font-bold capitalize">
                             {concept.concept}
@@ -51,7 +51,7 @@ const Body = ({ listItems }) => (
             } else if (concept.type === 'mastery') {
                 if (concept.isLocked) {
                     return (
-                        <div className="mb-4">
+                        <div key={concept.type} className="mb-4">
                             <div className="flex items-center text-gray-700 space-x-1">
                                 <span>{index + 1}.</span>
                                 <div className="h-4 animate-pulse bg-gray-200 rounded-lg w-full"></div>
@@ -68,7 +68,7 @@ const Body = ({ listItems }) => (
                     );
                 }
                 return (
-                    <div className="mb-4 text-gray-700">
+                    <div key={concept.type} className="mb-4 text-gray-700">
                         <span>
                             {index + 1}. {concept.content}
                         </span>
