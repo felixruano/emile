@@ -96,7 +96,7 @@ const ConceptCard = ({
         <div className="p-4">
             <Labels
                 icon={<FaPencilAlt color="#A7A2F4" />}
-                label="definitons"
+                label="definitions"
                 numberOfDefinitions={definitionsData.length}
             />
             <Body listItems={definitionsData} />
