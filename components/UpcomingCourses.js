@@ -1,4 +1,3 @@
-import { FaArrowRight } from 'react-icons/fa';
 import DnaIcon from './icons/DnaIcon';
 import HistoryIcon from './icons/HistoryIcon';
 import LiteratureIcon from './icons/LiteratureIcon';
@@ -22,21 +21,21 @@ const courses = [
 ];
 
 const CourseItem = ({ title, icon, description }) => (
-    <li className="flex flex-row py-6 border-b">
+    <li className="flex flex-row max-w-xl p-6 my-8 bg-white border border-gray-100 rounded shadow-xl">
         <div className="pr-6">{icon}</div>
         <div className="flex flex-col space-y-4">
-            <h3 className="text-2xl font-medium text-gray-600">{title}</h3>
+            <h3 className="text-2xl font-medium text-gray-800">{title}</h3>
             <p className="text-gray-500">{description}</p>
         </div>
-        <div className="flex flex-grow items-center justify-end">
+        <div className="flex items-center justify-end flex-grow">
             {/* <FaArrowRight color="#4F46E8" /> */}
         </div>
     </li>
 );
 
 const UpcomingCourses = () => (
-    <div className="mt-12 w-full md:mt-0 md:w-1/2">
-        <span className="text-gray-500 tracking-widest uppercase">
+    <div className="mt-12 md:mt-0">
+        <span className="tracking-widest text-center text-gray-600 uppercase md:text-start">
             courses enrolling soon
         </span>
         <ul>
