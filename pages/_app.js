@@ -1,6 +1,7 @@
-import React from 'react';
 import { useEffect } from 'react';
 import Router from 'next/router';
+import { ChakraProvider } from '@chakra-ui/core';
+
 import '../styles/index.css';
 import * as gtag from '../utils/gtag';
 import { ProvideAuth } from '../utils/use-auth';
@@ -19,7 +20,9 @@ const MyApp = ({ Component, pageProps }) => {
     return (
         <div className="antialiased">
             <ProvideAuth>
-                <Component {...pageProps} />
+                <ChakraProvider>
+                    <Component {...pageProps} />
+                </ChakraProvider>
             </ProvideAuth>
         </div>
     );

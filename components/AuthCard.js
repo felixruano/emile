@@ -12,20 +12,22 @@ import { db } from '../utils/firebase/firebaseClient';
 const verifyAndUpdateReferralCode = () => {
     const referralCode = window.localStorage.getItem('referral_code');
     if (referralCode) {
-        const referralCodeRef = db.collection('referralCodes').doc(referralCode);
+        const referralCodeRef = db
+            .collection('referralCodes')
+            .doc(referralCode);
         let newUsedCount;
-        referralCodeRef.get()
+        referralCodeRef
+            .get()
             .then((doc) => {
                 if (doc.exists) {
-                    if (doc.data().used_count < 6) {
-                        newUsedCount = doc.data().used_count + 1;
-                        referralCodeRef.update({ used_count: newUsedCount });
-                    }
-                    console.log(doc, doc.data());
+                    newUsedCount = doc.data().used_count + 1;
+                    referralCodeRef.update({ used_count: newUsedCount });
+                    window.localStorage.removeItem(referralCode);
                 }
-            }).catch((err) => console.log(err));
+            })
+            .catch((err) => console.log(err));
     }
-}
+};
 
 const AuthFooter = ({ isSignUpFlow }) => (
     <div className="px-8 py-8 bg-gray-100 md:px-20 md:py-12">
@@ -81,7 +83,11 @@ export const AuthContent = ({ isSignUpFlow }) => {
                     verifyAndUpdateReferralCode();
                     router.push('/signup/trial-info');
                 } else {
-                    if (data?.code !== ('auth/popup-closed-by-user' || 'auth/cancelled-popup-request')) {
+                    if (
+                        data?.code !==
+                        ('auth/popup-closed-by-user' ||
+                            'auth/cancelled-popup-request')
+                    ) {
                         router.push('/');
                     }
                 }

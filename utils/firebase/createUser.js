@@ -13,19 +13,6 @@ const createUser = async (
     role,
     referralCode
 ) => {
-    console.log(
-        uid,
-        givenName,
-        familyName,
-        displayName,
-        email,
-        verifiedEmail,
-        locale,
-        photoURL,
-        creationTime,
-        role,
-        referralCode
-    );
     await db
         .collection('users')
         .doc(uid)

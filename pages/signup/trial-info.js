@@ -67,7 +67,7 @@ const TrialInfo = () => (
             </p>
             <MarketingCard />
             <div className="py-12">
-              <Link href="/">
+              <Link href={{ pathname: '/profile', query: { 'accountCreated': true }}}>
                 <button className="max-w-lg px-32 py-4 bg-indigo-600 border-indigo-600 rounded shadow-lg outline-none hover:bg-indigo-500">
                   <p className="font-bold text-white uppercase">Start Free Trial</p>
                 </button>
