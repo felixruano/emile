@@ -34,7 +34,7 @@ const ProfileTabs = ({ handleTabChange, currentTab }) => (
     </ul>
 );
 
-const ProfileContent = ({ user }) => {
+const ProfileContent = () => {
     const [currentTab, setCurrentTab] = useState(1);
 
     const profileContentData = [
@@ -83,8 +83,6 @@ const ProfileContent = ({ user }) => {
 
 const Manage = () => {
     const router = useRouter();
-
-    console.log(user);
 
     useEffect(() => {
         router.replace('/profile');
