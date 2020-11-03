@@ -1,17 +1,17 @@
 import Countdown from './Countdown';
-import PrimaryButton from './PrimaryButton';
+import SignUpButton from './SignUpButton';
 
 const Hero = () => (
-    <div className="text-center">
-        <p className="max-w-md mx-auto text-gray-500 tracking-widest font-semibold sm:text-sm md:mt-5 md:text-lg md:max-w-3xl uppercase">Launching Soon</p>
-        <h2 className="mt-6 text-4xl tracking-tight text-gray-700 sm:text-5xl sm:leading-none md:text-6xl" style={{ lineHeight: '150%' }}>
+    <div className="mt-16 text-center">
+        <p className="max-w-md mx-auto mt-5 text-sm font-semibold tracking-widest text-gray-500 uppercase md:text-base md:max-w-3xl">subscription-based digital learning</p>
+        <h2 className="pb-8 mt-6 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl sm:leading-none md:text-6xl" style={{ lineHeight: '150%' }}>
             Welcome to elite {' '}
             <br />
             education {' '}
-            <span className="text-indigo-600">on demand</span>
+            <span className="pb-4 text-indigo-700 border-b-8 border-indigo-700">on demand</span>
         </h2>
-        <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-            {/* <PrimaryButton text="Request Free Trial" isDisabled={false} isLoading={false} type="button" /> */}
+        <div className="flex flex-col justify-center max-w-md px-24 mx-auto mt-5 space-y-8 md:mt-8">
+            <SignUpButton text="Get Started" />
             <Countdown />
         </div>
     </div>

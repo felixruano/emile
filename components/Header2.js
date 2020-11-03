@@ -1,8 +1,14 @@
+
+import { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useAuth } from '../utils/use-auth';
+
 const HamburgerMenu = () => (
-    <div className="-mr-2 -my-2 md:hidden">
-        <button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focous:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
+    <div className="-my-2 -mr-2 md:hidden">
+        <button className="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focous:outline-none focus:bg-gray-100 focus:text-gray-500">
             <svg
-                className="h-6 w-6"
+                className="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -21,11 +27,11 @@ const HamburgerMenu = () => (
 
 const NavItem = ({ label, isMenu }) => (
     <div className="relative">
-        <button className="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+        <button className="inline-flex items-center space-x-2 text-base font-medium leading-6 text-gray-500 transition duration-150 ease-in-out group hover:text-gray-900 focus:outline-none focus:text-gray-900">
             <span className="uppercase">{label}</span>
             {isMenu && (
                 <svg
-                    class="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
+                    className="w-5 h-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-gray-500 group-focus:text-gray-500"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -41,45 +47,129 @@ const NavItem = ({ label, isMenu }) => (
     </div>
 );
 
-const Header2 = () => (
-    <div className="z-0 relative">
-        <div className="md:pt-10 relative z-10">
-            <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-5 sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
-                <div>
-                    <a href="#" className="flex pb-2">
-                        <img
-                            className="h-5 w-auto sm:h-7"
-                            src="/emile_logo.svg"
-                            alt="Emile"
-                        />
-                    </a>
-                </div>
-                {/* <HamburgerMenu /> */}
-                {/* <div className="hidden md:flex-1 md:flex md:items-center md:justify-between md:space-x-12">
-                    <nav className="flex space-x-10">
-                        <NavItem label="Explore Courses" isMenu />
-                    </nav> */}
-                    {/* Uncomment when account creation is available */}
-                    {/* <div className="flex items-center space-x-8">
+const Dropdown = ({ auth }) => {
+    const router = useRouter();
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        auth.signOut();
+        router.push('/');
+    };
+
+    return (
+        <div className="absolute right-0 w-64 mt-6 origin-top-right rounded-md shadow-lg">
+            <div className="bg-white rounded-md shadow-xs">
+                <div
+                    className="py-1"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="options-menu"
+                >
+                    <Link href="/profile">
                         <a
-                            href="#"
-                            class="text-base leading-6 font-medium uppercase text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                            className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                            role="menuitem"
                         >
-                            Log in
+                            Account
                         </a>
-                        <span class="inline-flex rounded-md shadow-sm">
-                            <a
-                                href="#"
-                                class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium uppercase rounded-md text-indigo-600 border-indigo-600 hover:bg-indigo-500 hover:text-white focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
-                            >
-                                Request free trial
-                            </a>
-                        </span>
-                    </div> */}
-                {/* </div> */}
+                    </Link>
+                    <button
+                        type="button"
+                        className="block w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
+                        role="menuitem"
+                        onClick={(e) => handleLogout(e)}
+                    >
+                        Sign out
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
+};
+
+const Header2 = () => {
+    const router = useRouter();
+    const auth = useAuth();
+    const [showMenu, setShowMenu] = useState();
+
+    const toggleMenu = () => setShowMenu(!showMenu);
+
+    return (
+        <div className="relative z-0 bg-white shadow">
+            <div className="relative z-10 p-2">
+                <div className="flex items-center justify-between px-4 py-5 mx-auto max-w-7xl sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
+                    <Link href="/">
+                        <div>
+                            <a href="#" className="flex pb-2">
+                                <img
+                                    className="w-auto h-5 sm:h-7"
+                                    src="/emile_logo.svg"
+                                    alt="Emile"
+                                />
+                            </a>
+                        </div>
+                    </Link>
+                    {/* <HamburgerMenu /> */}
+                    <div className="justify-end md:flex-1 md:flex md:items-center md:space-x-12">
+                        {/* <nav className="flex space-x-10">
+                            <NavItem label="Explore Courses" isMenu />
+                        </nav> */}
+                        <div className="flex items-center space-x-8">
+                            {!auth?.user ? (
+                                <>
+                                    {!router.asPath.includes('login') &&
+                                        !router.asPath.includes('signup') && (
+                                            <Link href="/login">
+                                                <a
+                                                    href="#"
+                                                    className="text-base font-medium leading-6 text-gray-500 uppercase transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
+                                                >
+                                                    Log in
+                                                </a>
+                                            </Link>
+                                        )}
+                                    {!router.asPath.includes('signup') &&
+                                        !router.asPath.includes('login') && (
+                                            <Link href="/signup">
+                                                <span className="inline-flex rounded-md shadow-sm">
+                                                    <a
+                                                        href="#"
+                                                        className="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white uppercase transition duration-150 ease-in-out bg-indigo-500 border border-transparent rounded-full hover:bg-indigo-400 hover:text-white focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700"
+                                                    >
+                                                        Request free trial
+                                                    </a>
+                                                </span>
+                                            </Link>
+                                        )}
+                                </>
+                            ) : (
+                                !router.asPath.includes('signup') && (
+                                    <div className="relative inline-block select-none">
+                                        <div
+                                            className="flex flex-row items-center w-auto p-2 rounded-full cursor-pointer hover:bg-gray-100"
+                                            onClick={toggleMenu}
+                                        >
+                                            <img
+                                                className="inline object-cover w-8 h-8 mr-2 rounded-full md:w-12 md:h-12"
+                                                src={auth.user?.photoURL}
+                                                alt="Profile image"
+                                            />
+                                            <h3 className="text-sm font-bold text-gray-800 uppercase md:text-base">
+                                                {auth.user?.displayName}
+                                            </h3>
+                                        </div>
+                                        <div className="relative z-10">
+                                            {showMenu && <Dropdown auth={auth} />}
+                                        </div>
+                                    </div>
+                                )
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default Header2;
