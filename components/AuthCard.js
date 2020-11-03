@@ -9,13 +9,17 @@ import createUser from '../utils/firebase/createUser';
 import EmileShortIcon from './icons/EmileShortIcon';
 import { db } from '../utils/firebase/firebaseClient';
 
-const verifyAndUpdateReferralCode = () => {
+const verifyAndUpdateReferralCode = (currentUserReferralCode) => {
     const referralCode = window.localStorage.getItem('referral_code');
     if (referralCode) {
         const referralCodeRef = db
             .collection('referralCodes')
             .doc(referralCode);
+        const currentUserReferralCodeRef = db
+            .collection('referralCodes')
+            .doc(currentUserReferralCode);
         let newUsedCount;
+        let newCurrentUsedCount;
         referralCodeRef
             .get()
             .then((doc) => {
@@ -23,6 +27,14 @@ const verifyAndUpdateReferralCode = () => {
                     newUsedCount = doc.data().used_count + 1;
                     referralCodeRef.update({ used_count: newUsedCount });
                     window.localStorage.removeItem(referralCode);
+                    currentUserReferralCodeRef
+                        .get()
+                        .then((doc) => {
+                            if (doc.exists) {
+                                newCurrentUsedCount = doc.data().used_count + 1;
+                                currentUserReferralCodeRef.update({ used_count: newCurrentUsedCount });
+                            }
+                        }).catch((err) => console.log(err));
                 }
             })
             .catch((err) => console.log(err));
@@ -80,7 +92,7 @@ export const AuthContent = ({ isSignUpFlow }) => {
                         role,
                         referralCode
                     );
-                    verifyAndUpdateReferralCode();
+                    verifyAndUpdateReferralCode(referralCode);
                     router.push('/signup/trial-info');
                 } else {
                     if (
