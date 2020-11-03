@@ -77,12 +77,12 @@ const ReferralButton = ({ referralCode }) => {
     );
 
     return (
-        <div className="inline-flex">
+        <div className="flex flex-col lg:flex-row">
             <div
                 aria-label="First name"
                 name="firstName"
                 type="text"
-                className="max-w-xl p-4 text-base leading-6 text-gray-900 placeholder-gray-800 transition duration-150 ease-in-out bg-white border-t border-b border-l border-gray-300 rounded-tl rounded-bl appearance-none md:pr-32 focus:outline-none focus:shadow-outline-blue focus:border-blue-300"
+                className="max-w-xl p-4 text-base leading-6 text-gray-900 placeholder-gray-800 transition duration-150 ease-in-out bg-white border-t border-l border-r border-gray-300 rounded-tl rounded-bl appearance-none md:border-t md:border-b md:border-l md:pr-32 focus:outline-none focus:shadow-outline-blue focus:border-blue-300"
             >
                 {`http://hiemile.com/?referral_code=${referralCode}`}
             </div>
@@ -101,7 +101,7 @@ const ReferralButton = ({ referralCode }) => {
 const ReferralBlock = ({ referralCode, referralData }) => (
     <div className="px-8 py-8 mt-12 md:px-12 bg-teal-50">
         <div className="flex flex-col justify-between space-y-8 lg:flex-row">
-            <div className="flex items-center space-x-2 lg:w-3/4">
+            <div className="flex flex-col items-center space-x-2 md:flex-row lg:w-3/4">
                 <img
                     className="mx-8 mb-16 lg:mx-0 lg:mr-2"
                     src="/referral-icon.svg"
