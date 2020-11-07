@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FiCheckCircle } from 'react-icons/fi';
-import Container from '../../components/Container';
+import BaseContainer from '../../components/BaseContainer';
 import EmileShortIcon from '../../components/icons/EmileShortIcon';
 
 const marketingData = [
@@ -53,7 +53,7 @@ const MarketingCard = () => (
 );
 
 const TrialInfo = () => (
-    <Container backgroundColor="bg-gray-50">
+    <BaseContainer backgroundColor="bg-gray-50">
         <div className="flex flex-col items-center justify-center h-full px-4 pt-12 mx-auto space-y-8 ">
             <EmileShortIcon />
             <h1 className="text-6xl font-bold text-center text-gray-800">
@@ -74,7 +74,7 @@ const TrialInfo = () => (
               </Link>
             </div>
         </div>
-    </Container>
+    </BaseContainer>
 );
 
 export default TrialInfo;

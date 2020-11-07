@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/core';
 
 import { db } from '../../utils/firebase/firebaseClient';
-import Container from '../../components/Container';
+import BaseContainer from '../../components/BaseContainer';
 import { useAuth } from '../../utils/use-auth';
 
 const getUserInformation = async (uid) => {
@@ -166,7 +166,7 @@ const Index = () => {
     if (!auth?.user) return '';
 
     return (
-        <Container>
+        <BaseContainer>
             <div className="pb-64 md:px-12">
                 <ProfileHeader auth={auth} />
                 <ReferralBlock
@@ -214,7 +214,7 @@ const Index = () => {
                     </ModalBody>
                 </ModalContent>
             </Modal>
-        </Container>
+        </BaseContainer>
     );
 };
 

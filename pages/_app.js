@@ -6,6 +6,8 @@ import '../styles/index.css';
 import * as gtag from '../utils/gtag';
 import { ProvideAuth } from '../utils/use-auth';
 
+import theme from '../theme';
+
 const MyApp = ({ Component, pageProps }) => {
     useEffect(() => {
         const handleRouteChange = (url) => {
@@ -18,9 +20,9 @@ const MyApp = ({ Component, pageProps }) => {
     }, []);
 
     return (
-        <div className="antialiased">
+        <div className="font-sans antialiased">
             <ProvideAuth>
-                <ChakraProvider>
+                <ChakraProvider theme={theme} >
                     <Component {...pageProps} />
                 </ChakraProvider>
             </ProvideAuth>

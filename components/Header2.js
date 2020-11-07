@@ -56,6 +56,15 @@ const MobileMenu = ({ auth, router, toggleMobileMenu }) => {
                     </div>
                     {!auth?.user ? (
                         <div class="px-2 pt-2 pb-3 text-center">
+                             <Link href="/courses">
+                                <a
+                                    href="#"
+                                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
+                                    role="menuitem"
+                                >
+                                    Explore Courses
+                                </a>
+                            </Link>
                             <Link href="/login">
                                 <a
                                     href="#"
@@ -127,11 +136,12 @@ const HamburgerMenu = ({ toggleMobileMenu }) => (
     </div>
 );
 
-const NavItem = ({ label, isMenu }) => (
+const NavItem = ({ label, url, isMenu }) => (
     <div className="relative">
-        <button className="inline-flex items-center space-x-2 text-base font-medium leading-6 text-gray-500 transition duration-150 ease-in-out group hover:text-gray-900 focus:outline-none focus:text-gray-900">
-            <span className="uppercase">{label}</span>
-            {isMenu && (
+        <Link href={url}>
+            <button className="inline-flex items-center space-x-2 text-base font-medium leading-6 text-gray-900 transition duration-150 ease-in-out group hover:text-gray-700 focus:outline-none focus:text-gray-700">
+                <span className="uppercase">{label}</span>
+                {/* {isMenu && (
                 <svg
                     className="w-5 h-5 text-gray-400 transition duration-150 ease-in-out group-hover:text-gray-500 group-focus:text-gray-500"
                     xmlns="http://www.w3.org/2000/svg"
@@ -144,8 +154,9 @@ const NavItem = ({ label, isMenu }) => (
                         clipRule="evenodd"
                     />
                 </svg>
-            )}
-        </button>
+            )} */}
+            </button>
+        </Link>
     </div>
 );
 
@@ -221,10 +232,10 @@ const Header2 = () => {
                             toggleMobileMenu={toggleMobileMenu}
                         />
                     )}
-                    <div className="justify-end hidden md:flex-1 md:flex md:items-center md:space-x-12">
-                        {/* <nav className="flex space-x-10">
-                            <NavItem label="Explore Courses" isMenu />
-                        </nav> */}
+                    <div className="justify-between hidden md:flex-1 md:flex md:items-center md:space-x-12">
+                        <nav className="flex space-x-10">
+                            <NavItem label="Explore Courses" url="/courses" isMenu />
+                        </nav>
                         <div className="flex items-center space-x-8">
                             {!auth?.user ? (
                                 <>
@@ -233,7 +244,7 @@ const Header2 = () => {
                                             <Link href="/login">
                                                 <a
                                                     href="#"
-                                                    className="text-base font-medium leading-6 text-gray-500 uppercase transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none focus:text-gray-900"
+                                                    className="text-base font-medium leading-6 text-gray-900 uppercase transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none focus:text-gray-700"
                                                 >
                                                     Log in
                                                 </a>

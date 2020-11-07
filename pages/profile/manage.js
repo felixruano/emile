@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import Container from '../../components/Container';
+import BaseContainer from '../../components/BaseContainer';
 
 const ProfileTabs = ({ handleTabChange, currentTab }) => (
     <ul className="flex space-x-8 border-b sm:flex-row" role="tablist">
@@ -89,7 +89,7 @@ const Manage = () => {
     }, []);
 
     return (
-        <Container>
+        <BaseContainer>
             <div className="py-4 md:py-12 md:px-24">
                 <h2 className="text-4xl font-bold text-gray-900">
                     Manage My Account
@@ -98,7 +98,7 @@ const Manage = () => {
                     <ProfileContent />
                 </div>
             </div>
-        </Container>
+        </BaseContainer>
     );
 };
 
