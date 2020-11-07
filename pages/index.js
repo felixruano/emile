@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 
 import Header2 from '../components/Header2';
 import Hero from '../components/Hero';
@@ -318,12 +317,9 @@ const Home = () => {
                         backgroundSize: '32%',
                     }}
                 >
-                    <Image
-                        // className="w-full h-full mt-16 md:mt-24 md:w-5/6 xl:w-3/4 md:pb-24"
+                    <img
+                        className="w-full h-full mt-16 md:mt-24 md:w-5/6 xl:w-3/4 md:pb-24"
                         src="/heroimage2.png"
-                        width={1772}
-                        height={1067}
-                        quality={100}
                     />
                     <LearningThatWorksSection />
                     <div className="w-full px-8 mt-16 lg:mt-0 md:px-16 xl:px-32">
