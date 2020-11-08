@@ -8,7 +8,7 @@ const Hero = () => (
             Welcome to elite {' '}
             <br />
             education {' '}
-            <span className="pb-4 text-indigo-700 whitespace-pre border-b-8 border-indigo-700 md:whitespace-normal">on demand</span>
+            <span className="text-indigo-700 whitespace-pre rounded-underline md:whitespace-normal">on demand</span>
         </h2>
         <div className="flex flex-col justify-center max-w-md px-24 mx-auto mt-5 space-y-8 md:mt-8">
             <SignUpButton text="Get Started" />

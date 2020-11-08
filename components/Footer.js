@@ -10,9 +10,12 @@ const Footer = () => (
                 <EmileShortIcon />
                 <EmileLongIcon color="#4F46E8" />
             </div>
-            <div className="flex flex-col items-center justify-center space-y-6 text-gray-500">
+            <div className="flex flex-col items-center justify-center space-y-4 text-gray-500">
                 <Link href="/courses">
                     <a>Browse Courses</a>
+                </Link>
+                <Link href="/about">
+                    <a>About Emile</a>
                 </Link>
                 <Link href="/login">
                     <a>Member Log In</a>

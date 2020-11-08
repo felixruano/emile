@@ -8,6 +8,9 @@ module.exports = {
             },
             backgroundColor: {
                 'secondary-jade': '#35656D',
+            },
+            zIndex: {
+                '-10': '-10',
             }
         },
     },

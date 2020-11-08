@@ -279,21 +279,21 @@ const Courses = () => {
                     <Text
                         as="span"
                         textDecoration="none"
+                        position="relative"
                         color="indigo.600"
-                        borderBottom="8px solid #4F46E8"
-                        // _after={{
-                        //     content: '""',
-                        //     display: 'block',
-                        //     position: 'absolute',
-                        //     margin: '0 auto',
-                        //     width: '100%',
-                        //     height: '8px',
-                        //     background: '#4F46E8',
-                        //     borderRadius: '24px',
-                        //     left: 0,
-                        //     right: 0,
-                        //     bottom: '-4px',
-                        // }}
+                        _after={{
+                            content: '""',
+                            display: 'block',
+                            position: 'absolute',
+                            margin: '0 auto',
+                            width: '100%',
+                            height: '8px',
+                            background: '#4F46E8',
+                            borderRadius: '24px',
+                            left: 0,
+                            right: 0,
+                            bottom: '-4px',
+                        }}
                     >
                         courses.
                     </Text>

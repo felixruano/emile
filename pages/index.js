@@ -14,6 +14,7 @@ import useWindowDimensions from '../utils/use-window-dimensions';
 import SupportIcon from '../components/icons/SupportIcon';
 import RequestFreeTrialLink from '../components/RequestFreeTrialLink';
 import SignUpButton from '../components/SignUpButton';
+import LearningThatWorks from '../components/marketing/LearningThatWorks';
 
 const WhatStudentsAreSayingSection = () => (
     <div className="pt-16">
@@ -75,65 +76,6 @@ const ResultsSection = () => (
         </div>
     </div>
 );
-
-const LearningThatWorksSection = () => {
-    const { width } = useWindowDimensions();
-
-    return (
-        <div
-            className="flex bg-gray-50 sm:bg-transparent lg:my-20 xl:my-32 md:bg-none"
-            style={{
-                backgroundImage: "url('curved-background.png')",
-                backgroundSize: width > 700 ? '100% 100%' : '0 0',
-                backgroundRepeat: 'no-repeat',
-            }}
-        >
-            <div className="flex flex-col items-center justify-center p-8 my-8 space-y-6 sm:my-32 md:p-16 xl:px-52">
-                <p className="font-semibold tracking-wide text-gray-500">
-                    DISRUPTING TRADITIONAL EDUCATION
-                </p>
-                <h3 className="mb-8 text-2xl font-semibold text-center text-gray-800">
-                    Emile is online learning that actually works.
-                </h3>
-                <div className="grid grid-cols-1 space-y-6 text-gray-600 md:space-y-0 md:grid-cols-3">
-                    <div className="flex flex-col items-center justify-center space-y-6 text-center">
-                        <ClockStarsIcon color="#4F46E8" />
-                        <h3 className="text-2xl text-gray-800">
-                            Unlimited Streaming Access
-                        </h3>
-                        <p className="lg:mx-8">
-                            Unlimited access to 30+ courses, available to
-                            livestream and on-demand, whenever.
-                        </p>
-                    </div>
-                    <div className="flex flex-col items-center space-y-6 text-center">
-                        <ThinkingIcon color="#4F46E8" />
-                        <h3 className="text-2xl text-gray-800">
-                            Content Mastery Tools
-                        </h3>
-                        <p className="lg:mx-8">
-                            Proven mastery techniques and progress tracking with
-                            our proprietary learning platform.
-                        </p>
-                    </div>
-                    <div className="flex flex-col items-center justify-center space-y-6 text-center">
-                        <SupportIcon color="#4F46E8" />
-                        <h3 className="text-2xl text-gray-800">
-                            Top Quality Support
-                        </h3>
-                        <p className="lg:mx-8">
-                            Top quality instructors and a global community of
-                            student support.
-                        </p>
-                    </div>
-                </div>
-                <div className="pt-16">
-                    <SignUpButton text="Request Free Trial" />
-                </div>
-            </div>
-        </div>
-    );
-};
 
 const LeadersInEducationSection = () => {
     const { width } = useWindowDimensions();
@@ -309,7 +251,7 @@ const Home = () => {
             </div>
             <main className="bg-gray-50">
                 <div
-                    className="flex flex-col items-center justify-center"
+                    className="flex flex-col items-center justify-center pb-0 xl:pb-40"
                     style={{
                         backgroundImage: "url('ellipses.svg')",
                         backgroundRepeat: 'no-repeat',
@@ -321,26 +263,25 @@ const Home = () => {
                         className="w-full h-full mt-16 md:mt-24 md:w-5/6 xl:w-3/4 md:pb-24"
                         src="/heroimage2.png"
                     />
-                    <LearningThatWorksSection />
-                    <div className="w-full px-8 mt-16 lg:mt-0 md:px-16 xl:px-32">
-                        <div className="flex flex-col justify-between md:flex-row md:mb-8 lg:mb-20">
-                            <div className="flex flex-col items-center justify-center px-6 space-y-6 md:items-start md:mr-12 sm:mt-8 sm:px-12">
-                                <h3 className="text-2xl font-semibold text-gray-800">
-                                    What do you want to learn?
-                                </h3>
-                                <p className="text-gray-500">
-                                    Enroll in our next cohort starting{' '}
-                                    <span className="text-indigo-700">
-                                        November 30{' '}
-                                    </span>
-                                    along with{' '}
-                                    <br className="hidden sm:block" />
-                                    30+ incoming AP courses across 7 categories.
-                                </p>
-                                <RequestFreeTrialLink color="text-indigo-700" />
-                            </div>
-                            <UpcomingCourses />
+                </div>
+                <LearningThatWorks />
+                <div className="w-full px-8 mt-16 lg:mt-0 md:px-16 xl:px-32">
+                    <div className="flex flex-col justify-between md:flex-row md:mb-8 lg:mb-20">
+                        <div className="flex flex-col items-center justify-center px-6 space-y-6 md:items-start md:mr-12 sm:mt-8 sm:px-12">
+                            <h3 className="text-2xl font-semibold text-gray-800">
+                                What do you want to learn?
+                            </h3>
+                            <p className="text-gray-500">
+                                Enroll in our next cohort starting{' '}
+                                <span className="text-indigo-700">
+                                    November 30{' '}
+                                </span>
+                                along with <br className="hidden sm:block" />
+                                30+ incoming AP courses across 7 categories.
+                            </p>
+                            <RequestFreeTrialLink color="text-indigo-700" />
                         </div>
+                        <UpcomingCourses />
                     </div>
                 </div>
                 <ResultsSection />
