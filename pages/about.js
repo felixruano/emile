@@ -35,7 +35,7 @@ const About = () => (
             {/* <Flex mt={-4} mr={56} justify="flex-end">
               <CircleDotPattern />
             </Flex> */}
-            <Flex pt={16} align="center" justify="center">
+            <Flex pt={16} mb={20} align="center" justify="center">
                 <Box maxW="4xl" mx={8}>
                     <Heading
                         as="h4"
