@@ -11,6 +11,7 @@ const firebaseConfig = {
     databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
     projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NEXT_FIREBASE_PUBLIC_MEASUREMENT_ID,
     storageBucket: 'vaultprepmvp.appspot.com',
 };
 
