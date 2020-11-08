@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { Box, Center, Flex, Heading, Text } from '@chakra-ui/core';
+import { Box, Center, Flex, Heading, Image, Text } from '@chakra-ui/core';
 
 import BaseContainer from '../components/BaseContainer';
 import LearningThatWorks from '../components/marketing/LearningThatWorks';
@@ -11,8 +10,10 @@ const About = () => (
             <Center>
                 <Image
                     src="/heroImage3.png"
+                    alt="Hero Image"
                     width={1440}
                     height={558}
+                    objectFit="cover"
                     priority={true}
                 />
                 <Heading
@@ -21,8 +22,9 @@ const About = () => (
                     zIndex={0}
                     maxW={['5xl', null, '4xl']}
                     textAlign="center"
-                    fontSize={['2xl', null, '5xl']}
+                    fontSize={['3xl', null, '5xl']}
                     color="white"
+                    mx={8}
                     letterSpacing="wide"
                     lineHeight="base"
                 >
