@@ -26,7 +26,7 @@ const Footer = () => (
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://www.instagram.com/learnwithemile/"
+                        href="https://www.instagram.com/emilelearning/"
                     >
                         <FaInstagram color="#A9A9B8" size="32px" />
                     </a>
