@@ -3,35 +3,38 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import Header from '@components/Header';
-import Hero from '../components/Hero';
-import UpcomingCourses from '../components/UpcomingCourses';
-import ConceptCard from '../components/ConceptCard';
-import Footer from '../components/Footer';
-import CircleDotPattern from '../components/background-patterns/CircleDotPattern';
-import useWindowDimensions from '../utils/use-window-dimensions';
-import RequestFreeTrialLink from '../components/RequestFreeTrialLink';
-import SignUpButton from '../components/SignUpButton';
-import LearningThatWorks from '../components/marketing/LearningThatWorks';
-import CustomCountdown from '../components/CustomCountdown';
+import Hero from '@components/Hero';
+import UpcomingCourses from '@components/UpcomingCourses';
+import ConceptCard from '@components/ConceptCard';
+import Footer from '@components/Footer';
+import CircleDotPattern from '@components/background-patterns/CircleDotPattern';
+import useWindowDimensions from '@utils/use-window-dimensions';
+import CustomLink from '@components/CustomLink';
+import SignUpButton from '@components/SignUpButton';
+import LearningThatWorks from '@components/marketing/LearningThatWorks';
+import CustomCountdown from '@components/CustomCountdown';
 
 const WhatStudentsAreSayingSection = () => (
-    <div className="pt-16">
+    <div className="px-3 pt-16">
         <h3 className="text-3xl font-semibold text-center text-gray-800">
             What students are saying
         </h3>
-        <div className="flex flex-col items-center justify-center py-8 space-x-16 space-y-16 text-indigo-800 md:py-16 md:items-start bg-gray-50 md:flex-row">
+        <div className="flex flex-col items-center justify-center py-8 space-y-16 text-indigo-800 md:space-x-12 md:py-16 md:items-start md:flex-row">
             <div className="text-xs text-gray-500 align-items">
-                <img className="rounded-full h-80" src="/starrandrews.png" />
+                <img
+                    className="rounded-full h-80"
+                    src="/starrandrews.png?nf_resize=smartcrop&w=300&h=300"
+                />
                 <p className="text-center">
                     Photo: Jay Adeff/U.S. Figure Skating
                 </p>
             </div>
             <div className="flex flex-col justify-center space-y-8">
-                <p className="max-w-sm text-xl">
+                <p className="max-w-sm text-xl text-center md:text-left">
                     "I'm excited to promote a platform that will give students
                     around the world a place to learn and connect!”
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-2 text-center md:text-left">
                     <p className="font-semibold text-gray-800 justify-self-start">
                         Starr Andrews
                     </p>
@@ -57,7 +60,7 @@ const ResultsSection = () => (
             <div className="flex flex-col items-center text-gray-800">
                 <img
                     className="object-fill my-8 rounded-full shadow-xl h-72"
-                    src="/graduates.png"
+                    src="/graduates.png?nf_resize=smartcrop&w=300&h=300"
                 />
                 <h2 className="text-4xl font-semibold">
                     Get Measurable Results
@@ -68,7 +71,11 @@ const ResultsSection = () => (
                     We’re only <span className="font-bold">$19.99/month.</span>
                 </p>
                 <div className="my-8">
-                    <SignUpButton text="Get Started" bgColor="#35656D" actionBgColor="#468F99" />
+                    <SignUpButton
+                        text="Get Started"
+                        bgColor="#35656D"
+                        actionBgColor="#468F99"
+                    />
                 </div>
             </div>
         </div>
@@ -89,10 +96,10 @@ const LeadersInEducationSection = () => {
             <div className="flex flex-col items-center justify-center px-8 pt-32 pb-48 space-x-0 space-y-12 md:p-32 md:flex-row md:space-y-0 md:space-x-24">
                 <img
                     className="object-contain w-3/4 md:w-1/3"
-                    src="/educator.png"
+                    src="/educator.png?nf_resize=smartcrop&w=300&h=300"
                     alt="educator"
                 />
-                <div className="max-w-lg space-y-6">
+                <div className="max-w-lg space-y-6 text-center md:text-left">
                     <h2 className="text-2xl font-medium text-gray-600">
                         Leaders in Education
                     </h2>
@@ -103,7 +110,12 @@ const LeadersInEducationSection = () => {
                         more. Engage directly with our team of dedicated global
                         and community leaders.
                     </p>
-                    <RequestFreeTrialLink color="text-yellow-400" />
+                    <CustomLink
+                        href="/signup"
+                        color="yellow.400"
+                        text="Request Free Trial"
+                        hasArrow={true}
+                    />
                 </div>
             </div>
         </div>
@@ -165,7 +177,7 @@ const BetterWayToLearnSection = () => {
                     masteryData={dummyMasteryData}
                 />
             </div>
-            <div className="flex flex-col justify-start space-y-8 lg:w-1/2">
+            <div className="space-y-8 text-center lg:w-1/2 md:text-left">
                 <h2 className="text-2xl font-medium text-gray-800">
                     A Better Way to Learn
                 </h2>
@@ -175,7 +187,12 @@ const BetterWayToLearnSection = () => {
                     concept, rather than just a quiz score. Track your own
                     progress with our automated learning platform.
                 </p>
-                <RequestFreeTrialLink color="text-indigo-700" />
+                <CustomLink
+                    href="/signup"
+                    color="indigo.600"
+                    text="Request Free Trial"
+                    hasArrow={true}
+                />
             </div>
         </div>
     );
@@ -183,7 +200,7 @@ const BetterWayToLearnSection = () => {
 
 const AnytimeAnywhereSection = () => (
     <div className="flex flex-col items-center justify-between mx-16 my-16 space-x-0 space-y-12 lg:flex-row md:space-y-8 md:space-x-16 md:mx-48 lg:mr-0">
-        <div className="flex flex-col justify-start space-y-6">
+        <div className="space-y-6 text-center md:text-left">
             <h2 className="text-2xl font-medium text-gray-800">
                 Anytime and Anywhere
             </h2>
@@ -192,12 +209,17 @@ const AnytimeAnywhereSection = () => (
                 on-demand. Enjoy unlimited access to our 30+ courses, with new
                 courses added weekly.
             </p>
-            <RequestFreeTrialLink color="text-indigo-700" />
+            <CustomLink
+                href="/signup"
+                color="indigo.700"
+                text="Request Free Trial"
+                hasArrow={true}
+            />
         </div>
         <img
             className="hidden object-contain lg:block lg:h-96 xl:h-full"
             style={{ maxHeight: '670px' }}
-            src="livestream-computer.png"
+            src="livestream-computer.png?nf_resize=smartcrop&w=300&h=300"
         />
     </div>
 );
@@ -209,7 +231,11 @@ const NowEnrollingBanner = () => (
                 <h3 className="text-xl font-semibold text-center text-gray-800 md:text-2xl">
                     Now enrolling for November 30
                 </h3>
-                <SignUpButton text="Get Started" bgColor="indigo.600" actionBgColor="indigo.500" />
+                <SignUpButton
+                    text="Get Started"
+                    bgColor="indigo.600"
+                    actionBgColor="indigo.500"
+                />
             </div>
         </div>
     </div>
@@ -259,14 +285,14 @@ const Home = () => {
                 >
                     <img
                         className="w-full h-full mt-16 md:mt-24 md:w-5/6 xl:w-3/4"
-                        src="/heroimage2.png"
+                        src="/heroimage2.png?nf_resize=smartcrop&w=300&h=300"
                     />
                     <CustomCountdown />
                 </div>
                 <LearningThatWorks />
                 <div className="w-full px-3 mt-16 lg:mt-0 md:px-16 xl:px-32">
                     <div className="flex flex-col justify-between md:flex-row md:mb-8 lg:mb-20">
-                        <div className="flex flex-col items-center justify-center px-6 space-y-6 md:items-start md:mr-12 sm:mt-8 sm:px-12">
+                        <div className="px-6 space-y-6 text-center md:text-left md:items-start md:mr-12 sm:mt-8 sm:px-12">
                             <h3 className="text-2xl font-semibold text-gray-800">
                                 What do you want to learn?
                             </h3>
@@ -278,15 +304,21 @@ const Home = () => {
                                 along with <br className="hidden sm:block" />
                                 30+ incoming AP courses across 7 categories.
                             </p>
-                            <RequestFreeTrialLink color="text-indigo-700" />
+                            <CustomLink
+                                href="/courses"
+                                color="indigo.600"
+                                text="Explore Courses"
+                                hasArrow={true}
+                            />
                         </div>
                         <UpcomingCourses />
                     </div>
                 </div>
                 <ResultsSection />
-                <WhatStudentsAreSayingSection />
                 <BetterWayToLearnSection />
                 <LeadersInEducationSection />
+                <AnytimeAnywhereSection />
+                <NowEnrollingBanner />
                 <div
                     className="w-full"
                     style={{
@@ -295,8 +327,7 @@ const Home = () => {
                         backgroundSize: 'contain',
                     }}
                 >
-                    <AnytimeAnywhereSection />
-                    <NowEnrollingBanner />
+                    <WhatStudentsAreSayingSection />
                 </div>
             </main>
             <Footer />

@@ -1,23 +1,26 @@
 import { FaArrowRight } from 'react-icons/fa';
-import DnaIcon from './icons/DnaIcon';
-import HistoryIcon from './icons/HistoryIcon';
-import LiteratureIcon from './icons/LiteratureIcon';
+import DnaIcon2 from '@components/icons/DnaIcon2';
+import HistoryIcon from '@components/icons/HistoryIcon';
+import LiteratureIcon from '@components/icons/LiteratureIcon';
 
 const courses = [
     {
         title: 'AP Biology',
-        icon: <DnaIcon color="#4F46E8" />,
-        description: 'Learn the core scientific principles, theories, and processes that govern living organisms and biological systems.',
+        icon: <DnaIcon2 boxSize={12} color="#4F46E8" />,
+        description:
+            'Learn the core scientific principles, theories, and processes that govern living organisms and biological systems.',
     },
     {
         title: 'AP U.S. History',
-        icon: <HistoryIcon color="#4F46E8" />,
-        description: 'Learn about the cultural, economic, political, and social developments that have shaped the United States from 1491 to the present.',
+        icon: <HistoryIcon boxSize={12} color="#4F46E8" />,
+        description:
+            'Learn about the cultural, economic, political, and social developments that have shaped the United States from 1491 to the present.',
     },
     {
         title: 'AP Literature and Composition',
-        icon: <LiteratureIcon color="#4F46E8" />,
-        description: 'Cultivate your understanding of literature through reading and analyzing texts by exploring concepts like character, setting, structure, perspective, figurative language, and literary analysis in the context of literary works.',
+        icon: <LiteratureIcon boxSize={12} color="#4F46E8" />,
+        description:
+            'Cultivate your understanding of literature through reading and analyzing texts by exploring concepts like character, setting, structure, perspective, figurative language, and literary analysis in the context of literary works.',
     },
 ];
 

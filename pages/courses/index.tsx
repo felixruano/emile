@@ -244,14 +244,14 @@ const courses = [
     },
     {
         title: 'AP U.S. Government and Politics',
-        icon: <HistoryIcon boxSize={6} color="#4F46E8" />,
+        icon: <HistoryIcon boxSize={12} color="#4F46E8" />,
         startDate: 'Nov 30',
         description:
             'Dive into the concepts and institutions of the political system and culture of the United States.',
     },
     {
         title: 'AP Literature and Composition',
-        icon: <LiteratureIcon boxSize={6} color="#4F46E8" />,
+        icon: <LiteratureIcon boxSize={12} color="#4F46E8" />,
         startDate: 'Nov 30',
         description:
             'Cultivate your understanding of literature through reading and analyzing texts by exploring concepts like character, setting, structure, perspective, figurative language, and literary analysis in the context of literary works.',
