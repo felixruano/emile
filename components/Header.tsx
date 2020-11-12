@@ -154,6 +154,7 @@ const Dropdown = ({ auth }) => {
     const handleLogout = (e) => {
         e.preventDefault();
         auth.signOut();
+        // @ts-ignore
         analytics.track('Log Out');
         router.push('/');
     };
