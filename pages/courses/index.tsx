@@ -247,7 +247,7 @@ const courses = [
         icon: <HistoryIcon boxSize={6} color="#4F46E8" />,
         startDate: 'Nov 30',
         description:
-            'Learn about the cultural, economic, political, and social developments that have shaped the United States from 1491 to the present.',
+            'Dive into the concepts and institutions of the political system and culture of the United States.',
     },
     {
         title: 'AP Literature and Composition',
