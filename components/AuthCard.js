@@ -5,9 +5,9 @@ import { FcGoogle } from 'react-icons/fc';
 import { FaArrowRight } from 'react-icons/fa';
 
 import { useAuth } from '../utils/use-auth';
-import createUser from '../utils/firebase/createUser';
+import createUser from '../utils/firebase/createUser.ts';
 import EmileShortIcon from './icons/EmileShortIcon';
-import { db } from '../utils/firebase/firebaseClient';
+import { db } from '../utils/firebase/firebaseClient.ts';
 
 const verifyAndUpdateReferralCode = (currentUserReferralCode) => {
     const referralCode = window.localStorage.getItem('referral_code');
@@ -32,9 +32,12 @@ const verifyAndUpdateReferralCode = (currentUserReferralCode) => {
                         .then((doc) => {
                             if (doc.exists) {
                                 newCurrentUsedCount = doc.data().used_count + 1;
-                                currentUserReferralCodeRef.update({ used_count: newCurrentUsedCount });
+                                currentUserReferralCodeRef.update({
+                                    used_count: newCurrentUsedCount,
+                                });
                             }
-                        }).catch((err) => console.log(err));
+                        })
+                        .catch((err) => console.log(err));
                 }
             })
             .catch((err) => console.log(err));
@@ -93,15 +96,28 @@ export const AuthContent = ({ isSignUpFlow }) => {
                         referralCode
                     );
                     verifyAndUpdateReferralCode(referralCode);
+                    analytics.identify(uid, {
+                        given_name,
+                        family_name,
+                        displayName,
+                        email,
+                        verified_email,
+                        locale,
+                        creationTime,
+                        role,
+                        referralCode,
+                    });
+                    analytics.track('Account created', {
+                        authentication: 'Google',
+                    });
                     router.push('/signup/trial-info');
-                } else {
-                    if (
-                        data?.code !==
-                        ('auth/popup-closed-by-user' ||
-                            'auth/cancelled-popup-request')
-                    ) {
-                        router.push('/');
-                    }
+                } else if (
+                    data?.code !==
+                    ('auth/popup-closed-by-user' ||
+                        'auth/cancelled-popup-request')
+                ) {
+                    analytics.track('Log in', { authentication: 'Google' });
+                    router.push('/');
                 }
             })
             .catch((error) => console.log(error));

@@ -9,10 +9,12 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@analytics/segment": "^0.5.1",
     "@chakra-ui/core": "^1.0.0-rc.8",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@segment/snippet": "^4.13.1",
     "@tailwindcss/ui": "^0.5.0",
+    "analytics": "^0.5.5",
     "firebase": "^8.0.0",
     "framer-motion": "^2.9.4",
     "nanoid": "^3.1.16",

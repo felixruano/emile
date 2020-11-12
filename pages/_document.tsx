@@ -1,24 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import * as snippet from '@segment/snippet';
-
-const { NEXT_PUBLIC_ANALYTICS_WRITE_KEY_DEV, NODE_ENV } = process.env;
-
-import { GA_TRACKING_ID } from '../utils/gtag';
 
 export default class MyDocument extends Document {
-    // renderSnippet() {
-    //   console.log(NEXT_PUBLIC_ANALYTICS_WRITE_KEY_DEV, NODE_ENV);
-    //   let opts = {
-    //     apiKey: NEXT_PUBLIC_ANALYTICS_WRITE_KEY_DEV,
-    //     page: true,
-    //   }
-
-    //   if (NODE_ENV === 'development') {
-    //     return snippet.max(opts);
-    //   }
-
-    //   return snippet.min(opts);
-    // }
     render() {
         return (
             <Html>
@@ -41,7 +23,7 @@ export default class MyDocument extends Document {
                     />
                     <script
                         dangerouslySetInnerHTML={{
-                          __html: `
+                            __html: `
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
                             gtag('js', new Date());
@@ -49,11 +31,10 @@ export default class MyDocument extends Document {
                         }}
                     />
                     <link rel="icon" href="/favicon.ico" />
-                    <link rel="stylesheet" href="https://use.typekit.net/fbc0dff.css" />
-                    {/* <link
+                    <link
                         rel="stylesheet"
-                        href="https://rsms.me/inter/inter.css"
-                    /> */}
+                        href="https://use.typekit.net/fbc0dff.css"
+                    />
                 </Head>
                 <body>
                     <Main />
