@@ -145,6 +145,7 @@ const Index = () => {
                 const userInfo = await getUserInformation(auth?.user?.uid);
                 setUserInfo(userInfo);
                 const referralData = await getReferralCount(
+                    // @ts-ignore
                     userInfo.referral_code
                 );
                 setReferralData(referralData);

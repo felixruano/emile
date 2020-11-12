@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -249,6 +248,7 @@ const Home = () => {
         if (router?.query?.referral_code)
             window.localStorage.setItem(
                 'referral_code',
+                // @ts-ignore
                 router.query.referral_code
             );
     }, [router]);
