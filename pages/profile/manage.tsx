@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import BaseContainer from '../../components/BaseContainer';
+import BaseContainer from '../../components/layouts/BaseContainer';
 
 const ProfileTabs = ({ handleTabChange, currentTab }) => (
     <ul className="flex space-x-8 border-b sm:flex-row" role="tablist">

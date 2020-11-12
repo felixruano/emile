@@ -188,11 +188,11 @@ const Dropdown = ({ auth }) => {
     );
 };
 
-const Header2 = () => {
+const Header = () => {
     const router = useRouter();
     const auth = useAuth();
-    const [showMenu, setShowMenu] = useState();
-    const [showMobileMenu, setShowMobileMenu] = useState();
+    const [showMenu, setShowMenu] = useState<boolean>();
+    const [showMobileMenu, setShowMobileMenu] = useState<boolean>();
 
     const toggleMenu = () => setShowMenu(!showMenu);
     const toggleMobileMenu = () => setShowMobileMenu(!showMobileMenu);
@@ -284,4 +284,4 @@ const Header2 = () => {
     );
 };
 
-export default Header2;
+export default Header;

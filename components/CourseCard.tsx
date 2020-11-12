@@ -19,13 +19,7 @@ const ReserveButton = () => (
 );
 
 // TODO: Finish x days
-const CourseCard = ({
-    icon,
-    title,
-    description,
-    startDate,
-    numDaysToEnroll,
-}) => (
+const CourseCard = ({ icon, title, description, startDate }) => (
     <Box
         borderRadius="md"
         bgColor="white"
@@ -47,11 +41,11 @@ const CourseCard = ({
             justify="space-between"
         >
             {/* <Flex justify mb={2}> */}
-                <Text as="p" textTransform="uppercase" fontWeight={600} mb={2}>
-                    starts {startDate}
-                </Text>
-                {/* <Text as="p">X days left to enroll</Text> */}
-                <ReserveButton />
+            <Text as="p" textTransform="uppercase" fontWeight={600} mb={2}>
+                starts {startDate}
+            </Text>
+            {/* <Text as="p">X days left to enroll</Text> */}
+            <ReserveButton />
             {/* </Flex> */}
         </Flex>
     </Box>

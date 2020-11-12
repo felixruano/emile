@@ -1,3 +1,4 @@
+import { FaArrowRight } from 'react-icons/fa';
 import DnaIcon from './icons/DnaIcon';
 import HistoryIcon from './icons/HistoryIcon';
 import LiteratureIcon from './icons/LiteratureIcon';

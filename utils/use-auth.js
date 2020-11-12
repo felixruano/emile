@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext, createContext } from 'react';
-import { auth, firebase } from '../utils/firebase/firebaseClient';
+import { useState, useEffect, useContext, createContext } from 'react';
+import { auth, firebase } from './firebase/firebaseClient';
 
-const authContext = createContext();
+const authContext = createContext(null);
 
 // Provider component that wraps your app and makes auth object ...
 // ... available to any child component that calls useAuth().

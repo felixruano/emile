@@ -51,7 +51,6 @@ const LearningThatWorks = () => {
 
     return (
         <Box
-            // mt={[8, null, 32]}
             pt={[64, null, 32]}
             pb={64}
             bg="transparent"
@@ -67,14 +66,14 @@ const LearningThatWorks = () => {
                 <Flex justify="center" align="center" direction="column">
                     <Heading
                         as="h4"
-                        fontSize="md"
+                        fontSize={["xs", null, "md"]}
                         fontWeight={600}
                         color="textTertiary"
                         textTransform="uppercase"
                     >
                         DISRUPTING TRADITIONAL EDUCATION
                     </Heading>
-                    <Text fontSize="32px" fontWeight={600} textAlign="center">
+                    <Text fontSize={["xl", null, "32px"]} fontWeight={600} textAlign="center">
                         Emile is online learning that actually works.
                     </Text>
                 </Flex>
@@ -96,6 +95,7 @@ const LearningThatWorks = () => {
                             color="white"
                             textTransform="uppercase"
                             shadow="lg"
+                            letterSpacing="widest"
                             _hover={{ bg: 'indigo.500' }}
                             _active={{ bg: 'indigo.500' }}
                         >

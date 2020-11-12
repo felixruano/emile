@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/core';
 
 import { db } from '../../utils/firebase/firebaseClient';
-import BaseContainer from '../../components/BaseContainer';
+import BaseContainer from '../../components/layouts/BaseContainer';
 import { useAuth } from '../../utils/use-auth';
 
 const getUserInformation = async (uid) => {
@@ -45,7 +45,7 @@ const getReferralCount = async (referralCode) => {
 };
 
 const ProfileHeader = ({ auth }) => (
-    <div className="flex flex-col items-center justify-between w-full p-0 pb-12 space-y-8 border-b md:p-12 md:flex-row">
+    <div className="flex flex-col items-center justify-between w-full p-0 py-12 space-y-8 border-b md:p-12 md:flex-row">
         <div className="flex flex-col items-center space-y-4 md:space-y-0 md:space-x-8 md:flex-row">
             <img
                 className="inline object-cover w-32 h-32 mr-2 rounded-full"
@@ -71,19 +71,14 @@ const ProfileHeader = ({ auth }) => (
     </div>
 );
 
-const ReferralButton = ({ referralCode }) => {
+const ReferralButton = ({ referralCode }: { referralCode: string }) => {
     const [isCopied, setCopied] = useClipboard(
         `http://hiemile.com/?referral_code=${referralCode}`
     );
 
     return (
         <div className="flex flex-col lg:flex-row">
-            <div
-                aria-label="First name"
-                name="firstName"
-                type="text"
-                className="max-w-xl p-4 text-base leading-6 text-gray-900 placeholder-gray-800 transition duration-150 ease-in-out bg-white border-t border-l border-r border-gray-300 rounded-tl rounded-bl appearance-none md:border-t md:border-b md:border-l md:pr-32 focus:outline-none focus:shadow-outline-blue focus:border-blue-300"
-            >
+            <div className="w-full p-4 text-base leading-6 text-gray-900 placeholder-gray-800 transition duration-150 ease-in-out bg-white border-t border-l border-r border-gray-300 rounded-tl rounded-bl appearance-none lg:max-w-xl md:border-t md:border-b md:border-l md:pr-32 focus:outline-none focus:shadow-outline-blue focus:border-blue-300">
                 {`http://hiemile.com/?referral_code=${referralCode}`}
             </div>
             <button
@@ -107,18 +102,20 @@ const ReferralBlock = ({ referralCode, referralData }) => (
                     src="/referral-icon.svg"
                 />
                 <div className="space-y-4">
-                    <h2 className="text-2xl">Get 1 Month Free</h2>
-                    <p className="w-full text-gray-500 md:w-3/4">
+                    <h2 className="text-2xl text-center md:text-left">
+                        Get 1 Month Free
+                    </h2>
+                    <p className="w-full text-center text-gray-500 md:text-left md:w-3/4">
                         Earn <span className="font-bold">1 free month</span> of
                         Emile for you and a friend when that friend signs up
                         using your code.
                     </p>
                 </div>
             </div>
-            <div className="flex flex-col w-auto space-y-8">
+            <div className="w-auto space-y-8">
                 <ReferralButton referralCode={referralCode} />
                 {referralData?.used_count > 0 && (
-                    <p className="max-w-xl text-center text-gray-500 lg:ml-auto">
+                    <p className="w-full text-center text-gray-500 lg:max-w-xl lg:ml-auto">
                         You have{' '}
                         <span className="font-bold">
                             {referralData?.used_count}{' '}
@@ -138,8 +135,8 @@ const ReferralBlock = ({ referralCode, referralData }) => (
 const Index = () => {
     const auth = useAuth();
     const router = useRouter();
-    const [userInfo, setUserInfo] = useState();
-    const [referralData, setReferralData] = useState();
+    const [userInfo, setUserInfo] = useState<any>();
+    const [referralData, setReferralData] = useState<any>();
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     useEffect(() => {
@@ -197,7 +194,6 @@ const Index = () => {
                                 </Text>
                                 <Box
                                     as="button"
-                                    size="md"
                                     height="48px"
                                     width="200px"
                                     color="white"

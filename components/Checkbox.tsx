@@ -10,7 +10,7 @@ const Checkbox = ({ spanCol, id, name, value, text, required, register, errors }
                         name={name}
                         value={value}
                         type="checkbox"
-                        className="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
+                        className="w-4 h-4 text-indigo-600 transition duration-150 ease-in-out form-checkbox"
                         ref={register({ required })}
                     />
                     <label htmlFor="consent" className="ml-3">
@@ -20,7 +20,7 @@ const Checkbox = ({ spanCol, id, name, value, text, required, register, errors }
                     </label>
                 </div>
             </div>
-            <span className="text-red-500 text-xs italic">
+            <span className="text-xs italic text-red-500">
                 {errors?.[name] && 'Checkbox must be checked to submit'}
         </span>
         </fieldset>

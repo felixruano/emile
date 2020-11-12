@@ -49,12 +49,6 @@ const Footer = () => (
                     Email us at{' '}
                     <a className="text-indigo-600" href="mailto:contact@hiemile.com">contact@hiemile.com</a>
                 </p>
-                <p>
-                    Call or text us at{' '}
-                    <a className="text-indigo-600" href="tel:4242288696">
-                        (424) 228-8696
-                    </a>
-                </p>
             </div>
         </div>
     </div>

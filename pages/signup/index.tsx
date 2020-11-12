@@ -1,10 +1,10 @@
-import AuthCard from '../../components/AuthCard';
-import Footer from '../../components/Footer';
-import Header2 from '../../components/Header2';
+import AuthCard from '@components/AuthCard';
+import Footer from '@components/Footer';
+import Header from '@components/Header';
 
 const Index = () => (
     <div>
-        <Header2 />
+        <Header />
         <div
             className="flex items-center justify-center w-full px-4 py-24 mx-auto lg:py-56"
             style={{

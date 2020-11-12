@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FiCheckCircle } from 'react-icons/fi';
-import BaseContainer from '../../components/BaseContainer';
+import BaseContainer from '../../components/layouts/BaseContainer';
 import EmileShortIcon from '../../components/icons/EmileShortIcon';
 
 const marketingData = [

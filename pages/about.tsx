@@ -1,6 +1,6 @@
 import { Box, Center, Flex, Heading, Image, Text } from '@chakra-ui/core';
 
-import BaseContainer from '../components/BaseContainer';
+import BaseContainer from '../components/layouts/BaseContainer';
 import LearningThatWorks from '../components/marketing/LearningThatWorks';
 // import CircleDotPattern from '../components/background-patterns/CircleDotPattern';
 

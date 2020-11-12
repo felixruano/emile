@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import type { AppProps } from 'next/app';
 import Router from 'next/router';
 import { ChakraProvider } from '@chakra-ui/core';
 
@@ -9,7 +10,7 @@ import { firebase } from '../utils/firebase/firebaseClient';
 
 import theme from '../theme';
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             firebase.analytics();

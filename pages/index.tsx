@@ -2,19 +2,17 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import Header2 from '../components/Header2';
+import Header from '@components/Header';
 import Hero from '../components/Hero';
 import UpcomingCourses from '../components/UpcomingCourses';
-import ClockStarsIcon from '../components/icons/ClockStarsIcon';
-import ThinkingIcon from '../components/icons/ThinkingIcon';
 import ConceptCard from '../components/ConceptCard';
 import Footer from '../components/Footer';
 import CircleDotPattern from '../components/background-patterns/CircleDotPattern';
 import useWindowDimensions from '../utils/use-window-dimensions';
-import SupportIcon from '../components/icons/SupportIcon';
 import RequestFreeTrialLink from '../components/RequestFreeTrialLink';
 import SignUpButton from '../components/SignUpButton';
 import LearningThatWorks from '../components/marketing/LearningThatWorks';
+import CustomCountdown from '../components/CustomCountdown';
 
 const WhatStudentsAreSayingSection = () => (
     <div className="pt-16">
@@ -29,7 +27,7 @@ const WhatStudentsAreSayingSection = () => (
                 </p>
             </div>
             <div className="flex flex-col justify-center space-y-8">
-                <p className="max-w-md text-xl">
+                <p className="max-w-sm text-xl">
                     "I'm excited to promote a platform that will give students
                     around the world a place to learn and connect!”
                 </p>
@@ -48,20 +46,20 @@ const WhatStudentsAreSayingSection = () => (
 
 const ResultsSection = () => (
     <div
-        className="flex items-center justify-center w-full p-6 md:p-10"
+        className="flex items-center justify-center w-full px-3 md:p-10"
         style={{
             background: "url('/curved-background-green.png')",
             backgroundSize: '100% 85%',
             backgroundRepeat: 'no-repeat',
         }}
     >
-        <div className="mx-4 text-white bg-white border border-gray-100 rounded shadow-xl md:mx-1/4 xl:mx-1/3">
+        <div className="max-w-xl text-white bg-white border border-gray-100 rounded shadow-xl">
             <div className="flex flex-col items-center text-gray-800">
                 <img
                     className="object-fill my-8 rounded-full shadow-xl h-72"
                     src="/graduates.png"
                 />
-                <h2 className="text-2xl font-semibold">
+                <h2 className="text-4xl font-semibold">
                     Get Measurable Results
                 </h2>
                 <p className="px-4 mx-6 my-4 text-center text-gray-700">
@@ -70,7 +68,7 @@ const ResultsSection = () => (
                     We’re only <span className="font-bold">$19.99/month.</span>
                 </p>
                 <div className="my-8">
-                    <SignUpButton text="Get Started" />
+                    <SignUpButton text="Get Started" bgColor="#35656D" actionBgColor="#468F99" />
                 </div>
             </div>
         </div>
@@ -211,7 +209,7 @@ const NowEnrollingBanner = () => (
                 <h3 className="text-xl font-semibold text-center text-gray-800 md:text-2xl">
                     Now enrolling for November 30
                 </h3>
-                <SignUpButton text="Get Started" />
+                <SignUpButton text="Get Started" bgColor="indigo.600" actionBgColor="indigo.500" />
             </div>
         </div>
     </div>
@@ -241,7 +239,7 @@ const Home = () => {
                 />
             </Head>
             <div className="bg-gray-50">
-                <Header2 />
+                <Header />
                 <div className="flex justify-end px-32">
                     <CircleDotPattern />
                 </div>
@@ -251,7 +249,7 @@ const Home = () => {
             </div>
             <main className="bg-gray-50">
                 <div
-                    className="flex flex-col items-center justify-center pb-0 xl:pb-40"
+                    className="flex flex-col items-center md:pb-16"
                     style={{
                         backgroundImage: "url('ellipses.svg')",
                         backgroundRepeat: 'no-repeat',
@@ -260,12 +258,13 @@ const Home = () => {
                     }}
                 >
                     <img
-                        className="w-full h-full mt-16 md:mt-24 md:w-5/6 xl:w-3/4 md:pb-24"
+                        className="w-full h-full mt-16 md:mt-24 md:w-5/6 xl:w-3/4"
                         src="/heroimage2.png"
                     />
+                    <CustomCountdown />
                 </div>
                 <LearningThatWorks />
-                <div className="w-full px-8 mt-16 lg:mt-0 md:px-16 xl:px-32">
+                <div className="w-full px-3 mt-16 lg:mt-0 md:px-16 xl:px-32">
                     <div className="flex flex-col justify-between md:flex-row md:mb-8 lg:mb-20">
                         <div className="flex flex-col items-center justify-center px-6 space-y-6 md:items-start md:mr-12 sm:mt-8 sm:px-12">
                             <h3 className="text-2xl font-semibold text-gray-800">

@@ -15,12 +15,12 @@ import {
     useDisclosure,
 } from '@chakra-ui/core';
 import { FaChevronDown, FaArrowRight } from 'react-icons/fa';
-import BaseContainer from '../components/BaseContainer';
-import CourseCard from '../components/CourseCard';
-import useWindowDimensions from '../utils/use-window-dimensions';
-import DnaIcon2 from '../components/icons/DnaIcon2';
-import HistoryIcon from '../components/icons/HistoryIcon';
-import LiteratureIcon from '../components/icons/LiteratureIcon';
+import BaseContainer from '@components/layouts/BaseContainer';
+import CourseCard from '@components/CourseCard';
+import useWindowDimensions from '@utils/use-window-dimensions';
+import DnaIcon2 from '@components/icons/DnaIcon2';
+import HistoryIcon from '@components/icons/HistoryIcon';
+import LiteratureIcon from '@components/icons/LiteratureIcon';
 
 const coursesList = [
     [
@@ -115,6 +115,7 @@ const CoursesComingSoon = () => (
         backgroundSize="100% 94%"
         backgroundRepeat="no-repeat"
         pb={32}
+        display={['none', null, 'block']}
     >
         <Box px={[3, 8, 16, 32]} py={64}>
             <Center>
@@ -198,7 +199,7 @@ const CourseItemMobile = ({ label, courses }) => {
 };
 
 const CoursesComingSoonMobile = () => (
-    <Box pt="64px">
+    <Box pt="64px" display={['block', null, 'none']}>
         <Center>
             <Heading as="h4" fontSize="20px" mb="32px">
                 Courses Coming Soon
@@ -242,7 +243,7 @@ const courses = [
             'Learn the core scientific principles, theories, and processes that govern living organisms and biological systems.',
     },
     {
-        title: 'AP U.S. History',
+        title: 'AP U.S. Government and Politics',
         icon: <HistoryIcon boxSize={6} color="#4F46E8" />,
         startDate: 'Nov 30',
         description:
@@ -260,7 +261,6 @@ const courses = [
 const Courses = () => {
     const { width } = useWindowDimensions();
 
-    // TODO: Round border for courses
     return (
         <BaseContainer backgroundColor="bg-gray-50">
             <Box
@@ -315,6 +315,7 @@ const Courses = () => {
                 >
                     {courses.map((course) => (
                         <CourseCard
+                            key={course.title}
                             icon={course.icon}
                             title={course.title}
                             description={course.description}
@@ -342,7 +343,8 @@ const Courses = () => {
                     )}
                 </SimpleGrid>
             </Box>
-            {width > 768 ? <CoursesComingSoon /> : <CoursesComingSoonMobile />}
+            <CoursesComingSoon />
+            <CoursesComingSoonMobile />
         </BaseContainer>
     );
 };

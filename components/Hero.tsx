@@ -1,4 +1,3 @@
-import Countdown from './Countdown';
 import SignUpButton from './SignUpButton';
 
 const Hero = () => (
@@ -8,11 +7,10 @@ const Hero = () => (
             Welcome to elite {' '}
             <br />
             education {' '}
-            <span className="text-indigo-700 whitespace-pre rounded-underline md:whitespace-normal">on demand</span>
+            <span className="text-indigo-600 whitespace-pre rounded-underline md:whitespace-normal">on demand.</span>
         </h2>
-        <div className="flex flex-col justify-center max-w-md px-24 mx-auto mt-5 space-y-8 md:mt-8">
-            <SignUpButton text="Get Started" />
-            <Countdown />
+        <div className="flex justify-center mt-5 space-y-8 md:mt-8">
+            <SignUpButton text="Get Started" bgColor="indigo.600" actionBgColor="indigo.500" />
         </div>
     </div>
 );
