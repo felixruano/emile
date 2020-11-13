@@ -53,7 +53,7 @@ const MarketingCard = () => (
 );
 
 const TrialInfo = () => (
-    <BaseContainer backgroundColor="bg-gray-50">
+    <BaseContainer backgroundColor="gray.50">
         <div className="flex flex-col items-center justify-center h-full px-4 pt-12 mx-auto space-y-8 ">
             <EmileShortIcon />
             <h1 className="text-6xl font-bold text-center text-gray-800">

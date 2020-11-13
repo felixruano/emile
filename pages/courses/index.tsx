@@ -262,7 +262,7 @@ const Courses = () => {
     const { width } = useWindowDimensions();
 
     return (
-        <BaseContainer backgroundColor="bg-gray-50">
+        <BaseContainer backgroundColor="gray.50">
             <Box
                 px={[3, null, 16, 32]}
                 py={[6, null, 16]}

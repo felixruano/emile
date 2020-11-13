@@ -3,7 +3,7 @@ import { Box, Button, Flex, HStack, Text } from '@chakra-ui/core';
 import { Heading } from '@chakra-ui/core';
 
 const ReserveButton = () => (
-    <Link href="/signup">
+    <Link href="/courses/ap-biology">
         <Button
             mt={4}
             bg="indigo.600"
@@ -13,7 +13,7 @@ const ReserveButton = () => (
             _hover={{ bg: 'indigo.500' }}
             _active={{ bg: 'indigo.500' }}
         >
-            Request Free Trial
+            Access Course
         </Button>
     </Link>
 );

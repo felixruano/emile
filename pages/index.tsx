@@ -162,7 +162,7 @@ const BetterWayToLearnSection = () => {
 
     return (
         <div
-            className="flex flex-col items-center px-8 pb-24 space-x-0 md:px-32 md:py-16 justify-evenly lg:flex-row-reverse bg-gray-50 md:space-x-16"
+            className="flex flex-col items-center px-8 pb-24 space-x-0 md:px-32 md:py-16 justify-evenly lg:flex-row-reverse md:space-x-16"
             style={{
                 backgroundImage: "url('ellipses-purple.png')",
                 backgroundRepeat: 'no-repeat',
