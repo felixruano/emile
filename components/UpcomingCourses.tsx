@@ -11,10 +11,10 @@ const courses = [
             'Learn the core scientific principles, theories, and processes that govern living organisms and biological systems.',
     },
     {
-        title: 'AP U.S. History',
+        title: 'AP U.S. Government and Politics',
         icon: <HistoryIcon boxSize={12} color="#4F46E8" />,
         description:
-            'Learn about the cultural, economic, political, and social developments that have shaped the United States from 1491 to the present.',
+            'Dive into the concepts and institutions of the political system and culture of the United States.',
     },
     {
         title: 'AP Literature and Composition',
@@ -39,9 +39,9 @@ const CourseItem = ({ title, icon, description }) => (
 
 const UpcomingCourses = () => (
     <div className="mt-12 md:mt-0">
-        <span className="tracking-widest text-center text-gray-600 uppercase md:text-start">
+        <p className="tracking-widest text-center text-gray-600 uppercase md:text-left">
             courses enrolling soon
-        </span>
+        </p>
         <ul>
             {courses.map((courseItem) => (
                 <CourseItem
