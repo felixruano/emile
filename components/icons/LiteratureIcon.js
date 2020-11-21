@@ -1,4 +1,4 @@
-import { Icon } from '@chakra-ui/core';
+import { Icon } from '@chakra-ui/react';
 
 const LiteratureIcon = (props) => (
     <Icon viewBox="0 0 48 48" {...props}>

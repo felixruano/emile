@@ -13,7 +13,7 @@ import {
     Text,
     useDisclosure,
     VStack,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 import { db } from '../../utils/firebase/firebaseClient';
 import BaseContainer from '../../components/layouts/BaseContainer';

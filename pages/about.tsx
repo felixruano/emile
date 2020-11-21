@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Heading, Image, Text } from '@chakra-ui/core';
+import { Box, Center, Flex, Heading, Image, Text } from '@chakra-ui/react';
 
 import BaseContainer from '../components/layouts/BaseContainer';
 import LearningThatWorks from '../components/marketing/LearningThatWorks';

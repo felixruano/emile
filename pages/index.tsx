@@ -265,8 +265,8 @@ const Home = () => {
                     content="Emile is an accredited global virtual K-12 school."
                 />
             </Head>
-            <div className="bg-gray-50">
-                <Header />
+            <Header />
+            <div className="pt-8 md:pt-32 bg-gray-50">
                 <div className="flex justify-end px-32">
                     <CircleDotPattern />
                 </div>

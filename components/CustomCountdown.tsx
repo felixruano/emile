@@ -2,7 +2,7 @@ import Countdown, {
     CountdownRenderProps,
     CountdownRendererFn,
 } from 'react-countdown';
-import { Flex, Heading, Text } from '@chakra-ui/core';
+import { Flex, Heading, Text } from '@chakra-ui/react';
 
 const WrapperCard: React.FC = ({ children }) => (
     <Flex

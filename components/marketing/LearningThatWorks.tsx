@@ -8,7 +8,7 @@ import {
     SimpleGrid,
     Text,
     VStack,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 import useWindowDimensions from '../../utils/use-window-dimensions';
 import ClockStarsIcon from '../icons/ClockStarsIcon';
@@ -46,7 +46,52 @@ const GridItem = ({ icon, title, text }) => (
     </VStack>
 );
 
-const LearningThatWorks = () => {
+export const LearningThatWorkContent: React.FC = () => (
+    <Box px={4}>
+        <Flex justify="center" align="center" direction="column">
+            <Heading
+                as="h4"
+                fontSize={["xs", null, "md"]}
+                fontWeight={600}
+                color="textTertiary"
+                textTransform="uppercase"
+            >
+                DISRUPTING TRADITIONAL EDUCATION
+                    </Heading>
+            <Text fontSize={["xl", null, "32px"]} fontWeight={600} textAlign="center">
+                Emile is online learning that actually works.
+                    </Text>
+        </Flex>
+        <SimpleGrid mx={[0, 0, 0, 16]} mt={16} columns={[1, null, 3]} spacing={6}>
+            {gridData.map((item) => (
+                <GridItem
+                    key={item.title}
+                    icon={item.icon}
+                    title={item.title}
+                    text={item.text}
+                />
+            ))}
+        </SimpleGrid>
+        <Center>
+            <Link href="/signup">
+                <Button
+                    mt={16}
+                    bg="indigo.600"
+                    color="white"
+                    textTransform="uppercase"
+                    shadow="lg"
+                    letterSpacing="widest"
+                    _hover={{ bg: 'indigo.500' }}
+                    _active={{ bg: 'indigo.500' }}
+                >
+                    Request Free Trial
+                        </Button>
+            </Link>
+        </Center>
+    </Box>
+)
+
+export const LearningThatWorks: React.FC = () => {
     const { width } = useWindowDimensions();
 
     return (
@@ -62,48 +107,7 @@ const LearningThatWorks = () => {
             bgSize={width > 768 ? '100% 90%' : '100% 100%'}
             bgRepeat="no-repeat"
         >
-            <Box px={4}>
-                <Flex justify="center" align="center" direction="column">
-                    <Heading
-                        as="h4"
-                        fontSize={["xs", null, "md"]}
-                        fontWeight={600}
-                        color="textTertiary"
-                        textTransform="uppercase"
-                    >
-                        DISRUPTING TRADITIONAL EDUCATION
-                    </Heading>
-                    <Text fontSize={["xl", null, "32px"]} fontWeight={600} textAlign="center">
-                        Emile is online learning that actually works.
-                    </Text>
-                </Flex>
-                <SimpleGrid mx={[0, 0, 0, 16]} mt={16} columns={[1, null, 3]} spacing={6}>
-                    {gridData.map((item) => (
-                        <GridItem
-                            key={item.title}
-                            icon={item.icon}
-                            title={item.title}
-                            text={item.text}
-                        />
-                    ))}
-                </SimpleGrid>
-                <Center>
-                    <Link href="/signup">
-                        <Button
-                            mt={16}
-                            bg="indigo.600"
-                            color="white"
-                            textTransform="uppercase"
-                            shadow="lg"
-                            letterSpacing="widest"
-                            _hover={{ bg: 'indigo.500' }}
-                            _active={{ bg: 'indigo.500' }}
-                        >
-                            Request Free Trial
-                        </Button>
-                    </Link>
-                </Center>
-            </Box>
+            <LearningThatWorkContent />
         </Box>
     );
 };

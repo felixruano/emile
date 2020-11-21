@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Box, Button, Center, Flex, Heading, HStack, Icon, Image, Stack, Text } from "@chakra-ui/core";
+import ReactPlayer from 'react-player/lazy';
+import { AspectRatio, Box, Button, Center, Flex, Heading, HStack, Icon, Image, Stack, Text } from "@chakra-ui/react";
 import { FaArrowLeft, FaRegLightbulb } from "react-icons/fa";
 import { BiCube } from "react-icons/bi";
 import { AiOutlineInfoCircle } from "react-icons/ai";
@@ -23,19 +24,19 @@ const SectionHeader = ({ icon, text }: SectionHeaderProps) => (
 
 const BackButton = () => (
   <Link href="/courses">
-      <Button variant="link" py={6} leftIcon={<FaArrowLeft />} color="indigo.600" textTransform="uppercase">
-          Back to Course
+    <Button variant="link" py={6} leftIcon={<FaArrowLeft />} color="indigo.600" textTransform="uppercase">
+      Back to Course
       </Button>
   </Link>
 );
 
 const LearningObjective = () => (
-    <Stack py={8} borderBottom="2px solid #EAEAF0" spacing={4}>
-      <SectionHeader icon={<Icon as={FaRegLightbulb} boxSize={6} color="indigo.600" />} text="Learning Objective" />
-      <Text pl={14} fontSize="14px" color="textSecondary" maxW="4xl">
-        Learn the core scientific principles, theories, and processes that govern living organisms and biological systems.
+  <Stack py={8} borderBottom="2px solid #EAEAF0" spacing={4}>
+    <SectionHeader icon={<Icon as={FaRegLightbulb} boxSize={6} color="indigo.600" />} text="Learning Objective" />
+    <Text pl={14} fontSize="14px" color="textSecondary" maxW="4xl">
+      Learn the core scientific principles, theories, and processes that govern living organisms and biological systems.
       </Text>
-    </Stack>
+  </Stack>
 );
 
 const data = [
@@ -219,26 +220,22 @@ const AboutLesson = () => (
 );
 
 const LiveCourse: React.FC = () => {
-    return <BaseContainer backgroundColor="gray.50">
-        <Center color="textPrimary">
-          <Box>
-            <BackButton />
-            <Flex maxH="2xl" spacing={8}>
-              <Image
-                // boxSize="800px"
-                objectFit="contain"
-                src="/livestream.png"
-                alt="Livestream"
-                mr={6}
-              />
-              <ChatBox />
-            </Flex>
-            <LearningObjective />
-            <Concepts numConcepts={4} />
-            <AboutLesson />
-          </Box>
-        </Center>
-    </BaseContainer>;
+  return <BaseContainer backgroundColor="gray.50">
+    <Box mx="auto" maxW="1440px" px={8} w="100%" color="textPrimary">
+      <BackButton />
+      <Flex maxH="2xl" spacing={8}>
+        <Box w="100%" h="100%" mr={6}>
+          <AspectRatio maxW="100%" ratio={16 / 9}>
+            <ReactPlayer height="100%" width="100%" url="https://vimeo.com/477808396?color=4F46E8" controls={true} />
+          </AspectRatio>
+        </Box>
+        <ChatBox />
+      </Flex>
+      <LearningObjective />
+      <Concepts numConcepts={4} />
+      <AboutLesson />
+    </Box>
+  </BaseContainer>;
 };
 
 export default LiveCourse;

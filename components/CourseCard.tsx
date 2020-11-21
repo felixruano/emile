@@ -1,9 +1,13 @@
 import Link from 'next/link';
-import { Box, Button, Flex, HStack, Text } from '@chakra-ui/core';
-import { Heading } from '@chakra-ui/core';
+import { Box, Button, Flex, HStack, Text } from '@chakra-ui/react';
+import { Heading } from '@chakra-ui/react';
 
-const ReserveButton = () => (
-    <Link href="/courses/ap-biology">
+type ReserveButtonProps = {
+    uid: string;
+}
+
+const ReserveButton: React.FC<ReserveButtonProps> = ({ uid }) => (
+    <Link href={`/courses/${uid}`}>
         <Button
             mt={4}
             bg="indigo.600"
@@ -18,8 +22,16 @@ const ReserveButton = () => (
     </Link>
 );
 
+type CourseCardProps = {
+    icon?: React.ReactNode;
+    uid: string;
+    title: string;
+    description: string;
+    startDate: string;
+}
+
 // TODO: Finish x days
-const CourseCard = ({ icon, title, description, startDate }) => (
+const CourseCard: React.FC<CourseCardProps> = ({ icon, uid, title = '', description = '', startDate = '' }) => (
     <Box
         borderRadius="md"
         bgColor="white"
@@ -45,7 +57,7 @@ const CourseCard = ({ icon, title, description, startDate }) => (
                 starts {startDate}
             </Text>
             {/* <Text as="p">X days left to enroll</Text> */}
-            <ReserveButton />
+            <ReserveButton uid={uid} />
             {/* </Flex> */}
         </Flex>
     </Box>

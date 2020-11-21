@@ -13,7 +13,7 @@ import {
     Text,
     Stack,
     useDisclosure,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { FaChevronDown, FaArrowRight } from 'react-icons/fa';
 import BaseContainer from '@components/layouts/BaseContainer';
 import CourseCard from '@components/CourseCard';
@@ -115,7 +115,6 @@ const CoursesComingSoon = () => (
         backgroundSize="100% 94%"
         backgroundRepeat="no-repeat"
         pb={32}
-        display={['none', null, 'block']}
     >
         <Box px={[3, 8, 16, 32]} py={64}>
             <Center>
@@ -199,7 +198,7 @@ const CourseItemMobile = ({ label, courses }) => {
 };
 
 const CoursesComingSoonMobile = () => (
-    <Box pt="64px" display={['block', null, 'none']}>
+    <Box pt="64px">
         <Center>
             <Heading as="h4" fontSize="20px" mb="32px">
                 Courses Coming Soon
@@ -236,6 +235,7 @@ const CoursesComingSoonMobile = () => (
 
 const courses = [
     {
+        uid: 'ap-biology',
         title: 'AP Biology',
         icon: <DnaIcon2 boxSize={12} color="#4F46E8" />,
         startDate: 'Nov 30',
@@ -243,15 +243,17 @@ const courses = [
             'Learn the core scientific principles, theories, and processes that govern living organisms and biological systems.',
     },
     {
-        title: 'AP U.S. Government and Politics',
-        icon: <HistoryIcon boxSize={12} color="#4F46E8" />,
+        uid: 'ap-government',
+        title: 'AP U.S. History',
+        icon: <HistoryIcon boxSize={6} color="#4F46E8" />,
         startDate: 'Nov 30',
         description:
-            'Dive into the concepts and institutions of the political system and culture of the United States.',
+            'Learn about the cultural, economic, political, and social developments that have shaped the United States from 1491 to the present.',
     },
     {
+        uid: 'ap-literature',
         title: 'AP Literature and Composition',
-        icon: <LiteratureIcon boxSize={12} color="#4F46E8" />,
+        icon: <LiteratureIcon boxSize={6} color="#4F46E8" />,
         startDate: 'Nov 30',
         description:
             'Cultivate your understanding of literature through reading and analyzing texts by exploring concepts like character, setting, structure, perspective, figurative language, and literary analysis in the context of literary works.',
@@ -262,7 +264,7 @@ const Courses = () => {
     const { width } = useWindowDimensions();
 
     return (
-        <BaseContainer backgroundColor="gray.50">
+        <BaseContainer backgroundColor="bg-gray-50">
             <Box
                 px={[3, null, 16, 32]}
                 py={[6, null, 16]}
@@ -315,7 +317,8 @@ const Courses = () => {
                 >
                     {courses.map((course) => (
                         <CourseCard
-                            key={course.title}
+                            key={course.uid}
+                            uid={course.uid}
                             icon={course.icon}
                             title={course.title}
                             description={course.description}
@@ -343,8 +346,7 @@ const Courses = () => {
                     )}
                 </SimpleGrid>
             </Box>
-            <CoursesComingSoon />
-            <CoursesComingSoonMobile />
+            {width > 990 ? <CoursesComingSoon /> : <CoursesComingSoonMobile />}
         </BaseContainer>
     );
 };

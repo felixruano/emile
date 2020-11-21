@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/core';
+import { Button } from '@chakra-ui/react';
 import Link from 'next/link';
 
 import { useAuth } from '../utils/use-auth';
@@ -9,7 +9,7 @@ type SignUpButtonProps = {
     actionBgColor: string;
 };
 
-const SignUpButton = ({ text, bgColor, actionBgColor }: SignUpButtonProps) => {
+const SignUpButton: React.FC<SignUpButtonProps> = ({ text, bgColor, actionBgColor }: SignUpButtonProps) => {
     const auth = useAuth();
 
     if (auth?.user) return null;

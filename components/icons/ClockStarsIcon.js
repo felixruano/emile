@@ -1,4 +1,4 @@
-import { Icon } from '@chakra-ui/core';
+import { Icon } from '@chakra-ui/react';
 
 const ClockStarsIcon = (props) => (
     <Icon viewBox="0 0 64 64" {...props}>
