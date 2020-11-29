@@ -6,7 +6,7 @@ import { FaTimes } from 'react-icons/fa';
 
 import EmileLongIcon from './icons/EmileLongIcon';
 import MobileMenuButton from './MobileMenuButton';
-import { useAuth } from '@utils/use-auth';
+import { useAuth } from '@utils/hooks/use-auth';
 
 type UserMenuProps = {
     name: string;

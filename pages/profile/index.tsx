@@ -15,9 +15,9 @@ import {
     VStack,
 } from '@chakra-ui/react';
 
-import { db } from '../../utils/firebase/firebaseClient';
-import BaseContainer from '../../components/layouts/BaseContainer';
-import { useAuth } from '../../utils/use-auth';
+import { db } from '@utils/firebase/firebaseClient';
+import BaseContainer from '@components/layouts/BaseContainer';
+import { useAuth } from '@utils/hooks/use-auth';
 
 const getUserInformation = async (uid) => {
     const docRef = db.collection('users').doc(uid);

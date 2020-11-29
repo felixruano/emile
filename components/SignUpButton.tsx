@@ -1,7 +1,7 @@
 import { Button } from '@chakra-ui/react';
 import Link from 'next/link';
 
-import { useAuth } from '../utils/use-auth';
+import { useAuth } from '@utils/hooks/use-auth';
 
 type SignUpButtonProps = {
     text: string;

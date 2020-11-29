@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, SlideFade } from "@chakra-ui/react";
 
 import { LearningThatWorkContent } from "@components/marketing/LearningThatWorks";
 
@@ -8,10 +8,13 @@ import InstructorInfo from "./InstructorInfo";
 import Overview from "./Overview";
 
 type CourseInformationProps = {
-  courseInfo: Record<string, unknown>;
+  isOpen: boolean;
+  courseInfo: {
+    [key: string]: any;
+  }
 }
 
-const CourseInformation: React.FC<CourseInformationProps> = ({ courseInfo }) => {
+const CourseInformation: React.FC<CourseInformationProps> = ({ isOpen = true, courseInfo }) => {
   const { course_title, course_long_description, course_stats, instructor_information } = courseInfo.data;
   const { text: title } = course_title[0];
   const { text } = course_long_description[0];
@@ -20,15 +23,15 @@ const CourseInformation: React.FC<CourseInformationProps> = ({ courseInfo }) => 
   const { text: shortBio } = instructor_information[0].short_bio[0];
 
   return (
-    <>
+    <SlideFade in={isOpen}>
       <Overview description={text} numberOfStudents={numberOfStudents} numberOfWeeks={numberOfWeeks} numberOfLessons={numberOfLessons} />
       <ConceptGrid />
       <InstructorInfo name={instructorName} type={instructorType} course={title} shortBio={shortBio} />
-      <AvailableCoursesGrid />
-      <Box py={16}>
+      <AvailableCoursesGrid currentCourse={courseInfo.uid} />
+      <Box bg="#F7F7FF" py={16}>
         <LearningThatWorkContent />
       </Box>
-    </>
+    </SlideFade>
   )
 }
 

@@ -10,7 +10,7 @@ import {
     VStack,
 } from '@chakra-ui/react';
 
-import useWindowDimensions from '../../utils/use-window-dimensions';
+import useWindowDimensions from '@utils/hooks/use-window-dimensions';
 import ClockStarsIcon from '../icons/ClockStarsIcon';
 import ReportIcon from '../icons/ReportIcon';
 import SupportIcon from '../icons/SupportIcon';

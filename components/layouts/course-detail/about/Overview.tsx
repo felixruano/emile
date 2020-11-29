@@ -1,9 +1,10 @@
+import { ReactText } from "react";
 import { Flex, Heading, Stack, Stat, StatHelpText, StatNumber, Text } from "@chakra-ui/react";
 
 type CourseStatsProps = {
-  numberOfStudents: number;
-  numberOfWeeks: number;
-  numberOfLessons: number;
+  numberOfStudents: ReactText | number;
+  numberOfWeeks: ReactText | number;
+  numberOfLessons: ReactText | number;
 }
 
 const CourseStats: React.FC<CourseStatsProps> = ({ numberOfStudents, numberOfWeeks, numberOfLessons }) => (
@@ -25,9 +26,9 @@ const CourseStats: React.FC<CourseStatsProps> = ({ numberOfStudents, numberOfWee
 
 type OverviewProps = {
   description: string;
-  numberOfStudents: number;
-  numberOfWeeks: number;
-  numberOfLessons: number;
+  numberOfStudents: ReactText | number;
+  numberOfWeeks: ReactText | number;
+  numberOfLessons: ReactText | number;
 }
 
 const Overview: React.FC<OverviewProps> = ({ description = '', numberOfStudents = '', numberOfWeeks = '', numberOfLessons = '' }) => {

@@ -1,6 +1,6 @@
 import { Icon, IconProps } from '@chakra-ui/react';
 
-const DnaIcon2: React.FC<IconProps> = (props: IconProps) => (
+const DnaIcon2: React.FC<IconProps> = (props) => (
     <Icon viewBox="0 0 48 48" {...props}>
         <circle opacity=".8" cx="24" cy="24" r="24" fill="#EDEDFD" />
         <path

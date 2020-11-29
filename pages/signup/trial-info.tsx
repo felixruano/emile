@@ -52,7 +52,7 @@ const MarketingCard = () => (
     </div>
 );
 
-const TrialInfo = () => (
+const TrialInfo: React.FC = () => (
     <BaseContainer backgroundColor="gray.50">
         <div className="flex flex-col items-center justify-center h-full px-4 pt-12 mx-auto space-y-8 ">
             <EmileShortIcon />
@@ -67,11 +67,11 @@ const TrialInfo = () => (
             </p>
             <MarketingCard />
             <div className="py-12">
-              <Link href={{ pathname: '/profile', query: { 'accountCreated': true }}}>
-                <button className="max-w-lg px-32 py-4 bg-indigo-600 border-indigo-600 rounded shadow-lg outline-none hover:bg-indigo-500">
-                  <p className="font-bold text-white uppercase">Start Free Trial</p>
-                </button>
-              </Link>
+                <Link href={{ pathname: '/profile', query: { 'accountCreated': true } }}>
+                    <button className="max-w-lg px-32 py-4 bg-indigo-600 border-indigo-600 rounded shadow-lg outline-none hover:bg-indigo-500">
+                        <p className="font-bold text-white uppercase">Start Free Trial</p>
+                    </button>
+                </Link>
             </div>
         </div>
     </BaseContainer>

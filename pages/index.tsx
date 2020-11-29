@@ -8,7 +8,7 @@ import UpcomingCourses from '@components/UpcomingCourses';
 import ConceptCard from '@components/ConceptCard';
 import Footer from '@components/Footer';
 import CircleDotPattern from '@components/background-patterns/CircleDotPattern';
-import useWindowDimensions from '@utils/use-window-dimensions';
+import useWindowDimensions from '@utils/hooks/use-window-dimensions';
 import CustomLink from '@components/CustomLink';
 import SignUpButton from '@components/SignUpButton';
 import LearningThatWorks from '@components/marketing/LearningThatWorks';
@@ -248,8 +248,7 @@ const Home = () => {
         if (router?.query?.referral_code)
             window.localStorage.setItem(
                 'referral_code',
-                // @ts-ignore
-                router.query.referral_code
+                router.query.referral_code as string
             );
     }, [router]);
 

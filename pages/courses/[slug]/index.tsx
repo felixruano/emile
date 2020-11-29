@@ -1,15 +1,18 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { useState } from 'react';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import dynamic from 'next/dynamic';
-import { Box, Button, Flex, Heading, Image, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from "@chakra-ui/react";
+import { Box, Button, Center, CircularProgress, Flex, Heading, Image, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from "@chakra-ui/react";
 import { AiOutlineShareAlt } from 'react-icons/ai';
 
 import DnaIcon2 from "@components/icons/DnaIcon2";
 import BaseContainer from "@components/layouts/BaseContainer";
-import { queryRepeatableDocuments } from "@utils/queries";
+import { queryRepeatableDocuments } from "@utils/prismic/queries";
 
 import { Client } from "../../../prismic-configuration";
 
 const DynamicCourseInformation = dynamic(() => import('@components/layouts/course-detail/about/CourseInformation'));
+
+const DynamicLessonView = dynamic(() => import('@components/layouts/course-detail/lessons/TimelineView'));
 
 type HeaderProps = {
   icon?: React.ReactNode;
@@ -35,24 +38,49 @@ const Header: React.FC<HeaderProps> = ({ title = '', description = '' }) => {
 }
 
 type CourseDetailProps = {
-  courseInfo: Record<string, unknown>;
+  courseInfo: {
+    [key: string]: any;
+  };
 }
 
-const CourseDetail: React.FC<CourseDetailProps> = ({ courseInfo }) => {
-  const { course_title: courseTitle, course_image: courseImage, course_short_description: courseShortDescription } = courseInfo.data;
+const CourseDetail: NextPage<CourseDetailProps> = ({ courseInfo }) => {
+  const [tabIndex, setTabIndex] = useState(0);
+
+  if (!courseInfo) {
+    return (
+      <BaseContainer>
+        <Center>
+          <CircularProgress isIndeterminate color="indigo.600" />
+        </Center>
+      </BaseContainer>
+    )
+  }
+
+  const getListOfLessons = () => {
+    const lessonsArr = [];
+    courseInfo.data.lessons.map((lesson) => {
+      lessonsArr.push(lesson.lesson.id);
+    })
+    return lessonsArr;
+  }
+
+  const { course_title: courseTitle, course_image: courseImage, course_short_description: courseShortDescription } = courseInfo?.data;
   return (
     <BaseContainer>
       <Image mx="auto" src={courseImage.url} objectFit="contain" alt="Hero Image" />
       <Box mx="auto" px={[4, null, 16]} maxW="1440px" color="textPrimary">
         <Header title={courseTitle[0].text} description={courseShortDescription[0].text} />
-        <Tabs isLazy={true} colorScheme="black" isFitted={false}>
-          <TabList>
-            <Tab pb={8} mr={[24, null, 48]} textTransform="uppercase" letterSpacing="widest" borderBottom="4px solid #5F5F6C">About</Tab>
-            <Tab pb={8} textTransform="uppercase" letterSpacing="widest" borderBottom="4px solid #5F5F6C">Lessons</Tab>
+        <Tabs isLazy={true} colorScheme="indigo" isFitted={true} onChange={(index) => setTabIndex(index)}>
+          <TabList color="A9A9B8">
+            <Tab pb={8} textTransform="uppercase" letterSpacing="widest" borderBottom="4px solid">About</Tab>
+            <Tab pb={8} textTransform="uppercase" letterSpacing="widest" borderBottom="4px solid">Lessons</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
-              <DynamicCourseInformation courseInfo={courseInfo} />
+              <DynamicCourseInformation isOpen={tabIndex === 0} courseInfo={courseInfo} />
+            </TabPanel>
+            <TabPanel>
+              <DynamicLessonView listOfLessons={getListOfLessons()} isOpen={tabIndex === 1} />
             </TabPanel>
           </TabPanels>
         </Tabs>
@@ -62,9 +90,7 @@ const CourseDetail: React.FC<CourseDetailProps> = ({ courseInfo }) => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params, preview = null }) => {
-  console.log(params, preview);
-  const courseInfo = await Client().getByUID("course", params.slug, {});
-  console.log('test', courseInfo);
+  const courseInfo = await Client().getByUID("course", params.slug as string, {});
   return {
     props: {
       preview,
@@ -74,12 +100,11 @@ export const getStaticProps: GetStaticProps = async ({ params, preview = null })
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const documents = await queryRepeatableDocuments((doc: { type: string; }) => doc.type === 'course');
+  const paths = documents.map((doc: { uid: string }) => ({ params: { slug: doc.uid } }));
   return {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment 
-    paths: documents.map((doc: { uid: string; }) => `/courses/${doc.uid}`),
-    fallback: true,
+    paths,
+    fallback: false,
   }
 }
 

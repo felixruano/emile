@@ -122,6 +122,7 @@ const ChatBox = () => {
             maxW="xl"
             bg="white"
             color="textPrimary"
+            display={["none", null, "block"]}
         >
             <Header />
             {/* <ParticipantCountBox /> */}
