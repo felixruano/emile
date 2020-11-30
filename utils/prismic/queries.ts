@@ -1,4 +1,4 @@
-import { Client } from './prismicHelpers'
+import { Client } from 'prismic-configuration';
 
 async function fetchDocs(page = 1, routes = []) {
     const response = await Client().query('', { pageSize: 100, lang: '*', page });
@@ -7,7 +7,7 @@ async function fetchDocs(page = 1, routes = []) {
         return fetchDocs(page + 1, allRoutes);
     }
     return [...new Set(allRoutes)];
-};
+}
 
 /** Fetches all Prismic documents and filters them (eg. by document type).
  *  In production, you would probably query documents by type instead of filtering them.

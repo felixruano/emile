@@ -1,6 +1,7 @@
 [build]
+  function = "out_functions"
+  publish = "out_publish"
   command = "npm run build"
-  publish = "out"
 
 [[redirects]]
   from = "https://school.hiemile.com"

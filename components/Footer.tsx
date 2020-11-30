@@ -8,7 +8,7 @@ const Footer = () => (
         <div className="grid w-full grid-cols-1 md:grid-cols-3">
             <div className="flex items-center justify-center py-10 space-x-4">
                 <EmileShortIcon />
-                <EmileLongIcon color="#4F46E8" />
+                <EmileLongIcon boxSize={20} color="#4F46E8" />
             </div>
             <div className="flex flex-col items-center justify-center space-y-4 text-gray-500">
                 <Link href="/courses">

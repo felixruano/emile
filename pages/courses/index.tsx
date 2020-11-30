@@ -13,14 +13,13 @@ import {
     Text,
     Stack,
     useDisclosure,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { FaChevronDown, FaArrowRight } from 'react-icons/fa';
+
 import BaseContainer from '@components/layouts/BaseContainer';
-import CourseCard from '@components/CourseCard';
-import useWindowDimensions from '@utils/use-window-dimensions';
-import DnaIcon2 from '@components/icons/DnaIcon2';
-import HistoryIcon from '@components/icons/HistoryIcon';
-import LiteratureIcon from '@components/icons/LiteratureIcon';
+import useWindowDimensions from '@utils/hooks/use-window-dimensions';
+import CoursesGrid from '@components/CoursesGrid';
+import Head from 'next/head';
 
 const coursesList = [
     [
@@ -115,7 +114,6 @@ const CoursesComingSoon = () => (
         backgroundSize="100% 94%"
         backgroundRepeat="no-repeat"
         pb={32}
-        display={['none', null, 'block']}
     >
         <Box px={[3, 8, 16, 32]} py={64}>
             <Center>
@@ -199,7 +197,7 @@ const CourseItemMobile = ({ label, courses }) => {
 };
 
 const CoursesComingSoonMobile = () => (
-    <Box pt="64px" display={['block', null, 'none']}>
+    <Box pt="64px">
         <Center>
             <Heading as="h4" fontSize="20px" mb="32px">
                 Courses Coming Soon
@@ -234,118 +232,79 @@ const CoursesComingSoonMobile = () => (
     </Box>
 );
 
-const courses = [
-    {
-        title: 'AP Biology',
-        icon: <DnaIcon2 boxSize={12} color="#4F46E8" />,
-        startDate: 'Nov 30',
-        description:
-            'Learn the core scientific principles, theories, and processes that govern living organisms and biological systems.',
-    },
-    {
-        title: 'AP U.S. Government and Politics',
-        icon: <HistoryIcon boxSize={12} color="#4F46E8" />,
-        startDate: 'Nov 30',
-        description:
-            'Dive into the concepts and institutions of the political system and culture of the United States.',
-    },
-    {
-        title: 'AP Literature and Composition',
-        icon: <LiteratureIcon boxSize={12} color="#4F46E8" />,
-        startDate: 'Nov 30',
-        description:
-            'Cultivate your understanding of literature through reading and analyzing texts by exploring concepts like character, setting, structure, perspective, figurative language, and literary analysis in the context of literary works.',
-    },
-];
-
 const Courses = () => {
     const { width } = useWindowDimensions();
 
     return (
-        <BaseContainer backgroundColor="bg-gray-50">
-            <Box
-                px={[3, null, 16, 32]}
-                py={[6, null, 16]}
-                bgImg="url('ellipses-purple-2.png')"
-                bgRepeat="no-repeat"
-                bgPosition="0 100%"
-            >
-                <Heading
-                    as="h3"
-                    size="3xl"
-                    textAlign={['center', null, 'start']}
+        <>
+            <Head>
+                <title>
+                    Emile | K-12 learning platform delivering mastery-based
+                    instruction
+                </title>
+                <meta
+                    name="description"
+                    content="Emile is an accredited global virtual K-12 school."
+                />
+            </Head>
+            <BaseContainer backgroundColor="bg-gray-50">
+                <Box
+                    bgImg="url('ellipses-purple-2.png')"
+                    bgRepeat="no-repeat"
+                    bgPosition="0 100%"
                 >
-                    Browse our{' '}
-                    <Text
-                        as="span"
-                        textDecoration="none"
-                        position="relative"
-                        color="indigo.600"
-                        _after={{
-                            content: '""',
-                            display: 'block',
-                            position: 'absolute',
-                            margin: '0 auto',
-                            width: '100%',
-                            height: '8px',
-                            background: '#4F46E8',
-                            borderRadius: '24px',
-                            left: 0,
-                            right: 0,
-                            bottom: '-4px',
-                        }}
+                    <Box
+                        mx="auto"
+                        maxW="1440px"
+                        color="textPrimary"
+                        px={[4, null, 16]}
+                        py={[6, null, 16]}
                     >
-                        courses.
-                    </Text>
-                </Heading>
-                <Text
-                    as="p"
-                    fontSize="2xl"
-                    color="#5F5F6C"
-                    mt={10}
-                    mb={16}
-                    textAlign={['center', null, 'start']}
-                >
-                    Courses that challenge and inspire you. See why students
-                    love us!
-                </Text>
-                <SimpleGrid
-                    columns={[1, null, null, 2]}
-                    spacing={[8, null, 12]}
-                >
-                    {courses.map((course) => (
-                        <CourseCard
-                            key={course.title}
-                            icon={course.icon}
-                            title={course.title}
-                            description={course.description}
-                            startDate={course.startDate}
-                        />
-                    ))}
-                    {width > 990 && (
-                        <Box
-                            borderRadius="md"
-                            bgColor="#EDEDFD"
-                            p={[8, null, null, 12]}
-                            shadow="lg"
+                        <Heading
+                            as="h3"
+                            size="3xl"
+                            textAlign={['center', null, 'start']}
                         >
-                            <Center h="100%">
-                                <Heading
-                                    as="h3"
-                                    color="textPrimary"
-                                    fontSize="32px"
-                                    textTransform="uppercase"
-                                >
-                                    coming soon
-                                </Heading>
-                            </Center>
-                        </Box>
-                    )}
-                </SimpleGrid>
-            </Box>
-            <CoursesComingSoon />
-            <CoursesComingSoonMobile />
-        </BaseContainer>
+                            Browse our{' '}
+                            <Text
+                                as="span"
+                                textDecoration="none"
+                                position="relative"
+                                color="indigo.600"
+                                _after={{
+                                    content: '""',
+                                    display: 'block',
+                                    position: 'absolute',
+                                    margin: '0 auto',
+                                    width: '100%',
+                                    height: '8px',
+                                    background: '#4F46E8',
+                                    borderRadius: '24px',
+                                    left: 0,
+                                    right: 0,
+                                    bottom: '-4px',
+                                }}
+                            >
+                                courses.
+                    </Text>
+                        </Heading>
+                        <Text
+                            as="p"
+                            fontSize="2xl"
+                            color="#5F5F6C"
+                            mt={10}
+                            mb={16}
+                            textAlign={['center', null, 'start']}
+                        >
+                            Courses that challenge and inspire you. See why students
+                            love us!
+                </Text>
+                        <CoursesGrid />
+                    </Box>
+                </Box>
+                {width > 990 ? <CoursesComingSoon /> : <CoursesComingSoonMobile />}
+            </BaseContainer>
+        </>
     );
 };
 

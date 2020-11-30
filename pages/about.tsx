@@ -1,11 +1,11 @@
-import { Box, Center, Flex, Heading, Image, Text } from '@chakra-ui/core';
+import { Box, Center, Flex, Heading, Image, Text } from '@chakra-ui/react';
 
 import BaseContainer from '../components/layouts/BaseContainer';
 import LearningThatWorks from '../components/marketing/LearningThatWorks';
 // import CircleDotPattern from '../components/background-patterns/CircleDotPattern';
 
 const About = () => (
-    <BaseContainer backgroundColor="bg-gray-50">
+    <BaseContainer backgroundColor="gray.50">
         <Box>
             <Center>
                 <Image

@@ -1,10 +1,10 @@
-import { extendTheme } from '@chakra-ui/core';
+import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
     fonts: {
-      body: 'soleil',
-      heading: 'soleil',
-      mono: 'soleil'
+        body: 'soleil',
+        heading: 'soleil',
+        mono: 'soleil'
     },
     colors: {
         brand: {
@@ -12,7 +12,7 @@ const theme = extendTheme({
                 cardBg: '#FAF9FE',
                 indigoPrimary: '#4F46E8',
                 indigo: {
-                  500: '#4F46E8',
+                    500: '#4F46E8',
                 },
                 indigoLighter: '#514D9B',
                 indigoLight: '#C8C8D1',
@@ -22,12 +22,12 @@ const theme = extendTheme({
                 coral: '#E84656',
                 ceruleanDefault: '#46CBE8',
                 cerulean: {
-                  500: '#46CBE8',
+                    500: '#46CBE8',
                 },
                 canary: '#FCC73F',
                 jadePrimary: '#27AE60',
                 jade: {
-                  500: '#27AE60',
+                    500: '#27AE60',
                 }
             },
             tertiary: {
@@ -48,36 +48,37 @@ const theme = extendTheme({
                 light:
                     'inear-gradient(115.59deg, rgba(79, 70, 232, 0.03) 0.5%, rgba(79, 70, 232, 0.04) 100.5%)',
             },
-            gray: {
-                50: '#F7F7F7',
-                100: '#EFEFEF',
-                200: '#DFDFDF',
-                300: '#D0D0D0',
-                400: '#C0C0C0',
-                500: '#B0B0B0',
-                600: '#A0A0A0',
-                700: '#909090',
-                800: '#818181',
-                900: '#717171',
-                primary: '#616161',
-            },
         },
         indigo: {
-          1000: '#2A2848',
-          900: '#39356D',
-          800: '#4B4699',
-          700: '#534DC6',
-          600: '#4F46E8',
-          500: '#7972FB',
-          400: '#ADA9FF',
-          300: '#DCDAFF',
-          200: '#ECECFF',
-          100: '#F7F7FF',
+            1000: '#2A2848',
+            900: '#39356D',
+            800: '#4B4699',
+            700: '#534DC6',
+            600: '#4F46E8',
+            500: '#7972FB',
+            400: '#ADA9FF',
+            300: '#DCDAFF',
+            200: '#ECECFF',
+            100: '#F7F7FF',
+        },
+        gray: {
+            50: '#F9F9F9',
+            100: '#F4F4F6',
+            200: '#EAEAF0',
+            300: '#E2E2EB',
+            400: '#D0D0DE',
+            500: '#A9A9B8',
+            600: '#82828F',
+            700: '#5F5F6C',
+            800: '#3E3E4F',
+            900: '#24242C',
+            primary: '#616161',
         },
         textPrimary: '#24242C',
         textSecondary: '#5F5F6C',
         textTertiary: '#82828F',
     },
+    breakpoints: ["30em", "48em", "62em", "80em", "90em"],
     shadows: {
         brand: {
             base:

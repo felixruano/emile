@@ -4,10 +4,10 @@ import { nanoid } from 'nanoid';
 import { FcGoogle } from 'react-icons/fc';
 import { FaArrowRight } from 'react-icons/fa';
 
-import { useAuth } from '../utils/use-auth';
-import createUser from '../utils/firebase/createUser.ts';
+import { useAuth } from '@utils/hooks/use-auth';
+import createUser from '@utils/firebase/createUser';
 import EmileShortIcon from './icons/EmileShortIcon';
-import { db } from '../utils/firebase/firebaseClient.ts';
+import { db } from '@utils/firebase/firebaseClient';
 
 const verifyAndUpdateReferralCode = (currentUserReferralCode) => {
     const referralCode = window.localStorage.getItem('referral_code');
@@ -96,6 +96,7 @@ export const AuthContent = ({ isSignUpFlow }) => {
                         referralCode
                     );
                     verifyAndUpdateReferralCode(referralCode);
+                    // @ts-expect-error
                     analytics.identify(uid, {
                         given_name,
                         family_name,
@@ -107,6 +108,7 @@ export const AuthContent = ({ isSignUpFlow }) => {
                         role,
                         referralCode,
                     });
+                    // @ts-expect-error
                     analytics.track('Account created', {
                         authentication: 'Google',
                     });
@@ -116,6 +118,7 @@ export const AuthContent = ({ isSignUpFlow }) => {
                     ('auth/popup-closed-by-user' ||
                         'auth/cancelled-popup-request')
                 ) {
+                    // @ts-expect-error
                     analytics.track('Log in', { authentication: 'Google' });
                     router.push('/');
                 }
@@ -159,7 +162,7 @@ export const AuthContent = ({ isSignUpFlow }) => {
     );
 };
 
-const AuthCard = () => {
+const AuthCard: React.FC = () => {
     const router = useRouter();
     const isSignUpFlow = router.asPath.includes('signup');
 

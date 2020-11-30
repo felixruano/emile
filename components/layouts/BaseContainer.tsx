@@ -1,3 +1,5 @@
+import { Box } from "@chakra-ui/react";
+
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
@@ -9,9 +11,9 @@ type BaseContainerProps = {
 const BaseContainer = ({ children, backgroundColor }: BaseContainerProps) => (
   <>
     <Header />
-    <div className={`${backgroundColor}`}>
+    <Box mt={["42px", null, 32]} bgColor={backgroundColor}>
       {children}
-    </div>
+    </Box>
     <Footer />
   </>
 );

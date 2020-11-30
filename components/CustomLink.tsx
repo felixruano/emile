@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Button, HStack, Text } from '@chakra-ui/core';
+import { Button, HStack, Text } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
 
 type CustomLinkProps = {

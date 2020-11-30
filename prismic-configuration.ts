@@ -1,41 +1,36 @@
-import Prismic from 'prismic-javascript'
+import Prismic from 'prismic-javascript';
+import { DefaultClient } from 'prismic-javascript/types/client';
 
-export const apiEndpoint = 'https://emileclasses.cdn.prismic.io/api/v2'
-export const accessToken = 'MC5YMEgxREJJQUFCTWdNeVNy.77-9Zy0VMe-_ve-_ve-_vQLvv70CR--_vVXvv73vv70077-9UyDvv73vv73vv718PWN977-9awY877-9'
+export const apiEndpoint = process.env.NEXT_PUBLIC_PRISMIC_API_ENDPOINT;
+export const accessToken = process.env.PRISMIC_ACCESS_TOKEN;
 
 // Client method to query documents from the Prismic repo
-export const Client = (req = null) => (
-    Prismic.client(apiEndpoint, createClientOptions(req, accessToken))
-)
+export const Client = (req = null): DefaultClient => Prismic.client(apiEndpoint, createClientOptions(req, accessToken));
 
-const createClientOptions = (req = null, prismicAccessToken = null) => {
-    const reqOption = req ? { req } : {}
-    const accessTokenOption = prismicAccessToken ? { accessToken: prismicAccessToken } : {}
+const createClientOptions = (req: unknown = null, prismicAccessToken = null) => {
+    const reqOption = req ? { req } : {};
+    const accessTokenOption = prismicAccessToken
+        ? { accessToken: prismicAccessToken }
+        : {};
     return {
         ...reqOption,
         ...accessTokenOption,
-    }
-}
+    };
+};
 
 // -- Link resolution rules
 // Manages the url links to internal Prismic documents
-export const linkResolver = (doc) => {
+export const linkResolver = (doc: Record<string, unknown>): string => {
     if (doc.type === 'course') {
-        return `/classes/${doc.uid}`
+        return `/courses/${doc.uid}`;
     }
-    if (doc.type === 'teacher') {
-        return `/team/${doc.uid}`
-    }
-    return '/'
-}
+    return '/';
+};
 
 // Additional helper function for Next/Link components
-export const hrefResolver = (doc) => {
+export const hrefResolver = (doc: Record<string, unknown>): string => {
     if (doc.type === 'course') {
-        return '/classes/[uid]'
+        return '/courses/[uid]';
     }
-    if (doc.type === 'teacher') {
-        return '/team/[uid]'
-    }
-    return '/'
-}
+    return '/';
+};
