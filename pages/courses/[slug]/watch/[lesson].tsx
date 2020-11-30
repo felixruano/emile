@@ -65,7 +65,7 @@ const LiveCourse: React.FC = () => {
         <Box w="100%" h="100%" mr={[0, null, 6]}>
           <AspectRatio maxW="100%" ratio={16 / 9}>
             {(lessonData?.data && auth?.user) ? (
-              <ReactPlayer className="react-player" height="100%" width="100%" pip={true} url={`${video_url.url}?color=4F46E8`} controls={true} />
+              <ReactPlayer pip={true} width="100%" height="100%" url={`${video_url.url}?color=4F46E8`} controls={true} />
             ) : (
                 <Skeleton h="100%" w="100%" />
               )}
@@ -89,6 +89,8 @@ const LiveCourse: React.FC = () => {
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
       }
     `}
     </style>

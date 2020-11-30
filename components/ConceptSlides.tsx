@@ -42,9 +42,7 @@ const LargeSlide = ({ isLoadedAndAuthenticated = false, concept }) => {
     <Box bg="white" shadow="0px 3.10811px 6.21622px rgba(62, 62, 79, 0.06), 0px 6.21622px 9.32432px rgba(62, 62, 79, 0.1)" borderRadius="12px" w="100%">
       <Stack h="479px" spacing={8} p={[4, null, 10]} overflowY="scroll">
         <Box fontWeight={600} color="#39356D" letterSpacing="wide">{RichText.render(concept.data.unit_title)}</Box>
-        <SkeletonText noOfLines={4} isLoaded={isLoadedAndAuthenticated}>
-          <RichText render={concept.data.content} />
-        </SkeletonText>
+        {!isLoadedAndAuthenticated ? <SkeletonText noOfLines={4} isLoaded={false} /> : <RichText render={concept.data.content} />}
         <ImageGallery imageGallery={concept.data.image_gallery} isLoadedAndAuthenticated={isLoadedAndAuthenticated} />
       </Stack>
       <Flex h="88px" borderBottomRadius="12px" align="center" justify="flex-end" bg="#F9F9F9">

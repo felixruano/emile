@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
+import 'firebase/database';
 import 'firebase/storage';
 import 'firebase/analytics';
 
@@ -22,6 +23,7 @@ if (!firebase.apps.length) {
 const app = firebase.app();
 const auth = firebase.auth();
 const db = firebase.firestore();
+const rDb = firebase.database();
 const storage = firebase.storage();
 
-export { auth, db, storage, firebase };
+export { auth, db, rDb, storage, firebase };

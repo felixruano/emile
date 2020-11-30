@@ -12,8 +12,13 @@ import {
     Skeleton,
     SkeletonCircle,
     Text,
+    SkeletonText,
 } from '@chakra-ui/react';
-import { getAllUsers } from '@utils/firebase/getAllUsers';
+import { useAuth } from '@utils/hooks/use-auth';
+import { addUserToChat } from '@utils/firebase/addUserToChat';
+import { useRouter } from 'next/router';
+import { getAllUsersInChat } from '@utils/firebase/getAllUsersInChat';
+import { removeUserFromChat } from '@utils/firebase/removeUserFromChat';
 
 const Header = () => (
     <Center>
@@ -30,11 +35,13 @@ const Header = () => (
     </Center>
 );
 
-const ParticipantCountBox = () => (
+const ParticipantCountBox = ({ numUsers = 0 }) => (
     <Box borderBottom="2px solid #EAEAF0">
+        <SkeletonText noOfLines={1} isLoaded={numUsers > 0}>
         <Text pl={4} py={8} fontSize="14px" color="textSecondary">
-            All 53
+            All {numUsers}
         </Text>
+        </SkeletonText>
     </Box>
 );
 
@@ -70,7 +77,7 @@ const EmptyChatListItem = ({ index }) => (
 
 const quickFunction = () => {
     const items = [];
-    for (let i = 0; i <= 7; i++) {
+    for (let i = 0; i <= 3; i++) {
         items.push(i);
     }
     return items;
@@ -91,28 +98,49 @@ const ChatList = ({ users }) => {
 
     return (
         <List float="left" maxH="472px" styleType="none" overflowY="scroll">
-            {users.map((user, index) => (
+            {Object.keys(users).map((id, index) => { 
+                return (
                 <ChatListItem
-                    key={user.displayName}
+                    key={id}
                     index={index + 1}
-                    photoURL={user.photoURL}
-                    displayName={user.displayName}
+                    photoURL={users[id].imageSrc}
+                    displayName={users[id].displayName}
                 />
-            ))}
+            )})}
         </List>
     );
 };
 
 const ChatBox = () => {
+    const auth = useAuth();
+    const router = useRouter();
     const [users, setUsers] = useState();
 
-    // useEffect(() => {
-    //     async function getData() {
-    //         const fetchedUsers = await getAllUsers();
-    //         setUsers(fetchedUsers);
-    //     }
-    //     getData();
-    // }, []);
+    useEffect(() => {
+        if (auth?.user) {
+            const sessionID = router.query.lesson;
+            async function addUser() {
+                await addUserToChat(sessionID, auth?.user?.uid, auth?.user?.displayName, auth?.user?.photoURL)
+            }
+            
+            addUser();
+            return () => {
+                const sessionId = router.query.lesson;
+                removeUserFromChat(sessionId, auth?.user?.uid);
+            }
+        }
+    }, [auth?.user]);
+
+    useEffect(() => {
+        if (auth?.user) {
+            const sessionID = router.query.lesson;
+            async function getAllUsers() {
+                const chatUsers = await getAllUsersInChat(sessionID);
+                setUsers(chatUsers);
+            }
+            getAllUsers();
+        }
+    }, [auth?.user])
 
     return (
         <Box
@@ -125,8 +153,8 @@ const ChatBox = () => {
             display={["none", null, "block"]}
         >
             <Header />
-            {/* <ParticipantCountBox /> */}
-            {/* <ChatList users={users} /> */}
+            <ParticipantCountBox numUsers={users ? Object.keys(users).length : undefined} />
+            <ChatList users={users} />
         </Box>
     );
 };

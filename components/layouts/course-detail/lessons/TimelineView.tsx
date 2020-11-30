@@ -22,10 +22,10 @@ const Header = ({ weekNumber, title }: HeaderProps) => (
   </HStack>
 );
 
-const WeekView = ({ id = '', courseImageSrc = '', week = 1, lessonTime, title = '', numConcepts = 0 }) => {
+const WeekView = ({ id = '', courseImageSrc = '', week = 1, unit = 1, lessonTime, title = '', numConcepts = 0 }) => {
   return (
     <Box my={4} color="textPrimary">
-      <Header weekNumber={week} title={`Week ${week}: ${title}`} />
+      <Header weekNumber={week} title={`Unit ${unit}, Week ${week}: ${title}`} />
       <Flex h={["520px", null, "260px"]} align="center">
         <Divider color="#C4C4C4" borderWidth="1px" ml={4} mt={4} orientation="vertical" mr={[6, null, 12]} />
         <HStack spacing="2rem">
@@ -50,7 +50,7 @@ const TimelineView = ({ courseImageSrc = '', listOfLessons = [''], isOpen = fals
     <SlideFade in={isOpen}>
       {data.results.map((lesson) => {
         const { data } = lesson;
-        return <WeekView key={lesson.id} id={lesson.id} courseImageSrc={courseImageSrc} week={data.week} lessonTime={data.lesson_time} title={data.title[0].text} numConcepts={data.number_of_concepts} />
+        return <WeekView key={lesson.id} id={lesson.id} courseImageSrc={courseImageSrc} week={data.week} unit={data.unit} lessonTime={data.lesson_time} title={data.title[0].text} numConcepts={data.concepts.length} />
       })}
     </SlideFade>
   );
