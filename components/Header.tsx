@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import { Avatar, Box, Button, Flex, HStack, IconButton, Menu, MenuButton, MenuList, MenuItem, Text, VStack } from '@chakra-ui/react';
-import { FaTimes } from 'react-icons/fa';
+import { Avatar, Box, Button, Flex, HStack, Menu, MenuButton, MenuList, MenuItem, Text, VStack, CloseButton, Divider, Center } from '@chakra-ui/react';
 
 import EmileLongIcon from './icons/EmileLongIcon';
 import MobileMenuButton from './MobileMenuButton';
@@ -39,7 +38,6 @@ const MobileMenuLink = ({ text, href = '' }) => (
                 textAlign="center"
                 rounded="md"
                 py={2}
-                mx={2}
                 letterSpacing="wide"
                 _hover={{
                     color: 'gray.900',
@@ -51,7 +49,7 @@ const MobileMenuLink = ({ text, href = '' }) => (
                     background: 'gray.50',
                 }}
             >
-                <Flex align="center" justify="center" ml={5}>
+                <Flex align="center" justify="center">
                     <Text
                         fontSize="1rem"
                         fontWeight="medium"
@@ -64,38 +62,49 @@ const MobileMenuLink = ({ text, href = '' }) => (
     </NextLink>
 );
 
-const MobileMenu = ({ toggleMobileMenu }) => (
-    <Box position="absolute" top="0" w="96.5%" m={2}>
-        <Box rounded="lg" shadow="md">
-            <Box
-                rounded="lg"
-                bg="white"
-                shadow="xs"
-                overflow="hidden"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="main-menu"
-            >
-                <Flex px="5" pt="4" align="center" justify="space-between">
-                    <EmileLongIcon boxSize={16} color="#4F46E8" />
-                    <IconButton
-                        variant="ghost"
-                        color="gray.400"
-                        aria-label="Close menu"
-                        size="lg"
-                        icon={<FaTimes />}
-                        onClick={toggleMobileMenu}
-                    />
-                </Flex>
-                <VStack spacing={0}>
-                    <MobileMenuLink text="Explore Courses" href="/courses" />
-                    <MobileMenuLink text="Log In" href="/login" />
-                    <FreeTrialButton />
-                </VStack>
+const MobileMenu = ({ user, toggleMobileMenu, handleLogout }) => {
+    return (
+        <Box position="absolute" top="0" w="96.5%" m={2}>
+            <Box rounded="lg" shadow="md">
+                <Box
+                    rounded="lg"
+                    pb={!user ? 4 : 0}
+                    bg="white"
+                    shadow="xs"
+                    overflow="hidden"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="main-menu"
+                >
+                    <Flex px="5" pt="4" align="center" justify="space-between">
+                        <EmileLongIcon boxSize={16} color="#4F46E8" />
+                        <CloseButton variant="ghost" onClick={toggleMobileMenu} />
+                    </Flex>
+                    <VStack spacing={1}>
+                        {user ? (
+                            <>
+                                <MobileMenuLink text="Explore Courses" href="/courses" />
+                                <Divider mb={4} />
+                                <Avatar src={user.photoURL} size="sm" />
+                                <Text>{user?.displayName}</Text>
+                                <MobileMenuLink text="Account" href="/profile" />
+                                <Center as="button" bg="gray.100" py={4} color="red.500" w="100%" textTransform="uppercase" onClick={handleLogout}>
+                                    Sign Out
+                                </Center>
+                            </>
+                        ) : (
+                                <>
+                                    <MobileMenuLink text="Explore Courses" href="/courses" />
+                                    <MobileMenuLink text="Log In" href="/login" />
+                                    <FreeTrialButton />
+                                </>
+                            )}
+                    </VStack>
+                </Box>
             </Box>
         </Box>
-    </Box>
-);
+    )
+}
 
 type NavItemProps = {
     href: string;
@@ -155,7 +164,9 @@ const Nav: React.FC = () => {
                                     <MobileMenuButton />
                                 </Box>
                                 {auth?.user ? (
-                                    <UserMenu name={auth.user.displayName} src={auth.user.photoURL} handleLogout={handleLogout} />
+                                    <Box display={["none", null, "inherit"]}>
+                                        <UserMenu name={auth.user.displayName} src={auth.user.photoURL} handleLogout={handleLogout} />
+                                    </Box>
                                 ) : (
                                         <HStack display={["none", null, "block"]} spacing={8}>
                                             <NavItem href="/login" text="Log In" />
@@ -166,7 +177,7 @@ const Nav: React.FC = () => {
                         </HStack>
                     </Flex>
                 </Box>
-                {showMenu && <MobileMenu toggleMobileMenu={toggleMobileMenu} />}
+                {showMenu && <MobileMenu user={auth?.user} toggleMobileMenu={toggleMobileMenu} handleLogout={handleLogout} />}
             </Box>
         </nav>
     );
