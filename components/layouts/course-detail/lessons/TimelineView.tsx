@@ -22,21 +22,21 @@ const Header = ({ weekNumber, title }: HeaderProps) => (
   </HStack>
 );
 
-const WeekView = ({ id = '', week = 1, title = '', numConcepts = 0 }) => {
+const WeekView = ({ id = '', courseImageSrc = '', week = 1, lessonTime, title = '', numConcepts = 0 }) => {
   return (
     <Box my={4} color="textPrimary">
       <Header weekNumber={week} title={`Week ${week}: ${title}`} />
       <Flex h={["520px", null, "260px"]} align="center">
         <Divider color="#C4C4C4" borderWidth="1px" ml={4} mt={4} orientation="vertical" mr={[6, null, 12]} />
         <HStack spacing="2rem">
-          <HorizontalLessonCard id={id} weekNumber={week} title={title} numConcepts={numConcepts} />
+          <HorizontalLessonCard id={id} courseImageSrc={courseImageSrc} weekNumber={week} lessonTime={lessonTime} title={title} numConcepts={numConcepts} />
         </HStack>
       </Flex>
     </Box>
   )
 }
 
-const TimelineView = ({ listOfLessons = [''], isOpen = false }) => {
+const TimelineView = ({ courseImageSrc = '', listOfLessons = [''], isOpen = false }) => {
   const options = { orderings: '[my.lesson.week]' };
   const { isLoading, error, data } = useQuery(['lessons', listOfLessons], () => Client().getByIDs(listOfLessons, options));
 
@@ -50,7 +50,7 @@ const TimelineView = ({ listOfLessons = [''], isOpen = false }) => {
     <SlideFade in={isOpen}>
       {data.results.map((lesson) => {
         const { data } = lesson;
-        return <WeekView key={lesson.id} id={lesson.id} week={data.week} title={data.title[0].text} numConcepts={data.number_of_concepts} />
+        return <WeekView key={lesson.id} id={lesson.id} courseImageSrc={courseImageSrc} week={data.week} lessonTime={data.lesson_time} title={data.title[0].text} numConcepts={data.number_of_concepts} />
       })}
     </SlideFade>
   );

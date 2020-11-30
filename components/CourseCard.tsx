@@ -32,14 +32,15 @@ const CourseCard: React.FC<CourseCardProps> = ({ uid = undefined, url = '', imag
             textAlign="left"
             _active={{ outline: 'indigo.600' }}
             _focus={{ outline: 'indigo.600' }}
+            onClick={handleClick}
         >
-            <Link href={`/courses/${url}/live`}>
-                <Box pos="relative" display="inline-block" _hover={{ cursor: 'pointer', transition: 'all 0.25s ease', opacity: '70%' }} >
-                    <Image src={imageSrc} borderTopRadius="md" alt={title} />
-                    <PlayCircleIcon centerInImage={true} />
-                </Box>
-            </Link>
-            <Box p={8} onClick={handleClick} _hover={{ cursor: 'pointer' }}>
+            {/* <Link href={`/courses/${url}/live`}> */}
+            <Box pos="relative" display="inline-block" _hover={{ cursor: 'pointer', transition: 'all 0.25s ease', opacity: '70%' }} >
+                <Image src={imageSrc} borderTopRadius="md" alt={title} />
+                <PlayCircleIcon centerInImage={true} />
+            </Box>
+            {/* </Link> */}
+            <Box p={8} _hover={{ cursor: 'pointer' }}>
                 <HStack spacing={4}>
                     {iconFactory(uid.replace('coursecard-', ''), 6, 'indigo.600')}
                     <Heading as="h3" fontSize="24px">{title}</Heading>

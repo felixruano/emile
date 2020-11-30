@@ -8,11 +8,7 @@ type CourseStatsProps = {
 }
 
 const CourseStats: React.FC<CourseStatsProps> = ({ numberOfStudents, numberOfWeeks, numberOfLessons }) => (
-  <Stack mt={[8, null,]} direction="row" spacing={12}>
-    <Stat textAlign="center">
-      <StatNumber>{numberOfStudents}</StatNumber>
-      <StatHelpText>Students</StatHelpText>
-    </Stat>
+  <Stack direction="row" spacing={12}>
     <Stat textAlign="center">
       <StatNumber>{numberOfWeeks}</StatNumber>
       <StatHelpText>Weeks</StatHelpText>
@@ -31,13 +27,10 @@ type OverviewProps = {
   numberOfLessons: ReactText | number;
 }
 
-const Overview: React.FC<OverviewProps> = ({ description = '', numberOfStudents = '', numberOfWeeks = '', numberOfLessons = '' }) => {
+const Overview: React.FC<OverviewProps> = ({ numberOfStudents = '', numberOfWeeks = '', numberOfLessons = '' }) => {
   return (
-    <Flex direction={["column", null, "row"]} justify="space-between" pt={12} pb={16}>
-      <Stack spacing={8} textAlign={["center", null, "left"]}>
-        <Heading as="h3" fontSize="32px" fontWeight={600} letterSpacing="widest">Course Overview</Heading>
-        <Text maxW="3xl" color="textSecondary">{description}</Text>
-      </Stack>
+    <Flex direction={["column", null, "row"]} justify="space-between" py={4}>
+      <Heading as="h3" fontSize="32px" fontWeight={600} letterSpacing="widest">Course Overview</Heading>
       <CourseStats numberOfStudents={numberOfStudents} numberOfWeeks={numberOfWeeks} numberOfLessons={numberOfLessons} />
     </Flex>
   )

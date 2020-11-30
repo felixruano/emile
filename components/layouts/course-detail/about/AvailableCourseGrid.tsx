@@ -34,7 +34,6 @@ const AvailableCoursesGrid: React.FC<AvailableCourseGridProps> = ({ currentCours
               imageSrc: course_image.url,
               numberOfStudents: course_stats[0].number_of_students,
               title: course_title[0].text,
-              // TODO: add avatarImgSrc
               instructorName: instructor_information[0].instructor_name
             }
             return (

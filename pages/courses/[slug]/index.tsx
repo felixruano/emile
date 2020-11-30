@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import dynamic from 'next/dynamic';
-import { Box, Button, Center, CircularProgress, Flex, Heading, Image, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useDisclosure } from "@chakra-ui/react";
+import { Box, Button, Center, CircularProgress, Flex, Heading, Image, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from "@chakra-ui/react";
 import { AiOutlineShareAlt } from 'react-icons/ai';
 
-import DnaIcon2 from "@components/icons/DnaIcon2";
 import BaseContainer from "@components/layouts/BaseContainer";
 import { queryRepeatableDocuments } from "@utils/prismic/queries";
 
@@ -24,7 +23,6 @@ const Header: React.FC<HeaderProps> = ({ title = '', description = '' }) => {
   return (
     <Flex direction={["column", null, "row"]} py={12} justify="space-between">
       <Stack direction={['column', null, 'row']} spacing={4} align={["center", null, "baseline"]}>
-        <DnaIcon2 boxSize={10} color="indigo.600" />
         <Stack spacing={4} textAlign={["center", null, "left"]}>
           <Heading as="h2" fontSize="5xl" fontWeight={700}>{title}</Heading>
           <Text mt={4} color="textTertiary" maxW="2xl">{description}</Text>
@@ -80,7 +78,7 @@ const CourseDetail: NextPage<CourseDetailProps> = ({ courseInfo }) => {
               <DynamicCourseInformation isOpen={tabIndex === 0} courseInfo={courseInfo} />
             </TabPanel>
             <TabPanel>
-              <DynamicLessonView listOfLessons={getListOfLessons()} isOpen={tabIndex === 1} />
+              <DynamicLessonView courseImageSrc={courseImage.url} listOfLessons={getListOfLessons()} isOpen={tabIndex === 1} />
             </TabPanel>
           </TabPanels>
         </Tabs>

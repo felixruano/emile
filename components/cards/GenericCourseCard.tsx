@@ -19,11 +19,11 @@ const GenericCourseCard: React.FC<GenericCourseCardProps> = ({ handleCourseClick
       </Skeleton>
       <Box minH="200px" p={6}>
         <Stack direction="column" spacing={4}>
-          <SkeletonText isLoaded={isLoaded}>
+          {/* <SkeletonText isLoaded={isLoaded}>
             <Text as="p" fontSize="sm">{numberOfStudents} students</Text>
-          </SkeletonText>
+          </SkeletonText> */}
           <SkeletonText isLoaded={isLoaded}>
-            <Text minH="69px" fontWeight={700} fontSize="24px">{title}</Text>
+            <Text minH="110px" fontWeight={700} fontSize="24px">{title}</Text>
           </SkeletonText>
           <Skeleton isLoaded={isLoaded}>
             <HStack>
