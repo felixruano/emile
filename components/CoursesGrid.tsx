@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 import Prismic from 'prismic-javascript';
-import { Box, Center, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Box, Center, Heading, SimpleGrid, Spinner } from "@chakra-ui/react";
 
 import { Client } from "prismic-configuration";
 import useWindowDimensions from "@utils/hooks/use-window-dimensions";

@@ -1,6 +1,5 @@
-import Link from "next/link";
 import ReactPlayer from 'react-player/lazy';
-import { AspectRatio, Box, Button, Center, Flex, Heading, HStack, Icon, Image, Modal, ModalContent, ModalOverlay, Skeleton, Spinner, Stack, Text } from "@chakra-ui/react";
+import { AspectRatio, Box, Button, Center, Flex, Heading, HStack, Skeleton, Spinner, Stack, Text } from "@chakra-ui/react";
 import { FaArrowLeft, FaCube } from "react-icons/fa";
 import BaseContainer from '@components/layouts/BaseContainer';
 import ChatBox from '@components/chat/ChatBox';
@@ -10,6 +9,7 @@ import { Client } from "prismic-configuration";
 import ConceptSlides from "@components/ConceptSlides";
 import { LearningThatWorkContent } from "@components/marketing/LearningThatWorks";
 import { useAuth } from "@utils/hooks/use-auth";
+import Head from "next/head";
 
 type SectionHeaderProps = {
   text: string;
@@ -58,33 +58,45 @@ const LiveCourse: React.FC = () => {
     return conceptArr;
   }
 
-  return <BaseContainer backgroundColor="gray.50">
-    <Box mx="auto" maxW="1440px" px={[3, null, 8]} w="100%" color="textPrimary">
-      <BackButton />
-      <Flex maxH="2xl" spacing={8}>
-        <Box w="100%" h="100%" mr={[0, null, 6]}>
-          <AspectRatio maxW="100%" ratio={16 / 9}>
-            {(lessonData?.data && auth?.user) ? (
-              <ReactPlayer pip={true} width="100%" height="100%" url={`${video_url.url}?color=4F46E8`} controls={true} />
-            ) : (
-                <Skeleton h="100%" w="100%" />
-              )}
-          </AspectRatio>
+  return (
+    <>
+      <Head>
+        <title>
+          Emile | K-12 learning platform delivering mastery-based
+          instruction
+        </title>
+        <meta
+          name="description"
+          content="Emile is an accredited global virtual K-12 school."
+        />
+      </Head>
+      <BaseContainer backgroundColor="gray.50">
+        <Box mx="auto" maxW="1440px" px={[3, null, 8]} w="100%" color="textPrimary">
+          <BackButton />
+          <Flex maxH="2xl" spacing={8}>
+            <Box w="100%" h="100%" mr={[0, null, 6]}>
+              <AspectRatio maxW="100%" ratio={16 / 9}>
+                {(lessonData?.data && auth?.user) ? (
+                  <ReactPlayer pip={true} width="100%" height="100%" url={`${video_url.url}?color=4F46E8`} controls={true} />
+                ) : (
+                    <Skeleton h="100%" w="100%" />
+                  )}
+              </AspectRatio>
+            </Box>
+            <ChatBox />
+          </Flex>
+          <HStack mt={6} fontSize="32px" color="textPrimary" display={['none', null, 'flex']}>
+            <FaCube />
+            <Heading as="h3" fontWeight={600}>Summary Ideas</Heading>
+            <Box display="inline-block" color="gray.600">({concepts.length})</Box>
+          </HStack>
+          <ConceptSlides conceptList={getListOfConcepts()} isAuthenticated={!!auth?.user} />
+          <AboutLesson text={about[0].text} />
+          {!auth?.user && (<Box bg="#F7F7FF" py={16}>
+            <LearningThatWorkContent />
+          </Box>)}
         </Box>
-        <ChatBox />
-      </Flex>
-      <HStack mt={6} fontSize="32px" color="textPrimary" display={['none', null, 'flex']}>
-        <FaCube />
-        <Heading as="h3" fontWeight={600}>Summary Ideas</Heading>
-        <Box display="inline-block" color="gray.600">({concepts.length})</Box>
-      </HStack>
-      <ConceptSlides conceptList={getListOfConcepts()} isAuthenticated={!!auth?.user} />
-      <AboutLesson text={about[0].text} />
-      {!auth?.user && (<Box bg="#F7F7FF" py={16}>
-        <LearningThatWorkContent />
-      </Box>)}
-    </Box>
-    <style jsx>{`
+        <style jsx>{`
       .react-player {
         position: absolute;
         top: 0;
@@ -93,8 +105,9 @@ const LiveCourse: React.FC = () => {
         height: 100%;
       }
     `}
-    </style>
-  </BaseContainer>;
+        </style>
+      </BaseContainer>
+    </>)
 };
 
 export default LiveCourse;

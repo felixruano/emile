@@ -59,6 +59,9 @@ const AuthFooter = ({ isSignUpFlow }) => (
                 </a>
             </Link>
         </div>
+        {isSignUpFlow && (<div className="flex justify-center pt-8 text-center text-gray-600 align-center">
+            <span>By clicking “CONTINUE” you agree to the Emile <span className="text-gray-700"><Link href="/terms-of-service">Terms of Service</Link></span> and <span className="text-gray-700"><Link href="/privacy-policy">Privacy Policy</Link>.</span></span>
+        </div>)}
     </div>
 );
 

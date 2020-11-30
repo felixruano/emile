@@ -12,7 +12,6 @@ import useWindowDimensions from '@utils/hooks/use-window-dimensions';
 import CustomLink from '@components/CustomLink';
 import SignUpButton from '@components/SignUpButton';
 import LearningThatWorks from '@components/marketing/LearningThatWorks';
-import CustomCountdown from '@components/CustomCountdown';
 
 const WhatStudentsAreSayingSection = () => (
     <div className="px-3 pt-16">
@@ -229,7 +228,7 @@ const NowEnrollingBanner = () => (
         <div className="p-16 bg-white border border-gray-100 rounded shadow-lg md:p-24">
             <div className="flex flex-col items-center justify-center space-y-8">
                 <h3 className="text-xl font-semibold text-center text-gray-800 md:text-2xl">
-                    Now enrolling for November 30
+                    Courses enrolling now
                 </h3>
                 <SignUpButton
                     text="Get Started"
@@ -284,10 +283,9 @@ const Home = () => {
                     }}
                 >
                     <img
-                        className="w-full h-full mt-16 md:mt-24 md:w-5/6 xl:w-3/4"
+                        className="w-full h-full mt-16 mb-8 md:mb-32 md:mt-24 md:w-5/6 xl:w-3/4"
                         src="/heroimage2.png?nf_resize=smartcrop&w=300&h=300"
                     />
-                    <CustomCountdown />
                 </div>
                 <LearningThatWorks />
                 <div className="w-full px-3 mt-16 lg:mt-0 md:px-16 xl:px-32">
@@ -297,11 +295,7 @@ const Home = () => {
                                 What do you want to learn?
                             </h3>
                             <p className="max-w-lg text-gray-500">
-                                Enroll in our next cohort starting{' '}
-                                <span className="text-indigo-700">
-                                    November 30{' '}
-                                </span>
-                                along with 30+ incoming AP courses across 7 categories.
+                                Enroll in our next cohort along with 30+ incoming AP courses across 7 categories.
                             </p>
                             <CustomLink
                                 href="/courses"

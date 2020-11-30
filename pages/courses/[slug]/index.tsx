@@ -1,13 +1,15 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import dynamic from 'next/dynamic';
-import { Box, Button, Center, CircularProgress, Flex, Heading, Image, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from "@chakra-ui/react";
+import { Box, Button, Center, CircularProgress, Flex, Heading, Image, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useClipboard } from "@chakra-ui/react";
 import { AiOutlineShareAlt } from 'react-icons/ai';
 
 import BaseContainer from "@components/layouts/BaseContainer";
 import { queryRepeatableDocuments } from "@utils/prismic/queries";
 
 import { Client } from "../../../prismic-configuration";
+import { useRouter } from 'next/router';
 
 const DynamicCourseInformation = dynamic(() => import('@components/layouts/course-detail/about/CourseInformation'));
 
@@ -20,6 +22,10 @@ type HeaderProps = {
 }
 
 const Header: React.FC<HeaderProps> = ({ title = '', description = '' }) => {
+  const router = useRouter();
+  const [value] = useState(`https://hiemile.com${router.asPath}`);
+  const { hasCopied, onCopy } = useClipboard(value);
+
   return (
     <Flex direction={["column", null, "row"]} py={12} justify="space-between">
       <Stack direction={['column', null, 'row']} spacing={4} align={["center", null, "baseline"]}>
@@ -28,8 +34,8 @@ const Header: React.FC<HeaderProps> = ({ title = '', description = '' }) => {
           <Text mt={4} color="textTertiary" maxW="2xl">{description}</Text>
         </Stack>
       </Stack>
-      <Button mt={[8, null, 0]} variant="outline" colorScheme="indigo" leftIcon={<AiOutlineShareAlt />} textTransform="uppercase" letterSpacing="widest">
-        Share Course
+      <Button mt={[8, null, 0]} variant="outline" colorScheme="indigo" leftIcon={<AiOutlineShareAlt />} textTransform="uppercase" letterSpacing="widest" onClick={onCopy}>
+        {hasCopied ? 'Copied!' : 'Share Course'}
       </Button>
     </Flex>
   )
@@ -64,26 +70,38 @@ const CourseDetail: NextPage<CourseDetailProps> = ({ courseInfo }) => {
 
   const { course_title: courseTitle, course_image: courseImage, course_short_description: courseShortDescription } = courseInfo?.data;
   return (
-    <BaseContainer>
-      <Image mx="auto" src={courseImage.url} objectFit="contain" alt="Hero Image" />
-      <Box mx="auto" px={[4, null, 16]} maxW="1440px" color="textPrimary">
-        <Header title={courseTitle[0].text} description={courseShortDescription[0].text} />
-        <Tabs isLazy={true} colorScheme="indigo" isFitted={true} onChange={(index) => setTabIndex(index)}>
-          <TabList color="A9A9B8">
-            <Tab pb={8} textTransform="uppercase" letterSpacing="widest" borderBottom="4px solid">About</Tab>
-            <Tab pb={8} textTransform="uppercase" letterSpacing="widest" borderBottom="4px solid">Lessons</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
-              <DynamicCourseInformation isOpen={tabIndex === 0} courseInfo={courseInfo} />
-            </TabPanel>
-            <TabPanel>
-              <DynamicLessonView courseImageSrc={courseImage.url} listOfLessons={getListOfLessons()} isOpen={tabIndex === 1} />
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
-      </Box>
-    </BaseContainer>
+    <>
+      <Head>
+        <title>
+          Emile | K-12 learning platform delivering mastery-based
+          instruction
+        </title>
+        <meta
+          name="description"
+          content="Emile is an accredited global virtual K-12 school."
+        />
+      </Head>
+      <BaseContainer>
+        <Image mx="auto" src={courseImage.url} objectFit="contain" alt="Hero Image" />
+        <Box mx="auto" px={[4, null, 16]} maxW="1440px" color="textPrimary">
+          <Header title={courseTitle[0].text} description={courseShortDescription[0].text} />
+          <Tabs isLazy={true} colorScheme="indigo" isFitted={true} onChange={(index) => setTabIndex(index)}>
+            <TabList color="A9A9B8">
+              <Tab pb={8} textTransform="uppercase" letterSpacing="widest" borderBottom="4px solid">About</Tab>
+              <Tab pb={8} textTransform="uppercase" letterSpacing="widest" borderBottom="4px solid">Lessons</Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
+                <DynamicCourseInformation isOpen={tabIndex === 0} courseInfo={courseInfo} />
+              </TabPanel>
+              <TabPanel>
+                <DynamicLessonView courseImageSrc={courseImage.url} listOfLessons={getListOfLessons()} isOpen={tabIndex === 1} />
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+        </Box>
+      </BaseContainer>
+    </>
   )
 }
 

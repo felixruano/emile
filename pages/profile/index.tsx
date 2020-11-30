@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import useClipboard from 'react-use-clipboard';
 import {
@@ -13,7 +14,6 @@ import {
     Text,
     useDisclosure,
     VStack,
-    Center,
 } from '@chakra-ui/react';
 
 import { db } from '@utils/firebase/firebaseClient';
@@ -165,54 +165,66 @@ const Index = () => {
     if (!auth?.user) return '';
 
     return (
-        <BaseContainer>
-            <div className="pb-64 md:px-12">
-                <ProfileHeader auth={auth} />
-                <ReferralBlock
-                    referralCode={userInfo?.referral_code}
-                    referralData={referralData}
+        <>
+            <Head>
+                <title>
+                    Emile | K-12 learning platform delivering mastery-based
+                    instruction
+                </title>
+                <meta
+                    name="description"
+                    content="Emile is an accredited global virtual K-12 school."
                 />
-            </div>
-            <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
-                <ModalContent>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <Flex justifyContent="center" py={4}>
-                            <VStack mt={8} spacing={4}>
-                                <img src="/balloons-icon.svg" />
-                                <Heading as="h3" size="xl">
-                                    Welcome!
+            </Head>
+            <BaseContainer>
+                <div className="pb-64 md:px-12">
+                    <ProfileHeader auth={auth} />
+                    <ReferralBlock
+                        referralCode={userInfo?.referral_code}
+                        referralData={referralData}
+                    />
+                </div>
+                <Modal isOpen={isOpen} onClose={onClose}>
+                    <ModalOverlay />
+                    <ModalContent>
+                        <ModalCloseButton />
+                        <ModalBody>
+                            <Flex justifyContent="center" py={4}>
+                                <VStack mt={8} spacing={4}>
+                                    <img src="/balloons-icon.svg" />
+                                    <Heading as="h3" size="xl">
+                                        Welcome!
                                 </Heading>
-                                <Text textAlign="center" color="gray.600">
-                                    You’ve successfully created your profile on
+                                    <Text textAlign="center" color="gray.600">
+                                        You’ve successfully created your profile on
                                     Emile! Your free trial begins on{' '}
-                                    <span className="font-semibold">
-                                        November 30
+                                        <span className="font-semibold">
+                                            November 30
                                     </span>
                                     , when we officially launch our courses. In
                                     the meantime, access your profile and
                                     account settings here.
                                 </Text>
-                                <Box
-                                    as="button"
-                                    height="48px"
-                                    width="200px"
-                                    color="white"
-                                    rounded="2px"
-                                    textTransform="uppercase"
-                                    fontWeight={600}
-                                    bg="#4F46E8"
-                                    onClick={onClose}
-                                >
-                                    Got It
+                                    <Box
+                                        as="button"
+                                        height="48px"
+                                        width="200px"
+                                        color="white"
+                                        rounded="2px"
+                                        textTransform="uppercase"
+                                        fontWeight={600}
+                                        bg="#4F46E8"
+                                        onClick={onClose}
+                                    >
+                                        Got It
                                 </Box>
-                            </VStack>
-                        </Flex>
-                    </ModalBody>
-                </ModalContent>
-            </Modal>
-        </BaseContainer>
+                                </VStack>
+                            </Flex>
+                        </ModalBody>
+                    </ModalContent>
+                </Modal>
+            </BaseContainer>
+        </>
     );
 };
 

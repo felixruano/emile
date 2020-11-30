@@ -40,7 +40,7 @@ const CourseItem = ({ title, icon, description }) => (
 const UpcomingCourses = () => (
     <div className="mt-12 md:mt-0">
         <p className="tracking-widest text-center text-gray-600 uppercase md:text-left">
-            courses enrolling soon
+            Courses enrolling now
         </p>
         <ul>
             {courses.map((courseItem) => (
