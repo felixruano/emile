@@ -296,13 +296,12 @@ const Home = () => {
                             <h3 className="text-2xl font-semibold text-gray-800">
                                 What do you want to learn?
                             </h3>
-                            <p className="text-gray-500">
+                            <p className="max-w-lg text-gray-500">
                                 Enroll in our next cohort starting{' '}
                                 <span className="text-indigo-700">
                                     November 30{' '}
                                 </span>
-                                along with <br className="hidden sm:block" />
-                                30+ incoming AP courses across 7 categories.
+                                along with 30+ incoming AP courses across 7 categories.
                             </p>
                             <CustomLink
                                 href="/courses"
