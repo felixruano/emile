@@ -24,7 +24,7 @@ const WrapperCard: React.FC = ({ children }) => (
 
 const CompletedCountdown = () => (
     <WrapperCard>
-        <Heading as="h4" fontWeight="600" fontSize="2xl">
+        <Heading as="h4" fontWeight="600" fontSize="3xl" py={12}>
             Launched 🚀
         </Heading>
     </WrapperCard>
