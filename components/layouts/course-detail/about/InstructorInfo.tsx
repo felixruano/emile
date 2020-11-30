@@ -9,10 +9,10 @@ type InstructorInfoProps = {
 }
 
 const InstructorInfo: React.FC<InstructorInfoProps> = ({ imageSrc = '', name = '', type = 'instructor', course = '', shortBio = '' }) => (
-  <Center bg="#5F5F6C" p={[8, null, 16]} color="white">
+  <Center bgImage="url('/instructor-background.png')" p={[8, null, 16]} color="white">
     <VStack spacing={8}>
       <Heading as="h3" fontWeight={600} fontSize="4xl" textAlign="center">Meet Your Instructor</Heading>
-      <Flex>
+      <Flex direction={["column", null, "row"]} align="center" textAlign={["center", null, "left"]}>
         <Avatar boxSize={16} name={name} src={imageSrc} />
         <Stack ml={4} spacing={2}>
           <Text fontWeight={700} fontSize="2xl">{name}</Text>
