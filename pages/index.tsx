@@ -3,7 +3,6 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import ReactPlayer from 'react-player/lazy';
-import { AspectRatio } from '@chakra-ui/react';
 
 import Header from '@components/Header';
 import Hero from '@components/Hero';
@@ -282,7 +281,7 @@ const Home = ({ document }) => {
                 <div
                     className="flex flex-col items-center pt-8 md:pb-16"
                 >
-                    <ReactPlayer width="80%" height="80%" url={document.data.hero_video.url} playing={true} loop={true} />
+                    <ReactPlayer width="80%" height="80%" url={document.data.hero_video.url} playing={true} loop={true} muted={true} />
                 </div>
                 <LearningThatWorks />
                 <div className="w-full px-3 mt-16 lg:mt-0 md:px-16 xl:px-32">
