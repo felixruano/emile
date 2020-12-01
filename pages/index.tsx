@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import ReactPlayer from 'react-player/lazy';
+import { AspectRatio } from '@chakra-ui/react';
 
 import Header from '@components/Header';
 import Hero from '@components/Hero';
@@ -12,6 +15,9 @@ import useWindowDimensions from '@utils/hooks/use-window-dimensions';
 import CustomLink from '@components/CustomLink';
 import SignUpButton from '@components/SignUpButton';
 import LearningThatWorks from '@components/marketing/LearningThatWorks';
+
+import { Client } from 'prismic-configuration';
+
 
 const WhatStudentsAreSayingSection = () => (
     <div className="px-3 pt-16">
@@ -240,7 +246,7 @@ const NowEnrollingBanner = () => (
     </div>
 );
 
-const Home = () => {
+const Home = ({ document }) => {
     const router = useRouter();
 
     useEffect(() => {
@@ -274,18 +280,9 @@ const Home = () => {
             </div>
             <main className="bg-gray-50">
                 <div
-                    className="flex flex-col items-center md:pb-16"
-                    style={{
-                        backgroundImage: "url('ellipses.svg')",
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'left top',
-                        backgroundSize: '32%',
-                    }}
+                    className="flex flex-col items-center pt-8 md:pb-16"
                 >
-                    <img
-                        className="w-full h-full mt-16 mb-8 md:mb-32 md:mt-24 md:w-5/6 xl:w-3/4"
-                        src="/heroimage2.png?nf_resize=smartcrop&w=300&h=300"
-                    />
+                    <ReactPlayer width="80%" height="80%" url={document.data.hero_video.url} playing={true} loop={true} />
                 </div>
                 <LearningThatWorks />
                 <div className="w-full px-3 mt-16 lg:mt-0 md:px-16 xl:px-32">
@@ -327,5 +324,15 @@ const Home = () => {
         </div>
     );
 };
+
+export const getStaticProps: GetStaticProps = async ({ preview = null }) => {
+    const document = await Client().getSingle('homepage', {});
+    return {
+        props: {
+            preview,
+            document
+        }
+    }
+}
 
 export default Home;
