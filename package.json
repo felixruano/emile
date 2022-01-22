@@ -17,7 +17,7 @@
     "analytics": "^0.5.5",
     "firebase": "^8.0.0",
     "framer-motion": "^2.9.4",
-    "nanoid": "^3.1.16",
+    "nanoid": "^3.1.31",
     "next": "^10.0.1",
     "next-images": "^1.4.0",
     "prismic-javascript": "^3.0.2",
